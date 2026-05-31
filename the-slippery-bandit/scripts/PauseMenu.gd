@@ -1,22 +1,3 @@
-# PauseMenu.gd
-# Attach to root node of PauseMenu.tscn
-# This scene lives INSIDE each level scene, not as a separate scene file.
-# Set the PauseMenu node's visibility to hidden by default.
-#
-# Scene tree layout (inside your Level scene):
-#   Level (Node2D)
-#   ├── ... (level stuff)
-#   └── PauseMenu (CanvasLayer)         ← CanvasLayer keeps it on top of everything
-#       └── Panel (Control)
-#           ├── PausedLabel (Label)     — "Paused"
-#           └── ButtonContainer (VBoxContainer)
-#               ├── ResumeButton (Button)    — "Resume"
-#               ├── RestartButton (Button)   — "Restart Level"
-#               └── MainMenuButton (Button)  — "Main Menu"
-#
-# In your Level script, call pause_menu.show_pause() / hide_pause()
-# OR handle input here directly — both shown below.
-
 extends CanvasLayer
 
 @onready var panel          : Control = $Panel
@@ -33,7 +14,7 @@ func _ready() -> void:
 	menu_button.pressed.connect(_on_menu_pressed)
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):  # Esc key by default
+	if event.is_action_pressed("ui_cancel"):
 		if is_paused:
 			_on_resume_pressed()
 		else:
@@ -56,6 +37,5 @@ func _on_restart_pressed() -> void:
 func _on_menu_pressed() -> void:
 	GameManager.go_to_main_menu()
 
-# Public method so the level script can trigger pause externally if needed
 func show_pause() -> void:
 	_pause()

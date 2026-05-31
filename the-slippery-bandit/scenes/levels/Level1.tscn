@@ -1,11 +1,84 @@
 [gd_scene format=3 uid="uid://b3mnn4yjpmha2"]
 
+[ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/IsometricCamera.gd" id="1_1pwbc"]
+[ext_resource type="Script" uid="uid://cextc50vsi78f" path="res://scripts/Player.gd" id="1_j08sa"]
+[ext_resource type="Script" uid="uid://tgrc243uw5gr" path="res://scripts/PauseMenu.gd" id="3_x4si1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gckpv"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_x4si1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_x4si1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x4si1"]
+
 [node name="Level1" type="Node3D" unique_id=2139471891]
 
-[node name="TitleLabel" type="Label" parent="." unique_id=1522288050]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1918098572]
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=252059291 groups=["player"]]
+script = ExtResource("1_j08sa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=477371309]
+shape = SubResource("CapsuleShape3D_gckpv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=2128778092]
+mesh = SubResource("CapsuleMesh_x4si1")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Player" unique_id=570014411]
+mesh = SubResource("CapsuleMesh_x4si1")
+
+[node name="CameraTarget" type="Node3D" parent="Player" unique_id=178956437]
+
+[node name="IsometricCamera" type="Camera3D" parent="." unique_id=698599528]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, -10)
+projection = 1
+current = true
+size = 2.603
+script = ExtResource("1_1pwbc")
+distance = 10.0
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1922752240]
+script = ExtResource("3_x4si1")
+
+[node name="Panel" type="Panel" parent="PauseMenu" unique_id=146831510]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="PausedLabel" type="Label" parent="PauseMenu/Panel" unique_id=779459473]
+layout_mode = 0
 offset_top = 27.0
 offset_right = 1152.0
 offset_bottom = 102.0
-text = "LEVEL 1"
+text = "Paused"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="PauseMenu/Panel" unique_id=91000407]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 271.0
+offset_right = 1059.0
+offset_bottom = 617.0
+theme_override_constants/separation = 25
+
+[node name="ResumeButton" type="Button" parent="PauseMenu/Panel/ButtonContainer" unique_id=1774312504]
+layout_mode = 2
+text = "RESUME"
+
+[node name="RestartButton" type="Button" parent="PauseMenu/Panel/ButtonContainer" unique_id=106416172]
+layout_mode = 2
+text = "RESTART"
+
+[node name="MainMenuButton" type="Button" parent="PauseMenu/Panel/ButtonContainer" unique_id=1144314264]
+layout_mode = 2
+text = "MAIN MENU"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=999809387]
+transform = Transform3D(38.898518, 0, 0, 0, 0.39569175, 0, 0, 0, 50.122158, -0.533, -1.196832, 0.54)
+mesh = SubResource("BoxMesh_x4si1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=2117772630]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=763477781]
+shape = SubResource("BoxShape3D_x4si1")
