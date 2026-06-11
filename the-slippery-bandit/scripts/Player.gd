@@ -15,7 +15,8 @@ var _friction : float = 0.0
 var _accel    : float = 0.0
 
 const GRAVITY    := 9.8
-const ISO_ANGLE  := deg_to_rad(45.0)
+# angle 135 make it straight up and down, angle 90 makes it so that WASD matches with map angles
+const ISO_ANGLE  := deg_to_rad(135.0)
 
 func _ready() -> void:
 	add_to_group("player")
