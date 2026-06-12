@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://d1cmfbdgitto3"]
+
+[ext_resource type="Script" uid="uid://ccr2ycb6tj7i6" path="res://scripts/SettingsMenu.gd" id="1_krd2w"]
+
+[node name="SettingsMenu" type="CanvasLayer" unique_id=1155707233]
+script = ExtResource("1_krd2w")
+
+[node name="Panel" type="Panel" parent="." unique_id=5492744]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel" unique_id=35382541]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 1152.0
+offset_bottom = 50.0
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BindingsContainer" type="VBoxContainer" parent="Panel" unique_id=2077283900]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 97.0
+offset_right = 1123.0
+offset_bottom = 335.0
+theme_override_constants/separation = 20
+
+[node name="MoveUpRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=1070994805]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/BindingsContainer/MoveUpRow" unique_id=1471416469]
+custom_minimum_size = Vector2(150, 25)
+layout_mode = 2
+text = "Move Up"
+
+[node name="MoveUpButton" type="Button" parent="Panel/BindingsContainer/MoveUpRow" unique_id=1758852305]
+custom_minimum_size = Vector2(35, 30)
+layout_mode = 2
+text = "W"
+
+[node name="MoveDownRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=1312232425]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/BindingsContainer/MoveDownRow" unique_id=380532409]
+custom_minimum_size = Vector2(150, 25)
+layout_mode = 2
+text = "Move Down"
+
+[node name="MoveDownButton" type="Button" parent="Panel/BindingsContainer/MoveDownRow" unique_id=100611674]
+custom_minimum_size = Vector2(35, 30)
+layout_mode = 2
+text = "S"
+
+[node name="MoveLeftRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=890050497]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/BindingsContainer/MoveLeftRow" unique_id=2091737879]
+custom_minimum_size = Vector2(150, 25)
+layout_mode = 2
+text = "Move Left"
+
+[node name="MoveLeftButton" type="Button" parent="Panel/BindingsContainer/MoveLeftRow" unique_id=1949532926]
+custom_minimum_size = Vector2(35, 30)
+layout_mode = 2
+text = "A"
+
+[node name="MoveRightRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=205712433]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/BindingsContainer/MoveRightRow" unique_id=2051190254]
+custom_minimum_size = Vector2(150, 25)
+layout_mode = 2
+text = "Move Right"
+
+[node name="MoveRightButton" type="Button" parent="Panel/BindingsContainer/MoveRightRow" unique_id=1498167426]
+custom_minimum_size = Vector2(35, 30)
+layout_mode = 2
+text = "D"
+
+[node name="SprintRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=456442235]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/BindingsContainer/SprintRow" unique_id=1539505520]
+custom_minimum_size = Vector2(150, 25)
+layout_mode = 2
+text = "Sprint"
+
+[node name="SprintButton" type="Button" parent="Panel/BindingsContainer/SprintRow" unique_id=625103130]
+custom_minimum_size = Vector2(35, 30)
+layout_mode = 2
+text = "SHIFT"
+
+[node name="InteractRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=1143499907]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Panel/BindingsContainer/InteractRow" unique_id=508431898]
+custom_minimum_size = Vector2(150, 25)
+layout_mode = 2
+text = "Interact"
+
+[node name="InteractButton" type="Button" parent="Panel/BindingsContainer/InteractRow" unique_id=243688979]
+custom_minimum_size = Vector2(35, 30)
+layout_mode = 2
+text = "E"
+
+[node name="ResetButton" type="Button" parent="Panel" unique_id=1364316539]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 607.0
+offset_right = 110.0
+offset_bottom = 638.0
+text = "Reset to Defaults"
+
+[node name="BackButton" type="Button" parent="Panel" unique_id=1187454653]
+layout_mode = 0
+offset_left = 1044.0
+offset_top = 607.0
+offset_right = 1141.0
+offset_bottom = 638.0
+text = "<-"

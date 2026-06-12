@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://b3mnn4yjpmha2"]
 
 [ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/IsometricCamera.gd" id="1_1pwbc"]
-[ext_resource type="PackedScene" uid="uid://cyuc5t4t5rn3m" path="res://scenes/player.tscn" id="1_fh0io"]
+[ext_resource type="PackedScene" uid="uid://cyuc5t4t5rn3m" path="res://scenes/Player.tscn" id="1_fh0io"]
 [ext_resource type="Script" uid="uid://tgrc243uw5gr" path="res://scripts/PauseMenu.gd" id="3_x4si1"]
 [ext_resource type="PackedScene" uid="uid://cett2vfu5nbcq" path="res://scenes/VACooms.tscn" id="4_fh0io"]
+[ext_resource type="PackedScene" uid="uid://dpuhpq3oc0ccx" path="res://scenes/menus/HUD.tscn" id="5_68ib6"]
+[ext_resource type="PackedScene" uid="uid://d1cmfbdgitto3" path="res://scenes/menus/SettingsMenu.tscn" id="6_76cw8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_x4si1"]
 
@@ -25,6 +27,8 @@ current = true
 size = 15.0
 script = ExtResource("1_1pwbc")
 distance = 10.0
+
+[node name="HUD" parent="." unique_id=1785215213 instance=ExtResource("5_68ib6")]
 
 [node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1922752240]
 script = ExtResource("3_x4si1")
@@ -58,9 +62,15 @@ text = "RESUME"
 layout_mode = 2
 text = "RESTART"
 
+[node name="SettingsButton" type="Button" parent="PauseMenu/Panel/ButtonContainer" unique_id=2016505405]
+layout_mode = 2
+text = "SETTINGS"
+
 [node name="MainMenuButton" type="Button" parent="PauseMenu/Panel/ButtonContainer" unique_id=1144314264]
 layout_mode = 2
 text = "MAIN MENU"
+
+[node name="SettingsMenu" parent="PauseMenu" unique_id=1155707233 instance=ExtResource("6_76cw8")]
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=999809387]
 transform = Transform3D(68.0724, 0, 0, 0, 0.39569175, 0, 0, 0, 61.34952, -0.533, -1.196832, 0.54)
