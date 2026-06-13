@@ -9,6 +9,8 @@ extends CharacterBody3D
 @export var max_acceleration  : float = 16.0
 @export var min_acceleration  : float = 2.0
 
+@onready var player = $CartoonRaccoon
+
 var butter_count : int = 0
 
 var _friction : float = 0.0
@@ -43,9 +45,12 @@ func _physics_process(delta: float) -> void:
 
 		var target_angle := atan2(move_dir.x, move_dir.z)
 		rotation.y = lerp_angle(rotation.y, target_angle, 12.0 * delta)
+		
+		player.play_animation("Run" if _is_sprinting() else "Walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, _friction * delta * base_speed)
 		velocity.z = move_toward(velocity.z, 0.0, _friction * delta * base_speed)
+		player.stop_animations()
 
 	move_and_slide()
 

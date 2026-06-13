@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://egufg2b8bn60"]
+
+[ext_resource type="Texture2D" uid="uid://cgtaoesu4rhr1" path="res://visuals/CartoonRaccoon_CartoonRaccoon.png" id="1_rdh0r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdh0r"]
+cull_mode = 1
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+
+[resource]
+resource_name = "Material.002"
+next_pass = SubResource("StandardMaterial3D_rdh0r")
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_rdh0r")
