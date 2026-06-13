@@ -5,126 +5,140 @@
 [node name="SettingsMenu" type="CanvasLayer" unique_id=1155707233]
 script = ExtResource("1_krd2w")
 
-[node name="Panel" type="Panel" parent="." unique_id=5492744]
+[node name="Overlay" type="ColorRect" parent="." unique_id=1052001264]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
 
-[node name="Label" type="Label" parent="Panel" unique_id=35382541]
-layout_mode = 0
-offset_top = 27.0
-offset_right = 1152.0
-offset_bottom = 50.0
+[node name="Window" type="PanelContainer" parent="Overlay" unique_id=1526893702]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -250.0
+offset_right = 350.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="Overlay/Window" unique_id=876828332]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Overlay/Window/Layout" unique_id=1784999031]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Overlay/Window/Layout/Header" unique_id=1314835040]
+layout_mode = 2
+size_flags_horizontal = 3
 text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BindingsContainer" type="VBoxContainer" parent="Panel" unique_id=2077283900]
-layout_mode = 0
-offset_left = 31.0
-offset_top = 97.0
-offset_right = 1123.0
-offset_bottom = 335.0
-theme_override_constants/separation = 20
-
-[node name="MoveUpRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=1070994805]
+[node name="CloseButton" type="Button" parent="Overlay/Window/Layout/Header" unique_id=20693979]
+custom_minimum_size = Vector2(50, 30)
 layout_mode = 2
-theme_override_constants/separation = 20
+size_flags_horizontal = 8
+text = "X"
 
-[node name="Label" type="Label" parent="Panel/BindingsContainer/MoveUpRow" unique_id=1471416469]
-custom_minimum_size = Vector2(150, 25)
+[node name="TabBar" type="TabContainer" parent="Overlay/Window/Layout" unique_id=585260921]
+custom_minimum_size = Vector2(0, 440)
 layout_mode = 2
-text = "Move Up"
+current_tab = 1
 
-[node name="MoveUpButton" type="Button" parent="Panel/BindingsContainer/MoveUpRow" unique_id=1758852305]
-custom_minimum_size = Vector2(35, 30)
+[node name="Audio" type="VBoxContainer" parent="Overlay/Window/Layout/TabBar" unique_id=99814556]
+visible = false
 layout_mode = 2
-text = "W"
+metadata/_tab_index = 0
 
-[node name="MoveDownRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=1312232425]
+[node name="MasterRow" type="HBoxContainer" parent="Overlay/Window/Layout/TabBar/Audio" unique_id=73392026]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 5
 
-[node name="Label" type="Label" parent="Panel/BindingsContainer/MoveDownRow" unique_id=380532409]
-custom_minimum_size = Vector2(150, 25)
+[node name="Label" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MasterRow" unique_id=256905974]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-text = "Move Down"
+text = "Master"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="MoveDownButton" type="Button" parent="Panel/BindingsContainer/MoveDownRow" unique_id=100611674]
-custom_minimum_size = Vector2(35, 30)
+[node name="MasterSlider" type="HSlider" parent="Overlay/Window/Layout/TabBar/Audio/MasterRow" unique_id=1930046569]
 layout_mode = 2
-text = "S"
+size_flags_horizontal = 3
 
-[node name="MoveLeftRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=890050497]
+[node name="MasterValue" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MasterRow" unique_id=156767128]
+custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
-theme_override_constants/separation = 20
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label" type="Label" parent="Panel/BindingsContainer/MoveLeftRow" unique_id=2091737879]
-custom_minimum_size = Vector2(150, 25)
+[node name="MusicRow" type="HBoxContainer" parent="Overlay/Window/Layout/TabBar/Audio" unique_id=1655474054]
 layout_mode = 2
-text = "Move Left"
+theme_override_constants/separation = 5
 
-[node name="MoveLeftButton" type="Button" parent="Panel/BindingsContainer/MoveLeftRow" unique_id=1949532926]
-custom_minimum_size = Vector2(35, 30)
+[node name="Label" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MusicRow" unique_id=2005124180]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-text = "A"
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="MoveRightRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=205712433]
+[node name="MusicSlider" type="HSlider" parent="Overlay/Window/Layout/TabBar/Audio/MusicRow" unique_id=1496618783]
 layout_mode = 2
-theme_override_constants/separation = 20
+size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="Panel/BindingsContainer/MoveRightRow" unique_id=2051190254]
-custom_minimum_size = Vector2(150, 25)
+[node name="MusicValue" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MusicRow" unique_id=1461221504]
+custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
-text = "Move Right"
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="MoveRightButton" type="Button" parent="Panel/BindingsContainer/MoveRightRow" unique_id=1498167426]
-custom_minimum_size = Vector2(35, 30)
+[node name="SFXRow" type="HBoxContainer" parent="Overlay/Window/Layout/TabBar/Audio" unique_id=303092657]
 layout_mode = 2
-text = "D"
+theme_override_constants/separation = 5
 
-[node name="SprintRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=456442235]
+[node name="Label" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/SFXRow" unique_id=1164968603]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-theme_override_constants/separation = 20
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label" type="Label" parent="Panel/BindingsContainer/SprintRow" unique_id=1539505520]
-custom_minimum_size = Vector2(150, 25)
+[node name="SFXSlider" type="HSlider" parent="Overlay/Window/Layout/TabBar/Audio/SFXRow" unique_id=906069316]
 layout_mode = 2
-text = "Sprint"
+size_flags_horizontal = 3
 
-[node name="SprintButton" type="Button" parent="Panel/BindingsContainer/SprintRow" unique_id=625103130]
-custom_minimum_size = Vector2(35, 30)
+[node name="SFXValue" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/SFXRow" unique_id=1500157632]
+custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
-text = "SHIFT"
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="InteractRow" type="HBoxContainer" parent="Panel/BindingsContainer" unique_id=1143499907]
+[node name="Controls" type="VBoxContainer" parent="Overlay/Window/Layout/TabBar" unique_id=1193791906]
 layout_mode = 2
-theme_override_constants/separation = 20
+metadata/_tab_index = 1
 
-[node name="Label" type="Label" parent="Panel/BindingsContainer/InteractRow" unique_id=508431898]
-custom_minimum_size = Vector2(150, 25)
+[node name="ResetButton" type="Button" parent="Overlay/Window/Layout/TabBar/Controls" unique_id=2063771075]
+clip_contents = true
+custom_minimum_size = Vector2(90, 35)
 layout_mode = 2
-text = "Interact"
-
-[node name="InteractButton" type="Button" parent="Panel/BindingsContainer/InteractRow" unique_id=243688979]
-custom_minimum_size = Vector2(35, 30)
-layout_mode = 2
-text = "E"
-
-[node name="ResetButton" type="Button" parent="Panel" unique_id=1364316539]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 607.0
-offset_right = 110.0
-offset_bottom = 638.0
+size_flags_horizontal = 8
 text = "Reset to Defaults"
 
-[node name="BackButton" type="Button" parent="Panel" unique_id=1187454653]
-layout_mode = 0
-offset_left = 1044.0
-offset_top = 607.0
-offset_right = 1141.0
-offset_bottom = 638.0
-text = "<-"
+[node name="Footer" type="HBoxContainer" parent="Overlay/Window/Layout" unique_id=261086571]
+layout_mode = 2
+
+[node name="ApplyButton" type="Button" parent="Overlay/Window/Layout/Footer" unique_id=1195763659]
+custom_minimum_size = Vector2(90, 35)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+text = "Apply"
