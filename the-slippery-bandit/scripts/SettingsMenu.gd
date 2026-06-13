@@ -161,8 +161,12 @@ func _on_reset_pressed() -> void:
 
 func _on_back_pressed() -> void:
 	hide_settings()
-	get_parent().show_pause()
+	var parent = get_parent()
+	if parent.has_method("show_pause"):
+		parent.show_pause()
 
 func _on_apply_pressed() -> void:
 	hide_settings()
-	get_parent().show_pause()
+	var parent = get_parent()
+	if parent.has_method("show_pause"):
+		parent.show_pause()
