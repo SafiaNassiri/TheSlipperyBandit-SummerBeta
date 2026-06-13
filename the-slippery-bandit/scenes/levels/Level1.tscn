@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://b3mnn4yjpmha2"]
+
+[ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/IsometricCamera.gd" id="1_1pwbc"]
+[ext_resource type="PackedScene" uid="uid://cyuc5t4t5rn3m" path="res://scenes/Player.tscn" id="1_fh0io"]
+[ext_resource type="Script" uid="uid://tgrc243uw5gr" path="res://scripts/PauseMenu.gd" id="3_x4si1"]
+[ext_resource type="PackedScene" uid="uid://cett2vfu5nbcq" path="res://scenes/VACooms.tscn" id="4_fh0io"]
+[ext_resource type="PackedScene" uid="uid://dpuhpq3oc0ccx" path="res://scenes/menus/HUD.tscn" id="5_68ib6"]
+[ext_resource type="PackedScene" uid="uid://d1cmfbdgitto3" path="res://scenes/menus/SettingsMenu.tscn" id="6_76cw8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_x4si1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fh0io"]
+albedo_color = Color(0.5720132, 0.7202748, 0.33946764, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x4si1"]
+
+[node name="Level1" type="Node3D" unique_id=2139471891]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1918098572]
+
+[node name="Player" parent="." unique_id=996823743 instance=ExtResource("1_fh0io")]
+
+[node name="IsometricCamera" type="Camera3D" parent="." unique_id=698599528]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, -10)
+projection = 1
+current = true
+size = 15.0
+script = ExtResource("1_1pwbc")
+distance = 10.0
+
+[node name="HUD" parent="." unique_id=1785215213 instance=ExtResource("5_68ib6")]
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1922752240]
+script = ExtResource("3_x4si1")
+
+[node name="Panel" type="Panel" parent="PauseMenu" unique_id=146831510]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="PausedLabel" type="Label" parent="PauseMenu/Panel" unique_id=779459473]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 1152.0
+offset_bottom = 102.0
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="PauseMenu/Panel" unique_id=91000407]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 271.0
+offset_right = 1059.0
+offset_bottom = 617.0
+theme_override_constants/separation = 25
+
+[node name="ResumeButton" type="Button" parent="PauseMenu/Panel/ButtonContainer" unique_id=1774312504]
+layout_mode = 2
+text = "RESUME"
+
+[node name="RestartButton" type="Button" parent="PauseMenu/Panel/ButtonContainer" unique_id=106416172]
+layout_mode = 2
+text = "RESTART"
+
+[node name="SettingsButton" type="Button" parent="PauseMenu/Panel/ButtonContainer" unique_id=2016505405]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="MainMenuButton" type="Button" parent="PauseMenu/Panel/ButtonContainer" unique_id=1144314264]
+layout_mode = 2
+text = "MAIN MENU"
+
+[node name="SettingsMenu" parent="PauseMenu" unique_id=1155707233 instance=ExtResource("6_76cw8")]
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=999809387]
+transform = Transform3D(68.0724, 0, 0, 0, 0.39569175, 0, 0, 0, 61.34952, -0.533, -1.196832, 0.54)
+mesh = SubResource("BoxMesh_x4si1")
+surface_material_override/0 = SubResource("StandardMaterial3D_fh0io")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor" unique_id=2117772630]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" unique_id=763477781]
+shape = SubResource("BoxShape3D_x4si1")
+
+[node name="WaypointPath" type="Node3D" parent="." unique_id=358112370]
+
+[node name="Waypoint1" type="Node3D" parent="WaypointPath" unique_id=449688811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.086239, 0, -22.270428)
+
+[node name="Waypoint2" type="Node3D" parent="WaypointPath" unique_id=1233190153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.960901, 0, -24.300896)
+
+[node name="Waypoint3" type="Node3D" parent="WaypointPath" unique_id=1306447010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.242828, 0, 16.505985)
+
+[node name="VaCooms" parent="." unique_id=1460798556 instance=ExtResource("4_fh0io")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+waypoints = Array[NodePath]([NodePath("../WaypointPath/Waypoint1"), NodePath("../WaypointPath/Waypoint2"), NodePath("../WaypointPath/Waypoint3")])

@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://d1cmfbdgitto3"]
+
+[ext_resource type="Script" uid="uid://ccr2ycb6tj7i6" path="res://scripts/SettingsMenu.gd" id="1_krd2w"]
+
+[node name="SettingsMenu" type="CanvasLayer" unique_id=1155707233]
+script = ExtResource("1_krd2w")
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=1052001264]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Window" type="PanelContainer" parent="Overlay" unique_id=1526893702]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -250.0
+offset_right = 350.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="Overlay/Window" unique_id=876828332]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Overlay/Window/Layout" unique_id=1784999031]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Overlay/Window/Layout/Header" unique_id=1314835040]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Overlay/Window/Layout/Header" unique_id=20693979]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "X"
+
+[node name="TabBar" type="TabContainer" parent="Overlay/Window/Layout" unique_id=585260921]
+custom_minimum_size = Vector2(0, 440)
+layout_mode = 2
+current_tab = 1
+
+[node name="Audio" type="VBoxContainer" parent="Overlay/Window/Layout/TabBar" unique_id=99814556]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MasterRow" type="HBoxContainer" parent="Overlay/Window/Layout/TabBar/Audio" unique_id=73392026]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MasterRow" unique_id=256905974]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Master"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterSlider" type="HSlider" parent="Overlay/Window/Layout/TabBar/Audio/MasterRow" unique_id=1930046569]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MasterValue" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MasterRow" unique_id=156767128]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicRow" type="HBoxContainer" parent="Overlay/Window/Layout/TabBar/Audio" unique_id=1655474054]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MusicRow" unique_id=2005124180]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="Overlay/Window/Layout/TabBar/Audio/MusicRow" unique_id=1496618783]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MusicValue" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MusicRow" unique_id=1461221504]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXRow" type="HBoxContainer" parent="Overlay/Window/Layout/TabBar/Audio" unique_id=303092657]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/SFXRow" unique_id=1164968603]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="Overlay/Window/Layout/TabBar/Audio/SFXRow" unique_id=906069316]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SFXValue" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/SFXRow" unique_id=1500157632]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Controls" type="VBoxContainer" parent="Overlay/Window/Layout/TabBar" unique_id=1193791906]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ResetButton" type="Button" parent="Overlay/Window/Layout/TabBar/Controls" unique_id=2063771075]
+clip_contents = true
+custom_minimum_size = Vector2(90, 35)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Reset to Defaults"
+
+[node name="Footer" type="HBoxContainer" parent="Overlay/Window/Layout" unique_id=261086571]
+layout_mode = 2
+
+[node name="ApplyButton" type="Button" parent="Overlay/Window/Layout/Footer" unique_id=1195763659]
+custom_minimum_size = Vector2(90, 35)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+text = "Apply"

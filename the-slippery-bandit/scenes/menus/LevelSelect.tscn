@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cpgu3dfb0uwrg"]
+
+[ext_resource type="Script" uid="uid://yjsns6iw1f4r" path="res://scripts/LevelSelect.gd" id="1_t7mlp"]
+
+[node name="LevelSelect" type="Control" unique_id=175670343]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_t7mlp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=403172843]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.31808648, 0.050251007, 0.071545966, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1103821443]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 1152.0
+offset_bottom = 102.0
+text = "Choose Your Heist"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelGrid" type="GridContainer" parent="." unique_id=100410357]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 111.0
+offset_right = 1119.0
+offset_bottom = 587.0
+
+[node name="BackButton" type="Button" parent="." unique_id=896104281]
+layout_mode = 0
+offset_left = 1044.0
+offset_top = 607.0
+offset_right = 1141.0
+offset_bottom = 638.0
+text = "<-"

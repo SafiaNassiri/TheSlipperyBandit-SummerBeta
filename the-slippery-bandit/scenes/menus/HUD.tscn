@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dpuhpq3oc0ccx"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1785215213]
+
+[node name="HUDContainer" type="MarginContainer" parent="." unique_id=867038387]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="TopLeft" type="VBoxContainer" parent="HUDContainer" unique_id=732475158]
+layout_mode = 2
+
+[node name="ButterLabel" type="Label" parent="HUDContainer/TopLeft" unique_id=1902858087]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "🧈 0 / 0"
+
+[node name="SecretLabel" type="Label" parent="HUDContainer/TopLeft" unique_id=528464385]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "★ NOT FOUND"
+
+[node name="TopRight" type="VBoxContainer" parent="HUDContainer" unique_id=259133059]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="LevelLabel" type="Label" parent="HUDContainer/TopRight" unique_id=643632266]
+layout_mode = 2
+text = "HOME 1"
+
+[node name="TimerLabel" type="Label" parent="HUDContainer/TopRight" unique_id=311155940]
+layout_mode = 2
+text = "0:00"

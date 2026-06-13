@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://i4itdr2jnvi3"]
+
+[ext_resource type="Script" uid="uid://cixa4fycgxf4f" path="res://scripts/WinScreen.gd" id="1_myrtv"]
+
+[node name="WinScreen" type="Control" unique_id=1173633472]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_myrtv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1915837586]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.31808648, 0.050251007, 0.071545966, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=656038892]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 1152.0
+offset_bottom = 102.0
+text = "HEIS COMPLETE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="." unique_id=1088596130]
+layout_mode = 0
+offset_top = 92.0
+offset_right = 1152.0
+offset_bottom = 155.0
+text = "TBD"
+horizontal_alignment = 1
+
+[node name="StatsContainer" type="VBoxContainer" parent="." unique_id=884858652]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 250.0
+offset_right = 969.0
+offset_bottom = 394.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="ButterLabel" type="Label" parent="StatsContainer" unique_id=1845071482]
+layout_mode = 2
+text = "Butter collected: X / Y"
+horizontal_alignment = 1
+
+[node name="SecretLabel" type="Label" parent="StatsContainer" unique_id=333702575]
+layout_mode = 2
+text = "Secret found: ✓ / ✗"
+horizontal_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="." unique_id=1412350525]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 491.0
+offset_right = 969.0
+offset_bottom = 648.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="NextLevelButton" type="Button" parent="ButtonContainer" unique_id=1699799966]
+layout_mode = 2
+text = "Next Heist"
+
+[node name="ReplayButton" type="Button" parent="ButtonContainer" unique_id=411986079]
+layout_mode = 2
+text = "Replay"
+
+[node name="MainMenuButton" type="Button" parent="ButtonContainer" unique_id=221705044]
+layout_mode = 2
+text = "Main Menu"

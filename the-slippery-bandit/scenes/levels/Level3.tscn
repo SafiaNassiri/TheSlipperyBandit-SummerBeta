@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ctmm5hudty6ch"]
+
+[node name="Level3" type="Node3D" unique_id=385752927]
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1578361313]
+offset_top = 27.0
+offset_right = 1152.0
+offset_bottom = 102.0
+text = "LEVEL 3"
+horizontal_alignment = 1
+vertical_alignment = 1

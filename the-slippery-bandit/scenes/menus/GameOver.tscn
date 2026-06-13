@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dv2lo8kwve8je"]
+
+[ext_resource type="Script" uid="uid://dncgc21vdm5s7" path="res://scripts/GameOver.gd" id="1_6hfuu"]
+
+[node name="GameOver" type="Control" unique_id=991012851]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6hfuu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1293992712]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.31808648, 0.050251007, 0.071545966, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=117700136]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 1152.0
+offset_bottom = 102.0
+text = "YOU'VE BEEN CAUGHT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="." unique_id=61049929]
+layout_mode = 0
+offset_top = 92.0
+offset_right = 1152.0
+offset_bottom = 155.0
+text = "tbd"
+horizontal_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="." unique_id=1042774477]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 529.0
+offset_right = 969.0
+offset_bottom = 648.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="RetryButton" type="Button" parent="ButtonContainer" unique_id=426054023]
+layout_mode = 2
+text = "Try Again"
+
+[node name="MainMenuButton" type="Button" parent="ButtonContainer" unique_id=88603899]
+layout_mode = 2
+text = "Main Menu"
