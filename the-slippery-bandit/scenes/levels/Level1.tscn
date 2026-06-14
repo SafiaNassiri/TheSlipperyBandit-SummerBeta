@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://b3mnn4yjpmha2"]
 
-[ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/IsometricCamera.gd" id="1_1pwbc"]
+[ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/camera/IsometricCamera.gd" id="1_1pwbc"]
 [ext_resource type="PackedScene" uid="uid://cyuc5t4t5rn3m" path="res://scenes/Player.tscn" id="1_fh0io"]
-[ext_resource type="Script" uid="uid://tgrc243uw5gr" path="res://scripts/PauseMenu.gd" id="3_x4si1"]
+[ext_resource type="Script" uid="uid://c40b2tx6t30x4" path="res://scripts/core/Level.gd" id="1_m00rq"]
+[ext_resource type="Script" uid="uid://tgrc243uw5gr" path="res://scripts/ui/PauseMenu.gd" id="3_x4si1"]
 [ext_resource type="PackedScene" uid="uid://cett2vfu5nbcq" path="res://scenes/VACooms.tscn" id="4_fh0io"]
 [ext_resource type="PackedScene" uid="uid://dpuhpq3oc0ccx" path="res://scenes/menus/HUD.tscn" id="5_68ib6"]
 [ext_resource type="PackedScene" uid="uid://d1cmfbdgitto3" path="res://scenes/menus/SettingsMenu.tscn" id="6_76cw8"]
+[ext_resource type="PackedScene" uid="uid://deg4j4rf7cpyk" path="res://scenes/Butter.tscn" id="8_7d7pp"]
+[ext_resource type="PackedScene" uid="uid://e2euqovhtuqn" path="res://scenes/levels/Exit.tscn" id="9_e5nfq"]
+[ext_resource type="PackedScene" uid="uid://c1mxqes7nafji" path="res://scenes/Door.tscn" id="10_e5nfq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_x4si1"]
 
@@ -15,12 +19,14 @@ albedo_color = Color(0.5720132, 0.7202748, 0.33946764, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_x4si1"]
 
 [node name="Level1" type="Node3D" unique_id=2139471891]
+script = ExtResource("1_m00rq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1918098572]
 
 [node name="Player" parent="." unique_id=996823743 instance=ExtResource("1_fh0io")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8589008, 0)
 
-[node name="IsometricCamera" type="Camera3D" parent="." unique_id=698599528]
+[node name="IsometricCamera" type="Camera3D" parent="." unique_id=698599528 groups=["isometric_camera"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, -10)
 projection = 1
 current = true
@@ -73,7 +79,7 @@ text = "MAIN MENU"
 [node name="SettingsMenu" parent="PauseMenu" unique_id=1155707233 instance=ExtResource("6_76cw8")]
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=999809387]
-transform = Transform3D(68.0724, 0, 0, 0, 0.39569175, 0, 0, 0, 61.34952, -0.533, -1.196832, 0.54)
+transform = Transform3D(68.0724, 0, 0, 0, 1.3562835, 0, 0, 0, 61.34952, -0.533, -1.196832, 0.54)
 mesh = SubResource("BoxMesh_x4si1")
 surface_material_override/0 = SubResource("StandardMaterial3D_fh0io")
 
@@ -93,6 +99,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.960901, 0, -24.300896)
 [node name="Waypoint3" type="Node3D" parent="WaypointPath" unique_id=1306447010]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.242828, 0, 16.505985)
 
+[node name="Butters" type="Node3D" parent="." unique_id=841157180]
+
+[node name="Butter" parent="Butters" unique_id=1107591258 instance=ExtResource("8_7d7pp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.702917, 0, 17.103107)
+
+[node name="Butter2" parent="Butters" unique_id=594003502 instance=ExtResource("8_7d7pp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.106598, 0, -12.127868)
+
+[node name="Butter3" parent="Butters" unique_id=1715030971 instance=ExtResource("8_7d7pp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3064, 0, 8.524341)
+
 [node name="VaCooms" parent="." unique_id=1460798556 instance=ExtResource("4_fh0io")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 waypoints = Array[NodePath]([NodePath("../WaypointPath/Waypoint1"), NodePath("../WaypointPath/Waypoint2"), NodePath("../WaypointPath/Waypoint3")])
+
+[node name="Exit" parent="." unique_id=1313272235 instance=ExtResource("9_e5nfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.338, 0, -29.815)
+
+[node name="Door" parent="." unique_id=663709829 instance=ExtResource("10_e5nfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7961035, 1.9195702, 0)

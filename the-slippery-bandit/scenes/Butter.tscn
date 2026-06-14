@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://deg4j4rf7cpyk"]
+
+[ext_resource type="Script" uid="uid://dtkuqex7d3a7l" path="res://scripts/objects/Butter.gd" id="1_4om1e"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h5q5g"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4om1e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucd41"]
+albedo_color = Color(0.92941177, 0.92941177, 0.30980393, 1)
+
+[node name="Butter" type="Area3D" unique_id=1107591258 groups=["butter"]]
+script = ExtResource("1_4om1e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=872993718]
+shape = SubResource("SphereShape3D_h5q5g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=159284605]
+mesh = SubResource("BoxMesh_4om1e")
+surface_material_override/0 = SubResource("StandardMaterial3D_ucd41")

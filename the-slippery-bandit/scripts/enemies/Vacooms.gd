@@ -72,7 +72,12 @@ func _trigger_catch() -> void:
 	_state = State.CAUGHT
 	velocity = Vector3.ZERO
 	
-	#When caugh tanimation is added
+	# Trigger camera shake
+	var cam := get_tree().get_first_node_in_group("isometric_camera")
+	if cam :
+		cam.shake()
+	
+	# When caugh tanimation is added
 	var anim := get_node_or_null("AnimationPlayer") as AnimationPlayer
 	if anim and anim.has_animation("caught"):
 		anim.play("caught")

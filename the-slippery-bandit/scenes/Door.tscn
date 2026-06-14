@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c1mxqes7nafji"]
+
+[ext_resource type="Script" uid="uid://bi5rnywmbgynr" path="res://scripts/objects/Door.gd" id="1_yfgsh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfgsh"]
+size = Vector3(0.16699219, 4.454834, 1.5185547)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yfgsh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xdx2q"]
+albedo_color = Color(0.32902414, 0.16982827, 0.058657005, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eyv6f"]
+
+[node name="Door" type="StaticBody3D" unique_id=663709829]
+script = ExtResource("1_yfgsh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=488098664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.001953125, 0.016197503, 0.013183594)
+shape = SubResource("BoxShape3D_yfgsh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1005509697]
+transform = Transform3D(0.17139834, 0, 0, 0, 4.48752, 0, 0, 0, 1.5442629, 0, -0.0006945798, 0)
+mesh = SubResource("BoxMesh_yfgsh")
+surface_material_override/0 = SubResource("StandardMaterial3D_xdx2q")
+
+[node name="InteractZone" type="Area3D" parent="." unique_id=744194694]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractZone" unique_id=733605627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5444248, 0)
+shape = SubResource("BoxShape3D_eyv6f")

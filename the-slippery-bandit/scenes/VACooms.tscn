@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cett2vfu5nbcq"]
 
-[ext_resource type="Script" uid="uid://d4lckfuow8st2" path="res://scripts/vacooms.gd" id="1_kto4h"]
+[ext_resource type="Script" uid="uid://d4lckfuow8st2" path="res://scripts/enemies/Vacooms.gd" id="1_kto4h"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_h71f4"]
 

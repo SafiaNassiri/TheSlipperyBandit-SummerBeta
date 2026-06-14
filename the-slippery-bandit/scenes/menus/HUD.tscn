@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dpuhpq3oc0ccx"]
 
+[ext_resource type="Script" uid="uid://b1gur5byx0xpk" path="res://scripts/ui/Hud.gd" id="1_jyvo4"]
+
 [node name="HUD" type="CanvasLayer" unique_id=1785215213]
+script = ExtResource("1_jyvo4")
 
 [node name="HUDContainer" type="MarginContainer" parent="." unique_id=867038387]
 anchors_preset = 15
