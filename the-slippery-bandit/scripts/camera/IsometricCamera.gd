@@ -7,9 +7,13 @@ extends Camera3D
 @export var shake_duration : float = 0.4
 @export var shake_intensity : float = 0.3
 
+@export var zoom_duration : float = 1.2
+@export var zoom_target_size : float = 3.0 # smaller = more zoom in
+
 var _target : Node3D = null
 var _shake_timer : float = 0.0
 var _base_offset : Vector3 = Vector3.ZERO
+var _zooming : bool = false
 
 func _ready() -> void:
 	_target = get_tree().get_first_node_in_group("player")
@@ -21,7 +25,7 @@ func _ready() -> void:
 	look_at(_target.global_position if _target else Vector3.ZERO, Vector3.UP)
 
 func _physics_process(delta: float) -> void:
-	if not _target:
+	if not _target or _zooming:
 		return
 	global_position = global_position.lerp(_get_desired_position(), follow_speed * delta)
 	look_at(_target.global_position, Vector3.UP)
@@ -40,3 +44,13 @@ func _get_desired_position() -> Vector3:
 
 func shake() -> void:
 	_shake_timer = shake_duration
+
+func death_zoom() -> void:
+	_zooming = true
+	var tween := create_tween()
+	tween.set_ease(Tween.EASE_IN)
+	tween.set_trans(Tween.TRANS_EXPO)
+	# Zoom in by shrinking orthographic size
+	tween.tween_property(self, "size", zoom_target_size, zoom_duration)
+	await tween.finished
+	_zooming = false

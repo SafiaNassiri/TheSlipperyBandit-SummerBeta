@@ -80,6 +80,7 @@ func _trigger_catch() -> void:
 	var cam := get_tree().get_first_node_in_group("isometric_camera")
 	if cam :
 		cam.shake()
+		await cam.death_zoom()
 	
 	# When caugh tanimation is added
 	var anim := get_node_or_null("AnimationPlayer") as AnimationPlayer
@@ -87,6 +88,6 @@ func _trigger_catch() -> void:
 		anim.play("caught")
 		await anim.animation_finished
 	else:
-		await get_tree().create_timer(0.8).timeout
+		await get_tree().create_timer(0.4).timeout
 	
 	GameManager.level_failed()
