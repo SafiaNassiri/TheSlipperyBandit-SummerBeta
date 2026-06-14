@@ -21,7 +21,11 @@ func _physics_process(delta: float) -> void:
 	rotation_degrees.y = lerp(rotation_degrees.y, _target_angle, anim_speed * delta)
 	
 	if _player_nearby and Input.is_action_just_pressed("interact"):
-		_toggle()
+		var player := get_tree().get_first_node_in_group("player")
+		if player and global_position.distance_to(player.global_position) < 3.0:
+			_toggle()
+		else:
+			_player_nearby = false
 
 func _toggle() -> void:
 	_is_open = not _is_open
