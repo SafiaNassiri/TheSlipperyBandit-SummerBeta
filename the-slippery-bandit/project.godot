@@ -26,6 +26,7 @@ GameManager="*uid://7a1uwhm0pftm"
 [display]
 
 window/subwindows/embed_subwindows=false
+window/stretch/mode="canvas_items"
 
 [input]
 

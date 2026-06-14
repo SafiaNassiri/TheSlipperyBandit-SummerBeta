@@ -20,6 +20,14 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.31808648, 0.050251007, 0.071545966, 1)
 
+[node name="BackButton" type="Button" parent="." unique_id=896104281]
+layout_mode = 0
+offset_left = 1044.0
+offset_top = 607.0
+offset_right = 1141.0
+offset_bottom = 638.0
+text = "<-"
+
 [node name="TitleLabel" type="Label" parent="." unique_id=1103821443]
 layout_mode = 0
 offset_top = 27.0
@@ -38,19 +46,12 @@ offset_bottom = 119.0
 text = "Rutabaga is ready."
 horizontal_alignment = 1
 
-[node name="BackButton" type="Button" parent="." unique_id=896104281]
-layout_mode = 0
-offset_left = 1044.0
-offset_top = 607.0
-offset_right = 1141.0
-offset_bottom = 638.0
-text = "<-"
-
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=103538984]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -59.0
 grow_horizontal = 2
 grow_vertical = 2
 

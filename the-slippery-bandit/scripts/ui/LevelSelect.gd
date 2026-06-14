@@ -7,8 +7,8 @@ const LEVEL_DESCS := [
 	"Full house.\nThree VACooms. Good luck.",
 ]
 
-@onready var level_grid  : GridContainer = $CenterContainer/LevelGrid
-@onready var back_button : Button        = $BackButton
+@onready var level_grid : GridContainer = $CenterContainer/LevelGrid
+@onready var back_button : Button = $BackButton
 
 func _ready() -> void:
 	back_button.pressed.connect(_on_back_pressed)
