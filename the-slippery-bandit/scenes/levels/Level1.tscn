@@ -24,7 +24,7 @@ script = ExtResource("1_m00rq")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1918098572]
 
 [node name="Player" parent="." unique_id=996823743 instance=ExtResource("1_fh0io")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8589008, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.746124, 0.8589008, -26.491745)
 
 [node name="IsometricCamera" type="Camera3D" parent="." unique_id=698599528 groups=["isometric_camera"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, -10)
@@ -94,7 +94,7 @@ shape = SubResource("BoxShape3D_x4si1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.086239, 0, -22.270428)
 
 [node name="Waypoint2" type="Node3D" parent="WaypointPath" unique_id=1233190153]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.960901, 0, -24.300896)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.961, 0, -22.27)
 
 [node name="Waypoint3" type="Node3D" parent="WaypointPath" unique_id=1306447010]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.242828, 0, 16.505985)
@@ -118,4 +118,4 @@ waypoints = Array[NodePath]([NodePath("../WaypointPath/Waypoint1"), NodePath("..
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.338, 0, -29.815)
 
 [node name="Door" parent="." unique_id=663709829 instance=ExtResource("10_e5nfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7961035, 1.9195702, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.796, 1.92, -12.213678)
