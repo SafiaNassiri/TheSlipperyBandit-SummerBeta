@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bdlqxg722oca3"]
+
+[ext_resource type="Texture2D" uid="uid://b4gee0rx2ld74" path="res://visuals/VACoomRED_VACoomRed.png" id="1_shm8b"]
+
+[resource]
+resource_name = "Material.003"
+cull_mode = 2
+albedo_texture = ExtResource("1_shm8b")
+roughness = 0.5

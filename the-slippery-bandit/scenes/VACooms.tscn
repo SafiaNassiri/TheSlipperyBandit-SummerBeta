@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://cett2vfu5nbcq"]
 
-[ext_resource type="Script" uid="uid://d4lckfuow8st2" path="res://scripts/enemies/Vacooms.gd" id="1_kto4h"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_h71f4"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kto4h"]
-albedo_color = Color(0.96903414, 0.49390632, 0.3995756, 1)
+[ext_resource type="Script" uid="uid://d4lckfuow8st2" path="res://scripts/vacooms.gd" id="1_kto4h"]
+[ext_resource type="PackedScene" uid="uid://bxlimcti3p6ml" path="res://visuals/VACoom.glb" id="2_qx7bo"]
+[ext_resource type="PackedScene" uid="uid://fsaugikboy6h" path="res://visuals/VACoomRED.glb" id="3_xvspb"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kto4h"]
 
@@ -13,11 +10,6 @@ albedo_color = Color(0.96903414, 0.49390632, 0.3995756, 1)
 
 [node name="VaCooms" type="CharacterBody3D" unique_id=1460798556]
 script = ExtResource("1_kto4h")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2083297297]
-transform = Transform3D(1, 0, 0, 0, 0.06169492, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("CylinderMesh_h71f4")
-surface_material_override/0 = SubResource("StandardMaterial3D_kto4h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=525458394]
 transform = Transform3D(0.062, 0, 0, 0, 0.062, 0, 0, 0, 0.062, 0, 0, 0)
@@ -30,3 +22,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("SphereShape3D_h71f4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=236190017]
+
+[node name="VACoom" parent="." unique_id=1603289302 instance=ExtResource("2_qx7bo")]
+
+[node name="VACoomRED" parent="." unique_id=1872988539 instance=ExtResource("3_xvspb")]
+visible = false

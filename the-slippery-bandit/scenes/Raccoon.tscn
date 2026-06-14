@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b1d638i27j54e"]
+
+[ext_resource type="PackedScene" uid="uid://blo0cwdse8brt" path="res://visuals/CartoonRaccoon.glb" id="1_5q464"]
+[ext_resource type="Material" uid="uid://egufg2b8bn60" path="res://visuals/Material.002.tres" id="2_5q464"]
+
+[node name="CartoonRaccoon" unique_id=1709922807 instance=ExtResource("1_5q464")]
+
+[node name="Sphere" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1422898741) index="0" unique_id=79335072]
+material_override = ExtResource("2_5q464")

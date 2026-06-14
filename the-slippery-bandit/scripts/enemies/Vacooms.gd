@@ -4,6 +4,8 @@ extends CharacterBody3D
 @export var detection_radius: float = 3.0
 @export var waypoint_tolerance: float = 0.3
 @export var waypoints: Array[NodePath] = []
+@onready var vacoom = $VACoom
+@onready var vacoomRed = $VACoomRED
 
 enum State {PATROL, CAUGHT}
 var _state: State = State.PATROL
@@ -71,6 +73,8 @@ func _trigger_catch() -> void:
 	_caught_triggered = true
 	_state = State.CAUGHT
 	velocity = Vector3.ZERO
+	vacoom.hide()
+	vacoomRed.show()
 	
 	# Trigger camera shake
 	var cam := get_tree().get_first_node_in_group("isometric_camera")
