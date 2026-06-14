@@ -32,7 +32,7 @@ projection = 1
 current = true
 size = 15.0
 script = ExtResource("1_1pwbc")
-distance = 10.0
+distance = 30.0
 
 [node name="HUD" parent="." unique_id=1785215213 instance=ExtResource("5_68ib6")]
 
