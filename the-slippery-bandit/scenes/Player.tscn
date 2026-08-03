@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cyuc5t4t5rn3m"]
 
-[ext_resource type="Script" uid="uid://cextc50vsi78f" path="res://scripts/Player.gd" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://cextc50vsi78f" path="res://scripts/core/Player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://blo0cwdse8brt" path="res://visuals/CartoonRaccoon.glb" id="2_v6fml"]
 [ext_resource type="Script" uid="uid://7o2fpl40wqnj" path="res://scripts/Raccoon.gd" id="3_3li8b"]
 

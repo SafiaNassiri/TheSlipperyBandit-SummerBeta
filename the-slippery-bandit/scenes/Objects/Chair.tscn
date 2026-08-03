@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://8iaxulc475pp"]
+
+[ext_resource type="Script" uid="uid://xi5hh2kwen07" path="res://scripts/objects/Chair.gd" id="1_5ut6l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m14uu"]
+size = Vector3(1, 2.6083364, 0.24530941)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5ut6l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ut6l"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m14uu"]
+
+[node name="Chair" type="StaticBody3D" unique_id=2093500120]
+script = ExtResource("1_5ut6l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=817748250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.3041682, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1611217335]
+transform = Transform3D(-4.3711385e-08, 0, -0.24530943, 0, 2.6083362, 0, 0.9999999, 0, -1.07228155e-08, 0.5, 1.3041682, 0)
+mesh = SubResource("BoxMesh_5ut6l")
+
+[node name="RampCollision" type="StaticBody3D" parent="." unique_id=199919946]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RampCollision" unique_id=1305713454]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+shape = SubResource("BoxShape3D_5ut6l")
+
+[node name="InteractZone" type="Area3D" parent="." unique_id=620543393]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="InteractZone" unique_id=1605367443]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")

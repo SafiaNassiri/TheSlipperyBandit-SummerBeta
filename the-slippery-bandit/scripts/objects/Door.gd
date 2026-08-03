@@ -38,5 +38,5 @@ func _on_player_entered_range(body: Node3D) -> void:
 		_player_nearby = true
 
 func _on_player_exited_range(body: Node3D) -> void:
-	if body.is_in_group("palyer"):
+	if body.is_in_group("player"):
 		_player_nearby = false

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://ckuvpod5qh0o1"]
+
+[ext_resource type="Script" uid="uid://tgrc243uw5gr" path="res://scripts/ui/PauseMenu.gd" id="1_i7533"]
+[ext_resource type="PackedScene" uid="uid://d1cmfbdgitto3" path="res://scenes/menus/SettingsMenu.tscn" id="2_5c87e"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=501947168]
+script = ExtResource("1_i7533")
+
+[node name="Panel" type="Panel" parent="." unique_id=1989791201]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="PausedLabel" type="Label" parent="Panel" unique_id=658879722]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 1152.0
+offset_bottom = 102.0
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="Panel" unique_id=1117119567]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 271.0
+offset_right = 1059.0
+offset_bottom = 617.0
+theme_override_constants/separation = 25
+
+[node name="ResumeButton" type="Button" parent="Panel/ButtonContainer" unique_id=460803619]
+layout_mode = 2
+text = "RESUME"
+
+[node name="RestartButton" type="Button" parent="Panel/ButtonContainer" unique_id=164382235]
+layout_mode = 2
+text = "RESTART"
+
+[node name="SettingsButton" type="Button" parent="Panel/ButtonContainer" unique_id=1194022393]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="MainMenuButton" type="Button" parent="Panel/ButtonContainer" unique_id=2088366284]
+layout_mode = 2
+text = "MAIN MENU"
+
+[node name="SettingsMenu" parent="." unique_id=1155707233 instance=ExtResource("2_5c87e")]
