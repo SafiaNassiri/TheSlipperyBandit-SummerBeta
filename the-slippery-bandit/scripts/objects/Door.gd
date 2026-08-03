@@ -30,8 +30,7 @@ func _physics_process(delta: float) -> void:
 func _toggle() -> void:
 	_is_open = not _is_open
 	_target_angle = (_closed_angle + open_rotation) if _is_open else _closed_angle
-	
-	$CollisionShape3D.disabled  = _is_open
+
 
 func _on_player_entered_range(body: Node3D) -> void:
 	if body.is_in_group("player"):

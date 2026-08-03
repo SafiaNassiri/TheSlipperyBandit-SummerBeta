@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dblsj2fk8d87g"]
 
+[ext_resource type="PackedScene" uid="uid://c1mxqes7nafji" path="res://scenes/Objects/Door.tscn" id="1_1pwbc"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_gckpv"]
 size = Vector3(40, 0.2, 30)
 
@@ -23,6 +25,9 @@ size = Vector3(40, 3, 0.3)
 transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
 light_energy = 1.2
 shadow_enabled = true
+
+[node name="Door" parent="." unique_id=663709829 instance=ExtResource("1_1pwbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07410765, 1.4978032, 0)
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=1275144679]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
