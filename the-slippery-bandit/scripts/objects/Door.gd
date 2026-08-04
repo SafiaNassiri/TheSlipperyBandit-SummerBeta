@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 	
 	if _player_nearby and Input.is_action_just_pressed("interact"):
 		var player := get_tree().get_first_node_in_group("player")
-		if player and global_position.distance_to(player.global_position) < 3.0:
+		if player and global_position.distance_to(player.global_position) < 4.0:
 			_toggle()
 		else:
 			_player_nearby = false

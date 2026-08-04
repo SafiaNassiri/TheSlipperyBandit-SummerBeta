@@ -12,7 +12,7 @@ size = Vector3(0.16699219, 3.9700928, 1.9664307)
 albedo_color = Color(0.32902414, 0.16982827, 0.058657005, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eyv6f"]
-size = Vector3(1, 4.045929, 1.9111328)
+size = Vector3(1.4609985, 4.045929, 2.4375)
 
 [node name="Door" type="StaticBody3D" unique_id=663709829]
 script = ExtResource("1_yfgsh")
@@ -30,7 +30,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_xdx2q")
 [node name="InteractZone" type="Area3D" parent="." unique_id=744194694]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractZone" unique_id=733605627]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2098453, 1.027832)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027435303, -0.2098453, 1.1308594)
 shape = SubResource("BoxShape3D_eyv6f")
 
 [node name="Door" parent="." unique_id=931913740 instance=ExtResource("2_hbq88")]

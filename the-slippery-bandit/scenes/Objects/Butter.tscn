@@ -7,7 +7,8 @@
 [sub_resource type="BoxMesh" id="BoxMesh_4om1e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucd41"]
-albedo_color = Color(0.92941177, 0.92941177, 0.30980393, 1)
+albedo_color = Color(0.8352941, 0.8627451, 0.39215687, 1)
+roughness = 0.0
 
 [node name="Butter" type="Area3D" unique_id=1107591258 groups=["butter"]]
 script = ExtResource("1_4om1e")
@@ -16,5 +17,6 @@ script = ExtResource("1_4om1e")
 shape = SubResource("SphereShape3D_h5q5g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=159284605]
+transform = Transform3D(1.997, 0, 0, 0, 0.625, 0, 0, 0, 0.625, 0, 0, 0)
 mesh = SubResource("BoxMesh_4om1e")
 surface_material_override/0 = SubResource("StandardMaterial3D_ucd41")
