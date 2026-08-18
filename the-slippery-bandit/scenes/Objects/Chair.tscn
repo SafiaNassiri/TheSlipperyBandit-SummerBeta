@@ -4,9 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://dabwuouxfifsc" path="res://visuals/Chair.glb" id="2_0yr05"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m14uu"]
-size = Vector3(1, 2.6083364, 0.24530941)
+size = Vector3(0.8330078, 0.6533317, 0.94785)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5ut6l"]
+size = Vector3(1, 0.1484375, 6.5921135)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0yr05"]
+size = Vector3(1, 0.2541504, 0.087402344)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_m14uu"]
 
@@ -14,20 +18,27 @@ size = Vector3(1, 2.6083364, 0.24530941)
 script = ExtResource("1_5ut6l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=817748250]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.3041682, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.50621593, 0)
 shape = SubResource("BoxShape3D_m14uu")
 
 [node name="RampCollision" type="StaticBody3D" parent="." unique_id=199919946]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RampCollision" unique_id=1305713454]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+transform = Transform3D(1, 7.125697e-08, -1.4095038e-08, -4.041959e-08, 0.3846498, -0.9230626, -6.035298e-08, 0.9230626, 0.3846498, -4.4540144e-08, -3.3547387, -0.108211935)
 shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RampCollision" unique_id=988307448]
+transform = Transform3D(1, 1.71131e-08, -3.4891663e-09, -1.7113102e-08, 0.92017716, -0.39150214, -3.4891663e-09, 0.39150214, 0.92017716, -3.9242146e-08, -0.24185824, -1.3540552)
+shape = SubResource("BoxShape3D_0yr05")
+debug_color = Color(1, 1, 1, 1)
 
 [node name="InteractZone" type="Area3D" parent="." unique_id=620543393]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="InteractZone" unique_id=1605367443]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.36841118, 0)
 shape = SubResource("SphereShape3D_m14uu")
 
 [node name="Chair" parent="." unique_id=1068570129 instance=ExtResource("2_0yr05")]
-transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -0.175, 0.75, -0.338)
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, -0.07262087, 0)

@@ -19,7 +19,7 @@ func _ready() -> void:
 	menu_button.pressed.connect(_on_menu_pressed)
 
 func _unhandled_input(event: InputEvent) -> void:
-	print(event)
+	#print(event)
 		
 	if event.is_action_pressed("ui_cancel"):
 		# If settings is open -> close settings first

@@ -235,4 +235,4 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 73.4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.29503, 0.74999976, 13.824156)
 
 [node name="Chair" parent="." unique_id=2093500120 instance=ExtResource("12_6owa4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.00685, 0, 14.5984335)
+transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 65.52603, 0.8287797, 14.287696)
