@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cv4flar1vd6fb"]
+
+[ext_resource type="Script" uid="uid://c0ogxfri8fitx" path="res://scenes/cutscenes/ending_cutscene.gd" id="1_wkpu8"]
+
+[node name="EndingCutscene" type="Node2D" unique_id=1552525180]
+script = ExtResource("1_wkpu8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=749267960]
+custom_minimum_size = Vector2(1000, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = 412.0
+offset_right = 1075.0
+offset_bottom = 612.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="TextBox" type="Label" parent="." unique_id=1713000542]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 110.0
+offset_top = 442.0
+offset_right = 1030.0
+offset_bottom = 592.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+vertical_alignment = 1

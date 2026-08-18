@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ckigtelids1ka"]
+
+[ext_resource type="Script" uid="uid://soy0cvdmwqix" path="res://scenes/cutscenes/news_cutscene.gd" id="1_6hyjb"]
+
+[node name="NewsCutscene" type="Node2D" unique_id=1423186782]
+script = ExtResource("1_6hyjb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=302846946]
+custom_minimum_size = Vector2(1000, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = 412.0
+offset_right = 1075.0
+offset_bottom = 612.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="TextBox" type="RichTextLabel" parent="." unique_id=258303324]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 110.0
+offset_top = 442.0
+offset_right = 1030.0
+offset_bottom = 592.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.0152692, 1)
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1671874050]
+one_shot = true

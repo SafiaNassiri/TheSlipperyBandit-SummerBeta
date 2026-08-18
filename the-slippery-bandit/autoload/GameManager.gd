@@ -24,15 +24,15 @@ const SCENE_LEVELS = {
 
 func go_to_main_menu() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file(SCENE_MAIN_MENU)
+	get_tree().call_deferred("change_scene_to_file", SCENE_MAIN_MENU)
 
 func go_to_level_select() -> void:
-	get_tree().change_scene_to_file(SCENE_LEVEL_SELECT)
+	get_tree().call_deferred("change_scene_to_file", SCENE_LEVEL_SELECT)
 
 func start_level(level_num: int) -> void:
 	current_level = level_num
 	if SCENE_LEVELS.has(level_num):
-		get_tree().change_scene_to_file(SCENE_LEVELS[level_num])
+		get_tree().call_deferred("change_scene_to_file", SCENE_LEVELS[level_num])
 	else:
 		push_error("GameManager: No scene registered for level %d" % level_num)
 
@@ -44,10 +44,12 @@ func level_complete(collected: int, total: int, secret: bool) -> void:
 	var next = current_level + 1
 	if next <= total_levels and next not in unlocked_levels:
 		unlocked_levels.append(next)
-	get_tree().change_scene_to_file(SCENE_WIN)
+
+func go_to_win_screen() -> void:
+	get_tree().call_deferred("change_scene_to_file", SCENE_WIN)
 
 func level_failed() -> void:
-	get_tree().change_scene_to_file(SCENE_GAME_OVER)
+	get_tree().call_deferred("change_scene_to_file", SCENE_GAME_OVER)
 
 func quit_game() -> void:
 	get_tree().quit()
