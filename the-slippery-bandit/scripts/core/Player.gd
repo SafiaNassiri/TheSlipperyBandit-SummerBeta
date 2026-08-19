@@ -79,9 +79,14 @@ func add_butter() -> void:
 	print("Butter collected: %d / %d - Slide distance: %.2f" % [butter_count, max_butter, _calculate_slide_distance()])
 
 func _update_physics_from_butter() -> void:
-	var t  := float(butter_count) / float(max_butter) if max_butter > 0 else 0.0
-	_friction = lerp(max_friction, min_friction, t)
-	_accel    = lerp(max_acceleration, min_acceleration, t)
+	# Friction decreases by 2.5x per butter collected
+	if butter_count == 0:
+		_friction = max_friction
+		_accel = max_acceleration
+	else:
+		var multiplier = pow(2.5, butter_count)
+		_friction = max_friction / multiplier
+		_accel = max_acceleration / multiplier
 
 func _calculate_slide_distance() -> float:
 	if _friction <= 0:
