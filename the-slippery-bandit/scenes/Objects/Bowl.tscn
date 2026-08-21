@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cn0bnelmgug34"]
+
+[ext_resource type="PackedScene" uid="uid://cexlxj13wteu8" path="res://visuals/Bowl.glb" id="1_cnf25"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cnf25"]
+height = 0.7883301
+radius = 1.1855469
+
+[node name="Bowl" type="StaticBody3D" unique_id=992104924]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=511052068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39139968, 0)
+shape = SubResource("CylinderShape3D_cnf25")
+
+[node name="Bowl" parent="." unique_id=1689036163 instance=ExtResource("1_cnf25")]

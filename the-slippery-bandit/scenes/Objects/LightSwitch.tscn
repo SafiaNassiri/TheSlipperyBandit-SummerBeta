@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cv3vvcrhagbji"]
+
+[ext_resource type="PackedScene" uid="uid://c418573uipyls" path="res://visuals/LightSwitch.glb" id="1_rk7mr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eosia"]
+size = Vector3(1, 0.051757813, 1)
+
+[node name="Node3D" type="StaticBody3D" unique_id=1217004636]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2125745842]
+transform = Transform3D(1.3267891, 0, 0, 0, 1.3267891, 0, 0, 0, 1.3267891, 0, 0.32162458, 0)
+shape = SubResource("BoxShape3D_eosia")
+
+[node name="LightSwitch" parent="." unique_id=364583597 instance=ExtResource("1_rk7mr")]
