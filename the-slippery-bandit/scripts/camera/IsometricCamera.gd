@@ -14,6 +14,8 @@ var _target : Node3D = null
 var _shake_timer : float = 0.0
 var _base_offset : Vector3 = Vector3.ZERO
 var _zooming : bool = false
+var faded_walls: Dictionary = {}
+var target_alpha: float = 0.2
 
 func _ready() -> void:
 	_target = get_tree().get_first_node_in_group("player")
@@ -38,6 +40,43 @@ func _physics_process(delta: float) -> void:
 	else:
 		h_offset = 0.0
 		v_offset = 0.0
+	
+	var space_state = get_world_3d().direct_space_state
+	var query = PhysicsRayQueryParameters3D.create(global_transform.origin, _target.global_position)
+	query.exclude = [_target]
+	var result = space_state.intersect_ray(query)
+	
+	for wall in faded_walls.keys():
+		if is_instance_valid(wall):
+			_set_wall_transparency(wall.find_children("", "MeshInstance3D")[0], 1.0)
+	faded_walls.clear()
+	
+	if result:
+		var collider = result.collider as Node3D
+		if collider.is_in_group("walls") or collider.name.contains("Wall"):
+			_set_wall_transparency(collider.find_children("", "MeshInstance3D")[0], target_alpha)
+			faded_walls[collider] = true
+
+func _set_wall_transparency(wall: Node3D, alpha: float):
+	if not wall is MeshInstance3D:
+		return
+	
+	var mesh_instance: MeshInstance3D = wall as MeshInstance3D
+	
+	var material: StandardMaterial3D
+	if mesh_instance.get_mesh().surface_get_material(0) is StandardMaterial3D:
+		material = mesh_instance.get_mesh().surface_get_material(0).duplicate() as StandardMaterial3D
+		mesh_instance.set_surface_override_material(0, material)
+	else:
+		material = mesh_instance.get_surface_override_material(0)
+		if not material:
+			material = StandardMaterial3D.new()
+			mesh_instance.set_surface_override_material(0, material)
+	
+	material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	
+	material.albedo_color.a = alpha
+	
 
 func _get_desired_position() -> Vector3:
 	return _target.global_position + Vector3(-distance, height, -distance)
