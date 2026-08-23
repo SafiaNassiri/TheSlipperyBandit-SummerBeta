@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-@export var knock_rotation : float = 90.0
+@export var knock_rotation : float = -60.0
 @export var anim_speed : float = 6.0
 
 var _is_knocked : bool = false
