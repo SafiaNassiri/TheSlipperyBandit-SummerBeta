@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://blh5e8a2hei4h" path="res://scenes/Objects/PlantPot.tscn" id="14_uh3oe"]
 [ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="15_o6ptl"]
 [ext_resource type="PackedScene" uid="uid://dqlw6xgamps36" path="res://scenes/Objects/Cabinet.tscn" id="16_mctl7"]
+[ext_resource type="PackedScene" uid="uid://cett2vfu5nbcq" path="res://scenes/Objects/VACooms.tscn" id="17_mctl7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2p574"]
 size = Vector3(40.013077, 0.2, 90.14754)
@@ -250,6 +251,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 91.7
 [node name="Butter5" parent="Butters" unique_id=959960356 instance=ExtResource("6_twycr")]
 transform = Transform3D(0.54172283, 0, 0.84055716, 0, 1, 0, -0.84055716, 0, 0.54172283, 98.57636, 0.34704834, 1.819951)
 
+[node name="Butter6" parent="Butters" unique_id=2132422889 instance=ExtResource("6_twycr")]
+transform = Transform3D(-0.61711836, 0, 0.7868704, 0, 1, 0, -0.7868704, 0, -0.61711836, 14.356306, 0.34704834, 31.29507)
+
 [node name="Doors" type="Node3D" parent="." unique_id=984045859]
 
 [node name="Door1" parent="Doors" unique_id=1262857097 instance=ExtResource("6_e5vnl")]
@@ -262,7 +266,7 @@ transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 35.4
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 90.1341, 2.2854476, -13.211274)
 
 [node name="Door4" parent="Doors" unique_id=759756118 instance=ExtResource("6_e5vnl")]
-transform = Transform3D(1, 0, 3.019916e-07, 0, 1, 0, -3.019916e-07, 0, 1, 17.818867, 4.570895, 10.078609)
+transform = Transform3D(1, 0, 3.019916e-07, 0, 1, 0, -3.019916e-07, 0, 1, 17.818867, 2.3343008, 10.078609)
 
 [node name="Props" type="Node3D" parent="." unique_id=134084837]
 
@@ -273,7 +277,7 @@ transform = Transform3D(6.556708e-08, 0.5, -2.1855694e-08, 1.9106855e-15, 2.1855
 transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 52.00383, 2.9832041, 0.06321198)
 
 [node name="Trashcan1" parent="Props" unique_id=1797922898 instance=ExtResource("9_5v643")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 98.67753, 0.037651062, -32.061188)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 99.56031, 0.037651062, -1.4158478)
 
 [node name="Table1" parent="Props" unique_id=1946768330 instance=ExtResource("10_o6ptl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.724495, 1.7172942, 32.014633)
@@ -345,3 +349,95 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 57.9
 
 [node name="Cabinet12" parent="Cabinets" unique_id=1078885155 instance=ExtResource("16_mctl7")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 59.90849, 0.606, 33.67127)
+
+[node name="WaypointPath1" type="Node3D" parent="." unique_id=233212658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.333017)
+
+[node name="Waypoint1" type="Node3D" parent="WaypointPath1" unique_id=2053010321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.102941, 0, 15.0617485)
+
+[node name="Waypoint2" type="Node3D" parent="WaypointPath1" unique_id=993636424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2294827, 0, 8.220152)
+
+[node name="Waypoint3" type="Node3D" parent="WaypointPath1" unique_id=594311378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.951843, 0, 6.720171)
+
+[node name="Waypoint4" type="Node3D" parent="WaypointPath1" unique_id=58701222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.57681656, 0, 1.809618)
+
+[node name="Waypoint5" type="Node3D" parent="WaypointPath1" unique_id=573117758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.631878, 0, -2.5191936)
+
+[node name="Waypoint6" type="Node3D" parent="WaypointPath1" unique_id=829201791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4029522, 0, -6.0322647)
+
+[node name="Waypoint7" type="Node3D" parent="WaypointPath1" unique_id=1315821039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.032402, 0, -10.342262)
+
+[node name="Waypoint8" type="Node3D" parent="WaypointPath1" unique_id=2098376103]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0073833, 0, -13.838324)
+
+[node name="WaypointPath2" type="Node3D" parent="." unique_id=1361036577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.38115, 0, -4.677025)
+
+[node name="Waypoint1" type="Node3D" parent="WaypointPath2" unique_id=1221300334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3827362, 0, -27.226475)
+
+[node name="Waypoint2" type="Node3D" parent="WaypointPath2" unique_id=211384509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.211296, 0, 2.435112)
+
+[node name="Waypoint3" type="Node3D" parent="WaypointPath2" unique_id=596410392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.175812, 0, -26.596397)
+
+[node name="Waypoint4" type="Node3D" parent="WaypointPath2" unique_id=338582891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.83899, 0, 2.66988)
+
+[node name="Waypoint5" type="Node3D" parent="WaypointPath2" unique_id=1536243556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.139168, 0, -27.27586)
+
+[node name="Waypoint6" type="Node3D" parent="WaypointPath2" unique_id=1821893963]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.443413, 0, 2.176237)
+
+[node name="Waypoint7" type="Node3D" parent="WaypointPath2" unique_id=1011890177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.813408, 0, -27.742989)
+
+[node name="WaypointPath3" type="Node3D" parent="." unique_id=1316246305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.22446, 0, -21.935621)
+
+[node name="Waypoint1" type="Node3D" parent="WaypointPath3" unique_id=1090768513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.46025, 0, 19.899256)
+
+[node name="Waypoint2" type="Node3D" parent="WaypointPath3" unique_id=1251495385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.58474, 0, -9.758093)
+
+[node name="Waypoint3" type="Node3D" parent="WaypointPath3" unique_id=934602764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.859894, 0, 20.833523)
+
+[node name="Waypoint4" type="Node3D" parent="WaypointPath3" unique_id=156442106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.111778, 0, -10.151457)
+
+[node name="Waypoint5" type="Node3D" parent="WaypointPath3" unique_id=1167019016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3815384, 0, 19.814325)
+
+[node name="Waypoint6" type="Node3D" parent="WaypointPath3" unique_id=1129256243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.322792, 0, -9.935938)
+
+[node name="Waypoint7" type="Node3D" parent="WaypointPath3" unique_id=683523837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.287315, 0, 20.111591)
+
+[node name="VACooms" type="Node3D" parent="." unique_id=535836872]
+
+[node name="VaCoom1" parent="VACooms" unique_id=1460798556 instance=ExtResource("17_mctl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.673414, 0, 2.0939732)
+move_speed = 8.5
+waypoints = Array[NodePath]([NodePath("../../WaypointPath1/Waypoint1"), NodePath("../../WaypointPath1/Waypoint2"), NodePath("../../WaypointPath1/Waypoint3"), NodePath("../../WaypointPath1/Waypoint4"), NodePath("../../WaypointPath1/Waypoint5"), NodePath("../../WaypointPath1/Waypoint6"), NodePath("../../WaypointPath1/Waypoint7"), NodePath("../../WaypointPath1/Waypoint8")])
+
+[node name="VaCoom2" parent="VACooms" unique_id=363091157 instance=ExtResource("17_mctl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.557816, 0, -31.448591)
+move_speed = 10.0
+waypoints = Array[NodePath]([NodePath("../../WaypointPath2/Waypoint7"), NodePath("../../WaypointPath2/Waypoint6"), NodePath("../../WaypointPath2/Waypoint5"), NodePath("../../WaypointPath2/Waypoint4"), NodePath("../../WaypointPath2/Waypoint3"), NodePath("../../WaypointPath2/Waypoint2"), NodePath("../../WaypointPath2/Waypoint1")])
+
+[node name="VaCoom3" parent="VACooms" unique_id=1166213097 instance=ExtResource("17_mctl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.334152, 0, -3.1974125)
+move_speed = 10.0
+waypoints = Array[NodePath]([NodePath("../../WaypointPath3/Waypoint1"), NodePath("../../WaypointPath3/Waypoint2"), NodePath("../../WaypointPath3/Waypoint3"), NodePath("../../WaypointPath3/Waypoint4"), NodePath("../../WaypointPath3/Waypoint5"), NodePath("../../WaypointPath3/Waypoint6"), NodePath("../../WaypointPath3/Waypoint7")])
