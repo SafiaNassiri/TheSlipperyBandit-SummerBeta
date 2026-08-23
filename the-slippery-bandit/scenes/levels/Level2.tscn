@@ -59,7 +59,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Player" parent="." unique_id=996823743 instance=ExtResource("2_2p574")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.822093, 0.5421833, -20.068747)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.822093, 0.08002341, -20.068747)
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1624577533]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 84.400826, 34.87206, 0)
@@ -429,17 +429,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.287315, 0, 20.111591)
 [node name="VACooms" type="Node3D" parent="." unique_id=535836872]
 
 [node name="VaCoom1" parent="VACooms" unique_id=1460798556 instance=ExtResource("17_mctl7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.673414, 0, 2.0939732)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.673, 0.075, 2.094)
 move_speed = 8.5
 waypoints = Array[NodePath]([NodePath("../../WaypointPath1/Waypoint1"), NodePath("../../WaypointPath1/Waypoint2"), NodePath("../../WaypointPath1/Waypoint3"), NodePath("../../WaypointPath1/Waypoint4"), NodePath("../../WaypointPath1/Waypoint5"), NodePath("../../WaypointPath1/Waypoint6"), NodePath("../../WaypointPath1/Waypoint7"), NodePath("../../WaypointPath1/Waypoint8")])
 
 [node name="VaCoom2" parent="VACooms" unique_id=363091157 instance=ExtResource("17_mctl7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.557816, 0, -31.448591)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.558, 0.075, -31.449)
 move_speed = 10.0
 waypoints = Array[NodePath]([NodePath("../../WaypointPath2/Waypoint7"), NodePath("../../WaypointPath2/Waypoint6"), NodePath("../../WaypointPath2/Waypoint5"), NodePath("../../WaypointPath2/Waypoint4"), NodePath("../../WaypointPath2/Waypoint3"), NodePath("../../WaypointPath2/Waypoint2"), NodePath("../../WaypointPath2/Waypoint1")])
 
 [node name="VaCoom3" parent="VACooms" unique_id=1166213097 instance=ExtResource("17_mctl7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.334152, 0, -3.1974125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.334152, 0.07524979, -3.1974125)
 move_speed = 10.0
 waypoints = Array[NodePath]([NodePath("../../WaypointPath3/Waypoint1"), NodePath("../../WaypointPath3/Waypoint2"), NodePath("../../WaypointPath3/Waypoint3"), NodePath("../../WaypointPath3/Waypoint4"), NodePath("../../WaypointPath3/Waypoint5"), NodePath("../../WaypointPath3/Waypoint6"), NodePath("../../WaypointPath3/Waypoint7")])
 
