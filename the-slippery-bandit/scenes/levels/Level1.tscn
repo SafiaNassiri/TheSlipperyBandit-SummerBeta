@@ -296,7 +296,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.961, 0, 8.763254)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.242828, 0, -6.179839)
 
 [node name="WaypointPath2" type="Node3D" parent="." unique_id=1051162372]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.64841, 0, -4.677025)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.4181, 0, -4.677025)
 
 [node name="Waypoint1" type="Node3D" parent="WaypointPath2" unique_id=691819513]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.64143, 0, -5.9128685)
@@ -305,6 +305,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.64143, 0, -5.9128685)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.961, 0, 8.763254)
 
 [node name="Waypoint3" type="Node3D" parent="WaypointPath2" unique_id=1265810660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.242828, 0, -6.179839)
+
+[node name="WaypointPath3" type="Node3D" parent="." unique_id=404216635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.903305, 0, 2.7868652)
+
+[node name="Waypoint1" type="Node3D" parent="WaypointPath3" unique_id=2102207539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.64143, 0, -5.9128685)
+
+[node name="Waypoint2" type="Node3D" parent="WaypointPath3" unique_id=1537543574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.961, 0, 8.763254)
+
+[node name="Waypoint3" type="Node3D" parent="WaypointPath3" unique_id=591991687]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.242828, 0, -6.179839)
 
 [node name="VACooms" type="Node3D" parent="." unique_id=23388049]
@@ -317,3 +329,8 @@ waypoints = Array[NodePath]([NodePath("../../WaypointPath1/Waypoint1"), NodePath
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.25163, 0, -5.5413914)
 move_speed = 4.5
 waypoints = Array[NodePath]([NodePath("../../WaypointPath2/Waypoint1"), NodePath("../../WaypointPath2/Waypoint2"), NodePath("../../WaypointPath2/Waypoint3")])
+
+[node name="VaCoom3" parent="VACooms" unique_id=921368470 instance=ExtResource("9_7d7pp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.066925, 0, -5.5413914)
+move_speed = 4.5
+waypoints = Array[NodePath]([NodePath("../VaCoom1"), NodePath("../VaCoom2"), NodePath(".")])
