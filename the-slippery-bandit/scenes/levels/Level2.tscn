@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://qdi6kl0ma8dt"]
 
 [ext_resource type="Script" uid="uid://c40b2tx6t30x4" path="res://scripts/core/Level.gd" id="1_uw6xe"]
+[ext_resource type="PackedScene" uid="uid://cyuc5t4t5rn3m" path="res://scenes/Player.tscn" id="2_2p574"]
+[ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/camera/IsometricCamera.gd" id="3_e5vnl"]
+[ext_resource type="PackedScene" uid="uid://dpuhpq3oc0ccx" path="res://scenes/menus/HUD.tscn" id="4_twycr"]
+[ext_resource type="PackedScene" uid="uid://ckuvpod5qh0o1" path="res://scenes/menus/PauseMenu.tscn" id="5_inlfm"]
 
 [node name="Level2" type="Node3D" unique_id=1669271570]
 script = ExtResource("1_uw6xe")
@@ -14,3 +18,21 @@ text = "LEVEL 2
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Player" parent="." unique_id=996823743 instance=ExtResource("2_2p574")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.272521, 0.5421833, -0.87548393)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1624577533]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 84.400826, 34.87206, 0)
+
+[node name="IsometricCamera" type="Camera3D" parent="." unique_id=1939757022 groups=["isometric_camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, -10)
+projection = 1
+current = true
+size = 15.0
+script = ExtResource("3_e5vnl")
+distance = 30.0
+
+[node name="HUD" parent="." unique_id=1785215213 instance=ExtResource("4_twycr")]
+
+[node name="PauseMenu" parent="." unique_id=501947168 instance=ExtResource("5_inlfm")]

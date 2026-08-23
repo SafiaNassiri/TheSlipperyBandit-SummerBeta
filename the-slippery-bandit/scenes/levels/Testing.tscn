@@ -90,4 +90,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7735662, -0.5129992, -4.894
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.475758, 0.08414674, -5.53611)
 
 [node name="Fridge" parent="." unique_id=262071157 instance=ExtResource("12_38umm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33024693, 0.4813099, -1.3371089)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33024693, 0.4813099, 13.858887)
