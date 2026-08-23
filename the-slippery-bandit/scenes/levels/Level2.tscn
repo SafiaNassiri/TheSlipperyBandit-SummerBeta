@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://blh5e8a2hei4h" path="res://scenes/Objects/PlantPot.tscn" id="14_uh3oe"]
 [ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="15_o6ptl"]
 [ext_resource type="PackedScene" uid="uid://dqlw6xgamps36" path="res://scenes/Objects/Cabinet.tscn" id="16_mctl7"]
+[ext_resource type="PackedScene" uid="uid://8iaxulc475pp" path="res://scenes/Objects/Chair.tscn" id="16_nkm7c"]
 [ext_resource type="PackedScene" uid="uid://cett2vfu5nbcq" path="res://scenes/Objects/VACooms.tscn" id="17_mctl7"]
 [ext_resource type="PackedScene" uid="uid://e2euqovhtuqn" path="res://scenes/levels/Exit.tscn" id="18_fpd7d"]
 
@@ -255,6 +256,12 @@ transform = Transform3D(0.54172283, 0, 0.84055716, 0, 1, 0, -0.84055716, 0, 0.54
 [node name="Butter6" parent="Butters" unique_id=2132422889 instance=ExtResource("6_twycr")]
 transform = Transform3D(-0.61711836, 0, 0.7868704, 0, 1, 0, -0.7868704, 0, -0.61711836, 14.356306, 0.34704834, 31.29507)
 
+[node name="Butter7" parent="Butters" unique_id=837554079 instance=ExtResource("6_twycr")]
+transform = Transform3D(-0.61711836, 0, 0.7868704, 0, 1, 0, -0.7868704, 0, -0.61711836, 60.12516, 1.5636969, 19.093788)
+
+[node name="Butter8" parent="Butters" unique_id=92593096 instance=ExtResource("6_twycr")]
+transform = Transform3D(0.80695003, 0, 0.59061986, 0, 1, 0, -0.59061986, 0, 0.80695003, 64.16478, 1.5636969, 20.87446)
+
 [node name="Doors" type="Node3D" parent="." unique_id=984045859]
 
 [node name="Door1" parent="Doors" unique_id=1262857097 instance=ExtResource("6_e5vnl")]
@@ -312,6 +319,81 @@ transform = Transform3D(6.556708e-08, 0.5, -2.1855694e-08, 1.9106855e-15, 2.1855
 
 [node name="Fridge" parent="Props" unique_id=262071157 instance=ExtResource("15_o6ptl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.47448, 0.8942565, 32.52339)
+
+[node name="Table3" parent="Props" unique_id=891922717 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.016457, 1.1619163, 19.286615)
+
+[node name="Table4" parent="Props" unique_id=2145768854 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.98904, 1.1619163, 19.286615)
+
+[node name="Table5" parent="Props" unique_id=173626964 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.016457, 1.1619163, 21.286768)
+
+[node name="Table6" parent="Props" unique_id=1335042234 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.989765, 1.1619163, 21.286772)
+
+[node name="Table7" parent="Props" unique_id=908311633 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.989925, 1.1619163, 19.286615)
+
+[node name="Table8" parent="Props" unique_id=1702127932 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.96251, 1.1619163, 19.286615)
+
+[node name="Table9" parent="Props" unique_id=2064146585 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.989925, 1.1619163, 21.286768)
+
+[node name="Table10" parent="Props" unique_id=2067687673 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.963234, 1.1619163, 21.286772)
+
+[node name="Table13" parent="Props" unique_id=1711434813 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.989925, 1.1619163, 17.29988)
+
+[node name="Table14" parent="Props" unique_id=1836543707 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.963234, 1.1619163, 17.299883)
+
+[node name="Table17" parent="Props" unique_id=346398462 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.01646, 1.1619163, 17.29988)
+
+[node name="Table18" parent="Props" unique_id=159510397 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.98977, 1.1619163, 17.299883)
+
+[node name="Table11" parent="Props" unique_id=1968773553 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.029724, 1.1619163, 19.286615)
+
+[node name="Table12" parent="Props" unique_id=391272102 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.029724, 1.1619163, 21.286768)
+
+[node name="Table19" parent="Props" unique_id=1719540823 instance=ExtResource("10_o6ptl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.029728, 1.1619163, 17.29988)
+
+[node name="Chair" parent="Props" unique_id=2093500120 instance=ExtResource("16_nkm7c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.890873, 0.79795647, 21.270271)
+
+[node name="Chair2" parent="Props" unique_id=1172724623 instance=ExtResource("16_nkm7c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.890873, 0.79795647, 17.678774)
+
+[node name="Chair3" parent="Props" unique_id=514865038 instance=ExtResource("16_nkm7c")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 66.8938, 0.79795647, 21.270271)
+
+[node name="Chair4" parent="Props" unique_id=442284708 instance=ExtResource("16_nkm7c")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 66.8938, 0.79795647, 17.678774)
+
+[node name="Chair5" parent="Props" unique_id=35644363 instance=ExtResource("16_nkm7c")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 63.449654, 0.798, 14.498)
+
+[node name="Chair6" parent="Props" unique_id=1153452773 instance=ExtResource("16_nkm7c")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 57.88047, 0.79795647, 14.498175)
+
+[node name="Chair7" parent="Props" unique_id=1369626564 instance=ExtResource("16_nkm7c")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 60.50928, 0.79795647, 14.498175)
+
+[node name="Chair8" parent="Props" unique_id=452485936 instance=ExtResource("16_nkm7c")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 63.449654, 0.798, 23.733118)
+
+[node name="Chair9" parent="Props" unique_id=1046578854 instance=ExtResource("16_nkm7c")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 57.88047, 0.79795647, 23.733292)
+
+[node name="Chair10" parent="Props" unique_id=1184164119 instance=ExtResource("16_nkm7c")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 60.50928, 0.79795647, 23.733292)
 
 [node name="Cabinets" type="Node3D" parent="." unique_id=1406597386]
 
