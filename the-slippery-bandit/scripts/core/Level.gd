@@ -37,7 +37,7 @@ func _on_secret_collected() -> void:
 		hud.on_secret_found()
 
 func on_player_exited() -> void:
-	if butter_collected >= 1:
+	if butter_collected == butter_total:
 		GameManager.level_complete(butter_collected, butter_total, secret_found)
 		
 		await get_tree().process_frame

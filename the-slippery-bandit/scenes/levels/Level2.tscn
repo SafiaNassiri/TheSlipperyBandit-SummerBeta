@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="15_o6ptl"]
 [ext_resource type="PackedScene" uid="uid://dqlw6xgamps36" path="res://scenes/Objects/Cabinet.tscn" id="16_mctl7"]
 [ext_resource type="PackedScene" uid="uid://cett2vfu5nbcq" path="res://scenes/Objects/VACooms.tscn" id="17_mctl7"]
+[ext_resource type="PackedScene" uid="uid://e2euqovhtuqn" path="res://scenes/levels/Exit.tscn" id="18_fpd7d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2p574"]
 size = Vector3(40.013077, 0.2, 90.14754)
@@ -441,3 +442,6 @@ waypoints = Array[NodePath]([NodePath("../../WaypointPath2/Waypoint7"), NodePath
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.334152, 0, -3.1974125)
 move_speed = 10.0
 waypoints = Array[NodePath]([NodePath("../../WaypointPath3/Waypoint1"), NodePath("../../WaypointPath3/Waypoint2"), NodePath("../../WaypointPath3/Waypoint3"), NodePath("../../WaypointPath3/Waypoint4"), NodePath("../../WaypointPath3/Waypoint5"), NodePath("../../WaypointPath3/Waypoint6"), NodePath("../../WaypointPath3/Waypoint7")])
+
+[node name="Exit" parent="." unique_id=1313272235 instance=ExtResource("18_fpd7d")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 100.61733, 0.51310265, -14.197819)
