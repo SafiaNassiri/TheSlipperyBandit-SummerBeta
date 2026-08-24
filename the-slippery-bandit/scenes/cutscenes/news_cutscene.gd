@@ -29,7 +29,7 @@ func setup(text: String, dur: float, level: int = 2) -> void:
 		timer.start(duration)
 
 func _input(event: InputEvent) -> void:
-	print("Input event: ", event, " can_skip: ", can_skip)
+	#print("Input event: ", event, " can_skip: ", can_skip)
 	if can_skip and event is InputEventKey and event.pressed:
 		if event.keycode == KEY_SPACE:
 			print("Skipping cutscene!")
