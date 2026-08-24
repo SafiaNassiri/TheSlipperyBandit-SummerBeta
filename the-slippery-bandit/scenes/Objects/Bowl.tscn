@@ -1,15 +1,10 @@
 [gd_scene format=3 uid="uid://cn0bnelmgug34"]
 
-[ext_resource type="PackedScene" uid="uid://cexlxj13wteu8" path="res://visuals/Bowl.glb" id="1_cnf25"]
+[ext_resource type="PackedScene" uid="uid://cexlxj13wteu8" path="res://visuals/Bowl.glb" id="1_fnu1l"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_cnf25"]
-height = 0.7883301
-radius = 1.1855469
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ib4nb"]
 
-[node name="Bowl" type="StaticBody3D" unique_id=992104924]
+[node name="Bowl" unique_id=1049776473 instance=ExtResource("1_fnu1l")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=511052068]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39139968, 0)
-shape = SubResource("CylinderShape3D_cnf25")
-
-[node name="Bowl" parent="." unique_id=1689036163 instance=ExtResource("1_cnf25")]
+[node name="Circle" parent="." index="0" unique_id=1382658579]
+surface_material_override/0 = SubResource("StandardMaterial3D_ib4nb")

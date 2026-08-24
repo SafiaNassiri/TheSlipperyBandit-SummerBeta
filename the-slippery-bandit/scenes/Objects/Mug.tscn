@@ -1,15 +1,20 @@
 [gd_scene format=3 uid="uid://6w1hok06rcd8"]
 
-[ext_resource type="PackedScene" uid="uid://bx50oqogafrr" path="res://visuals/Mug.glb" id="1_437eg"]
+[ext_resource type="PackedScene" uid="uid://bx50oqogafrr" path="res://visuals/Mug.glb" id="1_07yp7"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_qd3wg"]
-height = 1.8510742
-radius = 1.0249023
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3aus"]
 
-[node name="Node3D" type="StaticBody3D" unique_id=2116311578]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_j2tbh"]
+height = 1.8666992
+radius = 0.92578125
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1774688357]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9333496, 0)
-shape = SubResource("CylinderShape3D_qd3wg")
+[node name="Mug" unique_id=235448887 instance=ExtResource("1_07yp7")]
 
-[node name="Mug" parent="." unique_id=235448887 instance=ExtResource("1_437eg")]
+[node name="Circle" parent="." index="0" unique_id=444466971]
+surface_material_override/0 = SubResource("StandardMaterial3D_o3aus")
+
+[node name="Area3D" type="StaticBody3D" parent="." index="1" unique_id=2103245636]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=2085363715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9350455, 0)
+shape = SubResource("CylinderShape3D_j2tbh")

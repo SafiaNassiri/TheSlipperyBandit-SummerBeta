@@ -40,6 +40,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xg4a2")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogei6"]
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_8jbj8"]
 _surfaces = [{
 "aabb": AABB(-1.3095399, -0.9999999, -1.1028177, 2.6190798, 4.8716116, 2.1028175),
@@ -72,6 +74,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8jbj8")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7tq85"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_vw0d6"]
 size = Vector3(1.9825134, 3.6069946, 1.6206055)
 
@@ -82,9 +86,11 @@ transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -0.4874426, 1.192092
 
 [node name="Handles" type="MeshInstance3D" parent="Fridge" unique_id=313120596]
 mesh = SubResource("ArrayMesh_g6ugw")
+surface_material_override/0 = SubResource("StandardMaterial3D_ogei6")
 
 [node name="Fridge" type="MeshInstance3D" parent="Fridge" unique_id=837711749]
 mesh = SubResource("ArrayMesh_5iqvq")
+surface_material_override/0 = SubResource("StandardMaterial3D_7tq85")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=120691286]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48882806, 1.0568624, 0.3782813)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dblsj2fk8d87g"]
 
-[ext_resource type="PackedScene" uid="uid://c1mxqes7nafji" path="res://scenes/Objects/Door.tscn" id="1_1pwbc"]
+[ext_resource type="PackedScene" uid="uid://c1mxqes7nafji" path="res://scenes/Objects/door.tscn" id="1_1pwbc"]
 [ext_resource type="PackedScene" uid="uid://cyuc5t4t5rn3m" path="res://scenes/Player.tscn" id="1_76cw8"]
 [ext_resource type="Script" uid="uid://c40b2tx6t30x4" path="res://scripts/core/Level.gd" id="1_m00rq"]
 [ext_resource type="PackedScene" uid="uid://deg4j4rf7cpyk" path="res://scenes/Objects/Butter.tscn" id="2_j08sa"]
@@ -13,12 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="11_6owa4"]
 [ext_resource type="PackedScene" uid="uid://8iaxulc475pp" path="res://scenes/Objects/Chair.tscn" id="12_6owa4"]
 [ext_resource type="PackedScene" uid="uid://cv3vvcrhagbji" path="res://scenes/Objects/LightSwitch.tscn" id="13_n5pya"]
-[ext_resource type="PackedScene" uid="uid://c1cw42mir3sd2" path="res://scenes/Objects/Trashcan.tscn" id="14_kypp1"]
-[ext_resource type="PackedScene" uid="uid://bt4n2lrxins2r" path="res://scenes/Objects/Table.tscn" id="15_p5s5a"]
-[ext_resource type="PackedScene" uid="uid://6w1hok06rcd8" path="res://scenes/Objects/Mug.tscn" id="16_njy47"]
-[ext_resource type="PackedScene" uid="uid://d3up6xyixv7xf" path="res://scenes/Objects/Plate.tscn" id="17_njy47"]
-[ext_resource type="PackedScene" uid="uid://d1g1adfrrrx08" path="res://scenes/Objects/Shelf.tscn" id="18_j7nyf"]
-[ext_resource type="PackedScene" uid="uid://blh5e8a2hei4h" path="res://scenes/Objects/PlantPot.tscn" id="19_xbvxr"]
+[ext_resource type="PackedScene" uid="uid://c1cw42mir3sd2" path="res://scenes/Objects/trashcan.tscn" id="14_kypp1"]
+[ext_resource type="PackedScene" uid="uid://bt4n2lrxins2r" path="res://scenes/Objects/table.tscn" id="15_p5s5a"]
+[ext_resource type="PackedScene" uid="uid://6w1hok06rcd8" path="res://scenes/Objects/mug.tscn" id="16_njy47"]
+[ext_resource type="PackedScene" uid="uid://d3up6xyixv7xf" path="res://scenes/Objects/plate.tscn" id="17_njy47"]
+[ext_resource type="PackedScene" uid="uid://cnhet74pjuaou" path="res://scenes/Objects/plant_pot.tscn" id="17_xbvxr"]
+[ext_resource type="PackedScene" uid="uid://d1g1adfrrrx08" path="res://scenes/Objects/shelf.tscn" id="18_j7nyf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gckpv"]
 size = Vector3(31.758911, 0.2, 30)
@@ -215,13 +215,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.21189, 1.7563329, 14.19740
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3064, 0.42586803, 1.3863602)
 
 [node name="Door" parent="." unique_id=663709829 instance=ExtResource("1_1pwbc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02354694, 2.2545738, -0.88742995)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02354694, -0.061374187, 0.092229605)
 
 [node name="Exit" parent="." unique_id=1313272235 instance=ExtResource("8_brv20")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 139.7233, 0.51310265, -0.099508286)
 
 [node name="Door2" parent="." unique_id=2086169702 instance=ExtResource("1_1pwbc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.962177, 2.2562065, -0.89657736)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.977978, -0.086591005, 0.11925101)
 
 [node name="Cabinets" type="Node3D" parent="." unique_id=1265538215]
 
@@ -288,11 +288,11 @@ transform = Transform3D(0.5, 0, 0, 0, -0.5, -7.54979e-08, 0, 7.54979e-08, -0.5, 
 [node name="Shelf3" parent="Props" unique_id=1068332540 instance=ExtResource("18_j7nyf")]
 transform = Transform3D(0.5, 0, 0, 0, -0.5, -7.54979e-08, 0, 7.54979e-08, -0.5, 0.0075302124, 2.0431304, 5.4367085)
 
-[node name="Plantpot1" parent="Props" unique_id=1037270525 instance=ExtResource("19_xbvxr")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.7773514, 1.3455598, 28.708378)
-
 [node name="Fridge" parent="Props" unique_id=262071157 instance=ExtResource("11_6owa4")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.705872, 0.1443615, 1.0550861)
+
+[node name="PlantPot" parent="Props" unique_id=1996763502 instance=ExtResource("17_xbvxr")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.7773514, 1.3455598, 28.708378)
 
 [node name="Chairs" type="Node3D" parent="." unique_id=566234903]
 
