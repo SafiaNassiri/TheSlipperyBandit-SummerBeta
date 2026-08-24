@@ -2,12 +2,12 @@ extends CharacterBody3D
 
 @export var base_speed        : float = 5.0
 @export var sprint_multiplier : float = 1.6
-
-@export var max_butter        : int   = 6
-@export var max_friction      : float = 20.0    # INCREASED for snappier when clean
-@export var min_friction      : float = 0.3     # LOWERED for dramatic slide (was 0.8)
-@export var max_acceleration  : float = 20.0    # INCREASED for snappier turning when clean
-@export var min_acceleration  : float = 0.5     # LOWERED for harder turning when buttery (was 1.0)
+@export var max_butter        : int   = 10
+@export var max_friction      : float = 20.0
+@export var min_friction      : float = 0.3
+@export var max_acceleration  : float = 20.0
+@export var min_acceleration  : float = 0.5
+@export var countersteer_boost : float = 2.5
 
 @onready var player = $CartoonRaccoon
 
@@ -17,7 +17,6 @@ var _accel    : float = 0.0
 var _is_sliding : bool = false
 
 const GRAVITY    := 9.8
-# angle 135 make it straight up and down, angle 90 makes it so that WASD matches with map angles
 const ISO_ANGLE  := deg_to_rad(135.0)
 
 func _ready() -> void:
@@ -35,27 +34,34 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= GRAVITY * delta
 
 	var input_dir := _get_input_vector()
-	var is_moving := input_dir != Vector2.ZERO
 
 	if input_dir != Vector2.ZERO:
 		var angle   := ISO_ANGLE
 		var world_x := input_dir.x * cos(angle) - input_dir.y * sin(angle)
 		var world_z := input_dir.x * sin(angle) + input_dir.y * cos(angle)
 		var move_dir := Vector3(world_x, 0.0, world_z).normalized()
+
 		var target_speed := base_speed * (sprint_multiplier if _is_sprinting() else 1.0)
 
-		velocity.x = move_toward(velocity.x, move_dir.x * target_speed, _accel * delta * base_speed)
-		velocity.z = move_toward(velocity.z, move_dir.z * target_speed, _accel * delta * base_speed)
+		# Boost acceleration when input opposes current velocity
+		var current_horizontal := Vector3(velocity.x, 0.0, velocity.z)
+		var accel := _accel
+		if current_horizontal.length() > 0.5 and current_horizontal.normalized().dot(move_dir) < -0.3:
+			accel *= countersteer_boost
+
+		velocity.x = move_toward(velocity.x, move_dir.x * target_speed, accel * delta * base_speed)
+		velocity.z = move_toward(velocity.z, move_dir.z * target_speed, accel * delta * base_speed)
 
 		var target_angle := atan2(move_dir.x, move_dir.z)
 		rotation.y = lerp_angle(rotation.y, target_angle, 12.0 * delta)
-		
+
 		player.play_animation("Run" if _is_sprinting() else "Walk")
 		_is_sliding = false
 	else:
 		# Decelerate with friction based on butter
 		velocity.x = move_toward(velocity.x, 0.0, _friction * delta * base_speed)
 		velocity.z = move_toward(velocity.z, 0.0, _friction * delta * base_speed)
+
 		# Check if actually sliding (has velocity but no input)
 		var current_speed = Vector2(velocity.x, velocity.z).length()
 		if current_speed > 0.1:
@@ -79,18 +85,19 @@ func add_butter() -> void:
 	print("Butter collected: %d / %d - Slide distance: %.2f" % [butter_count, max_butter, _calculate_slide_distance()])
 
 func _update_physics_from_butter() -> void:
-	# Friction decreases by 2.5x per butter collected
 	if butter_count == 0:
 		_friction = max_friction
 		_accel = max_acceleration
 	else:
-		var multiplier = pow(2.5, butter_count)
-		_friction = max_friction / multiplier
-		_accel = max_acceleration / multiplier
+		# Friction: exponential decay, clamped to min_friction
+		_friction = max(max_friction / pow(2.5, butter_count), min_friction)
+
+		# Acceleration: linear falloff (keeps steering viable)
+		var t := float(butter_count) / max_butter
+		_accel = lerp(max_acceleration, min_acceleration, t)
 
 func _calculate_slide_distance() -> float:
 	if _friction <= 0:
 		return 0.0
-	# Rough estimate of how long to decelerate from base_speed to near-zero
 	var time_to_stop := (base_speed * base_speed) / (2.0 * _friction * base_speed)
 	return base_speed * time_to_stop
