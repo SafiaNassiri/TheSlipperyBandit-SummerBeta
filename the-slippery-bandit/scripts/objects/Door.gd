@@ -7,6 +7,9 @@ var _is_open : bool = false
 var _player_nearby : bool = false
 var _target_angle : float = 0.0
 var _closed_angle : float = 0.0
+var _is_moving : bool = false
+
+@onready var _collision_shape: CollisionShape3D = get_node_or_null("CollisionShape3D")
 
 func _ready() -> void:
 	_closed_angle = rotation_degrees.y
@@ -20,6 +23,11 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	rotation_degrees.y = lerp(rotation_degrees.y, _target_angle, anim_speed * delta)
 	
+	if abs(rotation_degrees.y - _target_angle) < 0.1:
+			rotation_degrees.y = _target_angle
+			_is_moving = false
+			_set_collision_disabled(false)
+	
 	if _player_nearby and Input.is_action_just_pressed("interact"):
 		var player := get_tree().get_first_node_in_group("player")
 		if player and global_position.distance_to(player.global_position) < 4.0:
@@ -30,7 +38,8 @@ func _physics_process(delta: float) -> void:
 func _toggle() -> void:
 	_is_open = not _is_open
 	_target_angle = (_closed_angle + open_rotation) if _is_open else _closed_angle
-
+	_is_moving = true
+	_set_collision_disabled(true)
 
 func _on_player_entered_range(body: Node3D) -> void:
 	if body.is_in_group("player"):
@@ -39,3 +48,7 @@ func _on_player_entered_range(body: Node3D) -> void:
 func _on_player_exited_range(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		_player_nearby = false
+
+func _set_collision_disabled(disabled: bool) -> void:
+	if _collision_shape:
+		_collision_shape.set_deferred("disabled", disabled)
