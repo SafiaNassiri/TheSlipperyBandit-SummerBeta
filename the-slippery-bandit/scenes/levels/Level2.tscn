@@ -5,15 +5,15 @@
 [ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/camera/IsometricCamera.gd" id="3_e5vnl"]
 [ext_resource type="PackedScene" uid="uid://dpuhpq3oc0ccx" path="res://scenes/menus/HUD.tscn" id="4_twycr"]
 [ext_resource type="PackedScene" uid="uid://ckuvpod5qh0o1" path="res://scenes/menus/PauseMenu.tscn" id="5_inlfm"]
-[ext_resource type="PackedScene" uid="uid://c1mxqes7nafji" path="res://scenes/Objects/Door.tscn" id="6_e5vnl"]
+[ext_resource type="PackedScene" uid="uid://cpq7usfl272mw" path="res://scenes/Objects/Door.tscn" id="6_e5vnl"]
 [ext_resource type="PackedScene" uid="uid://deg4j4rf7cpyk" path="res://scenes/Objects/Butter.tscn" id="6_twycr"]
 [ext_resource type="PackedScene" uid="uid://cv3vvcrhagbji" path="res://scenes/Objects/LightSwitch.tscn" id="8_6rin4"]
 [ext_resource type="PackedScene" uid="uid://cnhet74pjuaou" path="res://scenes/Objects/plant_pot.tscn" id="8_nkm7c"]
-[ext_resource type="PackedScene" uid="uid://c1cw42mir3sd2" path="res://scenes/Objects/Trashcan.tscn" id="9_5v643"]
-[ext_resource type="PackedScene" uid="uid://bt4n2lrxins2r" path="res://scenes/Objects/Table.tscn" id="10_o6ptl"]
-[ext_resource type="PackedScene" uid="uid://6w1hok06rcd8" path="res://scenes/Objects/Mug.tscn" id="11_mctl7"]
-[ext_resource type="PackedScene" uid="uid://d3up6xyixv7xf" path="res://scenes/Objects/Plate.tscn" id="12_fpd7d"]
-[ext_resource type="PackedScene" uid="uid://d1g1adfrrrx08" path="res://scenes/Objects/Shelf.tscn" id="13_nkm7c"]
+[ext_resource type="PackedScene" uid="uid://d06uqd55is5bv" path="res://scenes/Objects/Trashcan.tscn" id="9_5v643"]
+[ext_resource type="PackedScene" uid="uid://e10wjj3uthwx" path="res://scenes/Objects/Table.tscn" id="10_o6ptl"]
+[ext_resource type="PackedScene" uid="uid://b6xqs60ydnfcv" path="res://scenes/Objects/Mug.tscn" id="11_mctl7"]
+[ext_resource type="PackedScene" uid="uid://d3gtaj05vi0k1" path="res://scenes/Objects/Plate.tscn" id="12_fpd7d"]
+[ext_resource type="PackedScene" uid="uid://ppjjaph44qeh" path="res://scenes/Objects/Shelf.tscn" id="13_nkm7c"]
 [ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="15_o6ptl"]
 [ext_resource type="PackedScene" uid="uid://dqlw6xgamps36" path="res://scenes/Objects/Cabinet.tscn" id="16_mctl7"]
 [ext_resource type="PackedScene" uid="uid://8iaxulc475pp" path="res://scenes/Objects/Chair.tscn" id="16_nkm7c"]
@@ -29,11 +29,11 @@ size = Vector3(40, 0.2, 30)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twycr"]
 albedo_color = Color(0, 0.1882353, 0.23137255, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpd7d"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkm7c"]
 albedo_color = Color(0.94509804, 0.9490196, 0.85490197, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_e3qul"]
-material = SubResource("StandardMaterial3D_fpd7d")
+material = SubResource("StandardMaterial3D_nkm7c")
 size = Vector3(40, 3, 0.3)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fpd7d"]
@@ -42,11 +42,11 @@ data = PackedVector3Array(-20, 1.5, 0.14999999, 20, 1.5, 0.14999999, -20, -1.5, 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nkm7c"]
 data = PackedVector3Array(-20, 1.5, 0.14999999, 20, 1.5, 0.14999999, -20, -1.5, 0.14999999, 20, 1.5, 0.14999999, 20, -1.5, 0.14999999, -20, -1.5, 0.14999999, 20, 1.5, -0.14999999, -20, 1.5, -0.14999999, 20, -1.5, -0.14999999, -20, 1.5, -0.14999999, -20, -1.5, -0.14999999, 20, -1.5, -0.14999999, 20, 1.5, 0.14999999, 20, 1.5, -0.14999999, 20, -1.5, 0.14999999, 20, 1.5, -0.14999999, 20, -1.5, -0.14999999, 20, -1.5, 0.14999999, -20, 1.5, -0.14999999, -20, 1.5, 0.14999999, -20, -1.5, -0.14999999, -20, 1.5, 0.14999999, -20, -1.5, 0.14999999, -20, -1.5, -0.14999999, 20, 1.5, 0.14999999, -20, 1.5, 0.14999999, 20, 1.5, -0.14999999, -20, 1.5, 0.14999999, -20, 1.5, -0.14999999, 20, 1.5, -0.14999999, -20, -1.5, 0.14999999, 20, -1.5, 0.14999999, -20, -1.5, -0.14999999, 20, -1.5, 0.14999999, 20, -1.5, -0.14999999, -20, -1.5, -0.14999999)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkm7c"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uh3oe"]
 albedo_color = Color(0.94509804, 0.9490196, 0.85490197, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dwyyt"]
-material = SubResource("StandardMaterial3D_nkm7c")
+material = SubResource("StandardMaterial3D_uh3oe")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uh3oe"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
@@ -81,6 +81,7 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [node name="Level2" type="Node3D" unique_id=1669271570]
 script = ExtResource("1_uw6xe")
 level_number = 2
+max_butter_in_level = 8
 
 [node name="TitleLabel" type="Label" parent="." unique_id=217025956]
 offset_top = 27.0
@@ -259,7 +260,7 @@ shape = SubResource("ConcavePolygonShape3D_8n7ay")
 [node name="Butters" type="Node3D" parent="." unique_id=583022133]
 
 [node name="Butter" parent="Butters" unique_id=1107591258 instance=ExtResource("6_twycr")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.26069, 0.34704834, -30.397259)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.26069, 0.34704834, -26.477777)
 
 [node name="Butter2" parent="Butters" unique_id=1254250722 instance=ExtResource("6_twycr")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.0864563, 0.34704834, 5.5239787)
@@ -268,13 +269,13 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.08
 transform = Transform3D(-0.68281496, 0, 0.73059136, 0, 1, 0, -0.73059136, 0, -0.68281496, 29.138693, 0.34704834, 28.371452)
 
 [node name="Butter4" parent="Butters" unique_id=512807833 instance=ExtResource("6_twycr")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 91.78578, 0.34704834, -31.591091)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 99.900665, 0.34704834, -31.591091)
 
 [node name="Butter5" parent="Butters" unique_id=959960356 instance=ExtResource("6_twycr")]
-transform = Transform3D(0.54172283, 0, 0.84055716, 0, 1, 0, -0.84055716, 0, 0.54172283, 98.57636, 0.34704834, 1.819951)
+transform = Transform3D(0.54172283, 0, 0.84055716, 0, 1, 0, -0.84055716, 0, 0.54172283, 94.913956, 0.34704834, 7.783784)
 
 [node name="Butter6" parent="Butters" unique_id=2132422889 instance=ExtResource("6_twycr")]
-transform = Transform3D(-0.61711836, 0, 0.7868704, 0, 1, 0, -0.7868704, 0, -0.61711836, 22.997948, 0.34704834, 31.29507)
+transform = Transform3D(-0.61711836, 0, 0.7868704, 0, 1, 0, -0.7868704, 0, -0.61711836, 20.194178, 0.34704834, 27.27544)
 
 [node name="Butter7" parent="Butters" unique_id=837554079 instance=ExtResource("6_twycr")]
 transform = Transform3D(-0.61711836, 0, 0.7868704, 0, 1, 0, -0.7868704, 0, -0.61711836, 60.12516, 1.5636969, 19.093788)
