@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dblsj2fk8d87g"]
 
-[ext_resource type="PackedScene" uid="uid://c1mxqes7nafji" path="res://scenes/Objects/Door.tscn" id="1_1pwbc"]
+[ext_resource type="PackedScene" uid="uid://cpq7usfl272mw" path="res://scenes/Objects/Door.tscn" id="1_1pwbc"]
 [ext_resource type="PackedScene" uid="uid://cyuc5t4t5rn3m" path="res://scenes/Player.tscn" id="1_76cw8"]
 [ext_resource type="Script" uid="uid://c40b2tx6t30x4" path="res://scripts/core/Level.gd" id="1_m00rq"]
 [ext_resource type="Environment" uid="uid://biq2lmut8nith" path="res://visuals/atmosphere/HouseDay.tres" id="2_bspq0"]
@@ -8,18 +8,19 @@
 [ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/camera/IsometricCamera.gd" id="2_m00rq"]
 [ext_resource type="PackedScene" uid="uid://dpuhpq3oc0ccx" path="res://scenes/menus/HUD.tscn" id="3_brv20"]
 [ext_resource type="PackedScene" uid="uid://ckuvpod5qh0o1" path="res://scenes/menus/PauseMenu.tscn" id="4_7d7pp"]
+[ext_resource type="Texture2D" uid="uid://dhkfd2ljwd50i" path="res://visuals/texture/fabrics_0076_ao_1k.jpg" id="7_dqba7"]
 [ext_resource type="PackedScene" uid="uid://e2euqovhtuqn" path="res://scenes/levels/Exit.tscn" id="8_brv20"]
 [ext_resource type="PackedScene" uid="uid://cett2vfu5nbcq" path="res://scenes/Objects/VACooms.tscn" id="9_7d7pp"]
 [ext_resource type="PackedScene" uid="uid://dqlw6xgamps36" path="res://scenes/Objects/Cabinet.tscn" id="10_lha2r"]
 [ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="11_6owa4"]
 [ext_resource type="PackedScene" uid="uid://8iaxulc475pp" path="res://scenes/Objects/Chair.tscn" id="12_6owa4"]
 [ext_resource type="PackedScene" uid="uid://cv3vvcrhagbji" path="res://scenes/Objects/LightSwitch.tscn" id="13_n5pya"]
-[ext_resource type="PackedScene" uid="uid://c1cw42mir3sd2" path="res://scenes/Objects/Trashcan.tscn" id="14_kypp1"]
-[ext_resource type="PackedScene" uid="uid://bt4n2lrxins2r" path="res://scenes/Objects/Table.tscn" id="15_p5s5a"]
-[ext_resource type="PackedScene" uid="uid://6w1hok06rcd8" path="res://scenes/Objects/Mug.tscn" id="16_njy47"]
-[ext_resource type="PackedScene" uid="uid://d3up6xyixv7xf" path="res://scenes/Objects/Plate.tscn" id="17_njy47"]
+[ext_resource type="PackedScene" uid="uid://d06uqd55is5bv" path="res://scenes/Objects/Trashcan.tscn" id="14_kypp1"]
+[ext_resource type="PackedScene" uid="uid://e10wjj3uthwx" path="res://scenes/Objects/Table.tscn" id="15_p5s5a"]
+[ext_resource type="PackedScene" uid="uid://b6xqs60ydnfcv" path="res://scenes/Objects/Mug.tscn" id="16_njy47"]
+[ext_resource type="PackedScene" uid="uid://d3gtaj05vi0k1" path="res://scenes/Objects/Plate.tscn" id="17_njy47"]
 [ext_resource type="PackedScene" uid="uid://cnhet74pjuaou" path="res://scenes/Objects/plant_pot.tscn" id="17_xbvxr"]
-[ext_resource type="PackedScene" uid="uid://d1g1adfrrrx08" path="res://scenes/Objects/Shelf.tscn" id="18_j7nyf"]
+[ext_resource type="PackedScene" uid="uid://ppjjaph44qeh" path="res://scenes/Objects/Shelf.tscn" id="18_j7nyf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gckpv"]
 size = Vector3(31.758911, 0.2, 30)
@@ -29,6 +30,7 @@ size = Vector3(39.97168, 0.2, 30)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1pwbc"]
 albedo_color = Color(0.21568628, 0.16470589, 0.22352941, 1)
+albedo_texture = ExtResource("7_dqba7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xbvxr"]
 albedo_color = Color(0.7539839, 0.75398386, 0.75398386, 1)
@@ -220,14 +222,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.21189, 1.7563329, 14.19740
 [node name="Butter3" parent="Butters" unique_id=1509577786 instance=ExtResource("2_j08sa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3064, 0.42586803, 1.3863602)
 
-[node name="Door" parent="." unique_id=663709829 instance=ExtResource("1_1pwbc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02354694, 2.2491674, -0.8943445)
-
 [node name="Exit" parent="." unique_id=1313272235 instance=ExtResource("8_brv20")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 139.7233, 0.51310265, -0.099508286)
-
-[node name="Door2" parent="." unique_id=2086169702 instance=ExtResource("1_1pwbc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.977978, 2.2641103, -0.8907782)
 
 [node name="Cabinets" type="Node3D" parent="." unique_id=1265538215]
 
@@ -307,6 +303,14 @@ transform = Transform3D(0.99999994, 0, -1.7484554e-07, 0, 1, 0, 1.7484554e-07, 0
 
 [node name="Chair2" parent="Chairs" unique_id=1936553171 instance=ExtResource("12_6owa4")]
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 80.99313, 0.8287797, 12.846203)
+
+[node name="Doors" type="Node3D" parent="Chairs" unique_id=915747518]
+
+[node name="Door" parent="Chairs/Doors" unique_id=663709829 instance=ExtResource("1_1pwbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02354694, 2.2491674, -0.8943445)
+
+[node name="Door2" parent="Chairs/Doors" unique_id=2086169702 instance=ExtResource("1_1pwbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.977978, 2.2641103, -0.8907782)
 
 [node name="WaypointPath1" type="Node3D" parent="." unique_id=186027259]
 

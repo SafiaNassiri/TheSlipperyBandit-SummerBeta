@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d1p5prsb0r4pj"]
+
+[ext_resource type="PackedScene" uid="uid://cjoixfcqjhgdc" path="res://visuals/models/premade/bed.glb" id="1_u5mna"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6p8b"]
+albedo_color = Color(0.92941177, 0.92941177, 0.92941177, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qythx"]
+albedo_color = Color(0.9764706, 0.84705883, 0.827451, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j71or"]
+albedo_color = Color(0.6509804, 0.40392157, 0.40392157, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kj6y"]
+albedo_color = Color(0.92941177, 0.92941177, 0.92941177, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bean8"]
+albedo_color = Color(0.7607843, 0.91764706, 0.9607843, 1)
+
+[node name="Sketchfab_Scene" unique_id=895835332 instance=ExtResource("1_u5mna")]
+
+[node name="Cube_002_Material_004_0" parent="Sketchfab_model/8b84aeeee23e427c9a36a7432befe563_fbx/RootNode/Cube_002" parent_id_path=PackedInt32Array(1748857719) index="0" unique_id=860555033]
+surface_material_override/0 = SubResource("StandardMaterial3D_r6p8b")
+
+[node name="Cube_001_Material_001_0" parent="Sketchfab_model/8b84aeeee23e427c9a36a7432befe563_fbx/RootNode/Cube_001" parent_id_path=PackedInt32Array(1402621498) index="0" unique_id=177367359]
+surface_material_override/0 = SubResource("StandardMaterial3D_qythx")
+
+[node name="Cube_Material_0" parent="Sketchfab_model/8b84aeeee23e427c9a36a7432befe563_fbx/RootNode/Cube" parent_id_path=PackedInt32Array(1478142607) index="0" unique_id=1536592263]
+surface_material_override/0 = SubResource("StandardMaterial3D_j71or")
+
+[node name="Cube_003_Material_003_0" parent="Sketchfab_model/8b84aeeee23e427c9a36a7432befe563_fbx/RootNode/Cube_003" parent_id_path=PackedInt32Array(211367312) index="0" unique_id=1282897871]
+surface_material_override/0 = SubResource("StandardMaterial3D_8kj6y")
+
+[node name="Plane_Material_002_0" parent="Sketchfab_model/8b84aeeee23e427c9a36a7432befe563_fbx/RootNode/Plane" parent_id_path=PackedInt32Array(1896212181) index="0" unique_id=844209990]
+surface_material_override/0 = SubResource("StandardMaterial3D_bean8")

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ckuvpod5qh0o1" path="res://scenes/menus/PauseMenu.tscn" id="5_inlfm"]
 [ext_resource type="PackedScene" uid="uid://cpq7usfl272mw" path="res://scenes/Objects/Door.tscn" id="6_e5vnl"]
 [ext_resource type="PackedScene" uid="uid://deg4j4rf7cpyk" path="res://scenes/Objects/Butter.tscn" id="6_twycr"]
+[ext_resource type="Texture2D" uid="uid://dhkfd2ljwd50i" path="res://visuals/texture/fabrics_0076_ao_1k.jpg" id="6_uh3oe"]
 [ext_resource type="PackedScene" uid="uid://cv3vvcrhagbji" path="res://scenes/Objects/LightSwitch.tscn" id="8_6rin4"]
 [ext_resource type="PackedScene" uid="uid://cnhet74pjuaou" path="res://scenes/Objects/plant_pot.tscn" id="8_nkm7c"]
 [ext_resource type="PackedScene" uid="uid://d06uqd55is5bv" path="res://scenes/Objects/Trashcan.tscn" id="9_5v643"]
@@ -28,6 +29,7 @@ size = Vector3(40, 0.2, 30)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twycr"]
 albedo_color = Color(0, 0.1882353, 0.23137255, 1)
+albedo_texture = ExtResource("6_uh3oe")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkm7c"]
 albedo_color = Color(0.94509804, 0.9490196, 0.85490197, 1)
@@ -269,7 +271,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.08
 transform = Transform3D(-0.68281496, 0, 0.73059136, 0, 1, 0, -0.73059136, 0, -0.68281496, 29.138693, 0.34704834, 28.371452)
 
 [node name="Butter4" parent="Butters" unique_id=512807833 instance=ExtResource("6_twycr")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 99.900665, 0.34704834, -31.591091)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 96.13655, 0.34704834, -27.668228)
 
 [node name="Butter6" parent="Butters" unique_id=2132422889 instance=ExtResource("6_twycr")]
 transform = Transform3D(-0.61711836, 0, 0.7868704, 0, 1, 0, -0.7868704, 0, -0.61711836, 20.194178, 0.34704834, 27.27544)
@@ -318,7 +320,7 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 100.20827, 1.7885833
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 99.758545, 1.8053862, 32.047626)
 
 [node name="Shelf1" parent="Props" unique_id=1451426688 instance=ExtResource("13_nkm7c")]
-transform = Transform3D(0.5, 0, 0, 0, -0.5, -7.54979e-08, 0, 7.54979e-08, -0.5, 0.0075302124, 2.423955, 22.527542)
+transform = Transform3D(0.5, 0, 0, 0, -0.49999997, -9.521353e-08, 0, 7.5497894e-08, -0.6305707, 0.0075302124, 2.423955, 22.402401)
 
 [node name="Trashcan2" parent="Props" unique_id=756623163 instance=ExtResource("9_5v643")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 97.092476, 0.037651062, 32.034393)
