@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://de0vgdwftlw7"
-path="res://.godot/imported/Table.glb-662a5e5496a91a8491ff50125518e75e.scn"
+uid="uid://f5lwsf668oe5"
+path="res://.godot/imported/Fridge.glb-45ab529ca1c8730db7812534a166dfa2.scn"
 
 [deps]
 
-source_file="res://visuals/Table.glb"
-dest_files=["res://.godot/imported/Table.glb-662a5e5496a91a8491ff50125518e75e.scn"]
+source_file="res://visuals/models/Fridge.glb"
+dest_files=["res://.godot/imported/Fridge.glb-45ab529ca1c8730db7812534a166dfa2.scn"]
 
 [params]
 
@@ -42,4 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=1
+gltf/texture_map_mode=0

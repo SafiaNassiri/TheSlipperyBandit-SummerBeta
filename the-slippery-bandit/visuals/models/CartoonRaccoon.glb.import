@@ -4,18 +4,20 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://blo0cwdse8brt"
-path="res://.godot/imported/CartoonRaccoon.glb-75c43a57248fb9b36cc8e5dbdf22a100.scn"
+path="res://.godot/imported/CartoonRaccoon.glb-cbbbf44879e7a91cfe10f87d9f9c985f.scn"
 
 [deps]
 
-source_file="res://visuals/CartoonRaccoon.glb"
-dest_files=["res://.godot/imported/CartoonRaccoon.glb-75c43a57248fb9b36cc8e5dbdf22a100.scn"]
+source_file="res://visuals/models/CartoonRaccoon.glb"
+dest_files=["res://.godot/imported/CartoonRaccoon.glb-cbbbf44879e7a91cfe10f87d9f9c985f.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=0.5
 nodes/import_as_skeleton_bones=false
@@ -4162,3 +4164,4 @@ _subresources={
 }
 gltf/naming_version=2
 gltf/embedded_image_handling=1
+gltf/texture_map_mode=0

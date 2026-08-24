@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c418573uipyls"
-path="res://.godot/imported/LightSwitch.glb-040bf48a2c8f8d4230172561118689ac.scn"
+uid="uid://db0objtnpa5sm"
+path="res://.godot/imported/Shelf.glb-2cc704ae9f88aa64b711d867d1a31b38.scn"
 
 [deps]
 
-source_file="res://visuals/LightSwitch.glb"
-dest_files=["res://.godot/imported/LightSwitch.glb-040bf48a2c8f8d4230172561118689ac.scn"]
+source_file="res://visuals/models/Shelf.glb"
+dest_files=["res://.godot/imported/Shelf.glb-2cc704ae9f88aa64b711d867d1a31b38.scn"]
 
 [params]
 

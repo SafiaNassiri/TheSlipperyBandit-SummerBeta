@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://6w1hok06rcd8"]
 
-[ext_resource type="PackedScene" uid="uid://bx50oqogafrr" path="res://visuals/Mug.glb" id="1_07yp7"]
+[ext_resource type="PackedScene" uid="uid://bx50oqogafrr" path="res://visuals/models/Mug.glb" id="1_07yp7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3aus"]
 

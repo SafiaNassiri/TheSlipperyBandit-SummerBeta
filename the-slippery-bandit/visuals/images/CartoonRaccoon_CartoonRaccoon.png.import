@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4gee0rx2ld74"
-path.s3tc="res://.godot/imported/VACoomRED_VACoomRed.png-e9b3bd29d669ab26def4be09c8c79f54.s3tc.ctex"
+uid="uid://cgtaoesu4rhr1"
+path.s3tc="res://.godot/imported/CartoonRaccoon_CartoonRaccoon.png-04ca4b1ad360ba4be325ade4399bea6d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "41e6a3967c6658a56f592430cf9ab212"
+"md5": "faf8373255bc0618788483e47dacfb24"
 }
 
 [deps]
 
-source_file="res://visuals/VACoomRED_VACoomRed.png"
-dest_files=["res://.godot/imported/VACoomRED_VACoomRed.png-e9b3bd29d669ab26def4be09c8c79f54.s3tc.ctex"]
+source_file="res://visuals/images/CartoonRaccoon_CartoonRaccoon.png"
+dest_files=["res://.godot/imported/CartoonRaccoon_CartoonRaccoon.png-04ca4b1ad360ba4be325ade4399bea6d.s3tc.ctex"]
 
 [params]
 

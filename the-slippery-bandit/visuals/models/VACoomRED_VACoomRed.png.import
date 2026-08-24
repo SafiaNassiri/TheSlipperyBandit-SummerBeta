@@ -2,24 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctqq8euu5mrhj"
-path.s3tc="res://.godot/imported/Door_Door.png-87ce26dc9ab46a35c1b3d4370310a8d0.s3tc.ctex"
+uid="uid://ce32f22bv420p"
+path="res://.godot/imported/VACoomRED_VACoomRed.png-d42980e7f1509fa107f6911eb9e6388c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
-"md5": "82b647c10394ebfd0bd9bc7a4ca79358"
+"md5": "41e6a3967c6658a56f592430cf9ab212"
 }
 
 [deps]
 
-source_file="res://visuals/Door_Door.png"
-dest_files=["res://.godot/imported/Door_Door.png-87ce26dc9ab46a35c1b3d4370310a8d0.s3tc.ctex"]
+source_file="res://visuals/models/VACoomRED_VACoomRed.png"
+dest_files=["res://.godot/imported/VACoomRED_VACoomRed.png-d42980e7f1509fa107f6911eb9e6388c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -41,4 +40,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

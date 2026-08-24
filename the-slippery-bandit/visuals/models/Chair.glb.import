@@ -3,19 +3,21 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bx50oqogafrr"
-path="res://.godot/imported/Mug.glb-3f86bb1f5ed6a6e03e7f186e985a1f69.scn"
+uid="uid://dabwuouxfifsc"
+path="res://.godot/imported/Chair.glb-7161ae6db3e58b164adefb591b792db1.scn"
 
 [deps]
 
-source_file="res://visuals/Mug.glb"
-dest_files=["res://.godot/imported/Mug.glb-3f86bb1f5ed6a6e03e7f186e985a1f69.scn"]
+source_file="res://visuals/models/Chair.glb"
+dest_files=["res://.godot/imported/Chair.glb-7161ae6db3e58b164adefb591b792db1.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -40,3 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
+gltf/texture_map_mode=0

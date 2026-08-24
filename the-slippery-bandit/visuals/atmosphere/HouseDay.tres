@@ -1,0 +1,25 @@
+[gd_resource type="Environment" format=3 uid="uid://biq2lmut8nith"]
+
+[ext_resource type="Material" uid="uid://bhd3k00c8yrku" path="res://visuals/atmosphere/new_procedural_sky_material.tres" id="1_sfj7u"]
+
+[sub_resource type="Sky" id="Sky_itylh"]
+sky_material = ExtResource("1_sfj7u")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_itylh")
+sky_custom_fov = 50.0
+ambient_light_source = 3
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_white = 6.0
+ssao_enabled = true
+ssao_radius = 1.5
+ssao_intensity = 1.2
+ssao_light_affect = 0.15
+ssil_enabled = true
+ssil_intensity = 0.7
+glow_enabled = true
+glow_intensity = 0.25
+glow_bloom = 0.02
+glow_hdr_threshold = 1.2

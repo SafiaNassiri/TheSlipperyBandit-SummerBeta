@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c1mxqes7nafji" path="res://scenes/Objects/Door.tscn" id="1_1pwbc"]
 [ext_resource type="PackedScene" uid="uid://cyuc5t4t5rn3m" path="res://scenes/Player.tscn" id="1_76cw8"]
 [ext_resource type="Script" uid="uid://c40b2tx6t30x4" path="res://scripts/core/Level.gd" id="1_m00rq"]
+[ext_resource type="Environment" uid="uid://biq2lmut8nith" path="res://visuals/atmosphere/HouseDay.tres" id="2_bspq0"]
 [ext_resource type="PackedScene" uid="uid://deg4j4rf7cpyk" path="res://scenes/Objects/Butter.tscn" id="2_j08sa"]
 [ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/camera/IsometricCamera.gd" id="2_m00rq"]
 [ext_resource type="PackedScene" uid="uid://dpuhpq3oc0ccx" path="res://scenes/menus/HUD.tscn" id="3_brv20"]
@@ -24,7 +25,7 @@
 size = Vector3(31.758911, 0.2, 30)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gckpv"]
-size = Vector3(40, 0.2, 30)
+size = Vector3(39.97168, 0.2, 30)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1pwbc"]
 albedo_color = Color(0.21568628, 0.16470589, 0.22352941, 1)
@@ -44,6 +45,7 @@ albedo_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_7d7pp"]
 material = SubResource("StandardMaterial3D_bspq0")
+size = Vector3(1, 1.0493164, 1)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bspq0"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
@@ -72,19 +74,23 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [node name="Level1" type="Node3D" unique_id=1435790613]
 script = ExtResource("1_m00rq")
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2097507599]
+environment = ExtResource("2_bspq0")
+
 [node name="Player" parent="." unique_id=996823743 instance=ExtResource("1_76cw8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.59195, 0.5421833, -0.87548393)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.655557, 0.17291707, -0.87548393)
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1939644957]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 84.400826, 34.87206, 0)
 
 [node name="IsometricCamera" type="Camera3D" parent="." unique_id=345099503 groups=["isometric_camera"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, -10)
+transform = Transform3D(-0.70710677, 0.3588838, -0.6092638, 0, 0.86162907, 0.5075384, 0.70710677, 0.3588838, -0.6092638, -43.655567, 25.000742, -30.875479)
 projection = 1
 current = true
 size = 15.0
 script = ExtResource("2_m00rq")
 distance = 30.0
+metadata/_edit_lock_ = true
 
 [node name="HUD" parent="." unique_id=1785215213 instance=ExtResource("3_brv20")]
 
@@ -98,7 +104,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1205444, 0, 0)
 shape = SubResource("BoxShape3D_gckpv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1971235302]
-transform = Transform3D(0.79526496, 0, 0, 0, 1, 0, 0, 0, 1, -4.148386, 0, 0)
+transform = Transform3D(0.79526496, 0, 0, 0, 1, 0, 0, 0, 1, -4.137125, 0, 0)
 mesh = SubResource("BoxMesh_gckpv")
 surface_material_override/0 = SubResource("StandardMaterial3D_1pwbc")
 
@@ -185,7 +191,7 @@ shape = SubResource("ConcavePolygonShape3D_ijfg6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.19224, 0, -8.537249)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/WallS_L6" unique_id=1718526059]
-transform = Transform3D(0.22678395, 0, 0, 0, 3.9118896, 0, 0, 0, 30.515398, 0, 2.0054324, 8.619566)
+transform = Transform3D(0.22678395, 0, 0, 0, 3.9118896, 0, 0, 0, 30.515398, 0, 1.9089723, 8.619566)
 mesh = SubResource("BoxMesh_7d7pp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/WallS_L6" unique_id=746577356]

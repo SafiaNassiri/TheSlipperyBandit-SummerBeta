@@ -1,0 +1,18 @@
+[gd_resource type="Environment" format=3 uid="uid://cumeotwt48lkp"]
+
+[resource]
+background_mode = 1
+background_color = Color(0.101960786, 0.078431375, 0.1254902, 1)
+ambient_light_color = Color(0.16470589, 0.14117648, 0.21960784, 1)
+ambient_light_energy = 0.4
+tonemap_mode = 3
+tonemap_white = 6.0
+ssao_enabled = true
+ssao_radius = 2.0
+ssao_intensity = 2.5
+ssao_light_affect = 0.3
+ssil_enabled = true
+glow_enabled = true
+glow_intensity = 0.6
+glow_bloom = 0.05
+fog_enabled = true

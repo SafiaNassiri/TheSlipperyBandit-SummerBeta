@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi7jyp7bwuqmm"
-path.s3tc="res://.godot/imported/Door_Handle.png-78824fe1d355e53f37ea52cf45680674.s3tc.ctex"
+path.s3tc="res://.godot/imported/Door_Handle.png-75d9d74cc9b6cd241fd12f8c6fb85759.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://visuals/Door_Handle.png"
-dest_files=["res://.godot/imported/Door_Handle.png-78824fe1d355e53f37ea52cf45680674.s3tc.ctex"]
+source_file="res://visuals/images/Door_Handle.png"
+dest_files=["res://.godot/imported/Door_Handle.png-75d9d74cc9b6cd241fd12f8c6fb85759.s3tc.ctex"]
 
 [params]
 

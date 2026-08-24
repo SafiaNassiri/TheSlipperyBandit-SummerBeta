@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgtaoesu4rhr1"
-path.s3tc="res://.godot/imported/CartoonRaccoon_CartoonRaccoon.png-3340dea571e1fe73803045a347737b8c.s3tc.ctex"
+uid="uid://c8ovyda05kdon"
+path.s3tc="res://.godot/imported/Door_Door.png-c740119bb15090a2d4e1a7f6bdabb6f3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "faf8373255bc0618788483e47dacfb24"
+"md5": "82b647c10394ebfd0bd9bc7a4ca79358"
 }
 
 [deps]
 
-source_file="res://visuals/CartoonRaccoon_CartoonRaccoon.png"
-dest_files=["res://.godot/imported/CartoonRaccoon_CartoonRaccoon.png-3340dea571e1fe73803045a347737b8c.s3tc.ctex"]
+source_file="res://visuals/models/Door_Door.png"
+dest_files=["res://.godot/imported/Door_Door.png-c740119bb15090a2d4e1a7f6bdabb6f3.s3tc.ctex"]
 
 [params]
 

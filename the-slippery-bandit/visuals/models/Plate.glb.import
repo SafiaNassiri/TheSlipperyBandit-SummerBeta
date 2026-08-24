@@ -3,19 +3,21 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b5r7obdqxg32y"
-path="res://.godot/imported/Trashcan.glb-50dd3838fe39086d6d4cbe360a9743b0.scn"
+uid="uid://bgpowhb57fkpr"
+path="res://.godot/imported/Plate.glb-eee89318af03b5844d77b06debb9c6f8.scn"
 
 [deps]
 
-source_file="res://visuals/Trashcan.glb"
-dest_files=["res://.godot/imported/Trashcan.glb-50dd3838fe39086d6d4cbe360a9743b0.scn"]
+source_file="res://visuals/models/Plate.glb"
+dest_files=["res://.godot/imported/Plate.glb-eee89318af03b5844d77b06debb9c6f8.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -40,3 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
+gltf/texture_map_mode=0

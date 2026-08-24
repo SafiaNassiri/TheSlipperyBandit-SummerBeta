@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cnhet74pjuaou"]
 
-[ext_resource type="PackedScene" uid="uid://bef8lr4u327fb" path="res://visuals/PlantPot.glb" id="1_ak77a"]
+[ext_resource type="PackedScene" uid="uid://bef8lr4u327fb" path="res://visuals/models/PlantPot.glb" id="1_ak77a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dnjgo"]
 

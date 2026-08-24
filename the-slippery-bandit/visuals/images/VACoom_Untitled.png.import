@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgcwjb2iylqcf"
-path.s3tc="res://.godot/imported/VACoom_Untitled.png-a22dd529a27c0ff574840e928ba60aa2.s3tc.ctex"
+path.s3tc="res://.godot/imported/VACoom_Untitled.png-406cabfad7e59345d38964110472b992.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://visuals/VACoom_Untitled.png"
-dest_files=["res://.godot/imported/VACoom_Untitled.png-a22dd529a27c0ff574840e928ba60aa2.s3tc.ctex"]
+source_file="res://visuals/images/VACoom_Untitled.png"
+dest_files=["res://.godot/imported/VACoom_Untitled.png-406cabfad7e59345d38964110472b992.s3tc.ctex"]
 
 [params]
 

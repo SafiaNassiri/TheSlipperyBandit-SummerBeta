@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://egufg2b8bn60"]
 
-[ext_resource type="Texture2D" uid="uid://cgtaoesu4rhr1" path="res://visuals/CartoonRaccoon_CartoonRaccoon.png" id="1_rdh0r"]
+[ext_resource type="Texture2D" uid="uid://cgtaoesu4rhr1" path="res://visuals/images/CartoonRaccoon_CartoonRaccoon.png" id="1_rdh0r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdh0r"]
 cull_mode = 1

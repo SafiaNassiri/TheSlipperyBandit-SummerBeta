@@ -3,21 +3,23 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bxlimcti3p6ml"
-path="res://.godot/imported/VACoom.glb-2ea55e02199b58e721980e0e0f484df6.scn"
+uid="uid://b0s2150kh74tc"
+path="res://.godot/imported/Cabinet.glb-cf9512a9a92619826728a71c5422df77.scn"
 
 [deps]
 
-source_file="res://visuals/VACoom.glb"
-dest_files=["res://.godot/imported/VACoom.glb-2ea55e02199b58e721980e0e0f484df6.scn"]
+source_file="res://visuals/models/Cabinet.glb"
+dest_files=["res://.godot/imported/Cabinet.glb-cf9512a9a92619826728a71c5422df77.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
-nodes/root_scale=0.5
+nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
@@ -40,3 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
+gltf/texture_map_mode=0
