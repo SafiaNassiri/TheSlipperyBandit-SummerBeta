@@ -53,7 +53,7 @@ size = Vector3(0.25263977, 3.9224243, 30.459106)
 script = ExtResource("1_m00rq")
 
 [node name="Player" parent="." unique_id=996823743 instance=ExtResource("1_76cw8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.272521, 0.5421833, -0.87548393)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 60.94452, 0.5421833, -0.87548393)
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1939644957]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 84.400826, 34.87206, 0)
@@ -295,18 +295,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.961, 0, 8.763254)
 [node name="Waypoint3" type="Node3D" parent="WaypointPath1" unique_id=1802090954]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.242828, 0, -6.179839)
 
-[node name="WaypointPath2" type="Node3D" parent="." unique_id=1051162372]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.4181, 0, -4.677025)
-
-[node name="Waypoint1" type="Node3D" parent="WaypointPath2" unique_id=691819513]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.64143, 0, -5.9128685)
-
-[node name="Waypoint2" type="Node3D" parent="WaypointPath2" unique_id=1495513174]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.961, 0, 8.763254)
-
-[node name="Waypoint3" type="Node3D" parent="WaypointPath2" unique_id=1265810660]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.242828, 0, -6.179839)
-
 [node name="WaypointPath3" type="Node3D" parent="." unique_id=404216635]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.903305, 0, 2.7868652)
 
@@ -319,18 +307,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.961, 0, 8.763254)
 [node name="Waypoint3" type="Node3D" parent="WaypointPath3" unique_id=591991687]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.242828, 0, -6.179839)
 
+[node name="Waypoint4" type="Node3D" parent="WaypointPath3" unique_id=739470910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7986298, 0, 6.06322)
+
+[node name="Waypoint5" type="Node3D" parent="WaypointPath3" unique_id=1658964702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.457138, 0, -6.179839)
+
+[node name="Waypoint6" type="Node3D" parent="WaypointPath3" unique_id=285099758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.556427, 0, -13.720821)
+
 [node name="VACooms" type="Node3D" parent="." unique_id=23388049]
 
 [node name="VaCoom1" parent="VACooms" unique_id=1460798556 instance=ExtResource("9_7d7pp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.866957, 0, -5.5413914)
 waypoints = Array[NodePath]([NodePath("../../WaypointPath1/Waypoint1"), NodePath("../../WaypointPath1/Waypoint2"), NodePath("../../WaypointPath1/Waypoint3")])
 
-[node name="VaCoom2" parent="VACooms" unique_id=1131986754 instance=ExtResource("9_7d7pp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.25163, 0, -5.5413914)
-move_speed = 4.5
-waypoints = Array[NodePath]([NodePath("../../WaypointPath2/Waypoint1"), NodePath("../../WaypointPath2/Waypoint2"), NodePath("../../WaypointPath2/Waypoint3")])
-
 [node name="VaCoom3" parent="VACooms" unique_id=921368470 instance=ExtResource("9_7d7pp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.066925, 0, -5.5413914)
 move_speed = 4.5
-waypoints = Array[NodePath]([NodePath("../VaCoom1"), NodePath("../VaCoom2"), NodePath(".")])
+waypoints = Array[NodePath]([NodePath("../../WaypointPath3/Waypoint1"), NodePath("../../WaypointPath3/Waypoint2"), NodePath("../../WaypointPath3/Waypoint3"), NodePath("../../WaypointPath3/Waypoint4"), NodePath("../../WaypointPath3/Waypoint5"), NodePath("../../WaypointPath3/Waypoint6")])
