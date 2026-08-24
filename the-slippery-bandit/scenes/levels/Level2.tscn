@@ -5,15 +5,15 @@
 [ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/camera/IsometricCamera.gd" id="3_e5vnl"]
 [ext_resource type="PackedScene" uid="uid://dpuhpq3oc0ccx" path="res://scenes/menus/HUD.tscn" id="4_twycr"]
 [ext_resource type="PackedScene" uid="uid://ckuvpod5qh0o1" path="res://scenes/menus/PauseMenu.tscn" id="5_inlfm"]
-[ext_resource type="PackedScene" uid="uid://c1mxqes7nafji" path="res://scenes/Objects/door.tscn" id="6_e5vnl"]
+[ext_resource type="PackedScene" uid="uid://c1mxqes7nafji" path="res://scenes/Objects/Door.tscn" id="6_e5vnl"]
 [ext_resource type="PackedScene" uid="uid://deg4j4rf7cpyk" path="res://scenes/Objects/Butter.tscn" id="6_twycr"]
 [ext_resource type="PackedScene" uid="uid://cv3vvcrhagbji" path="res://scenes/Objects/LightSwitch.tscn" id="8_6rin4"]
 [ext_resource type="PackedScene" uid="uid://cnhet74pjuaou" path="res://scenes/Objects/plant_pot.tscn" id="8_nkm7c"]
-[ext_resource type="PackedScene" uid="uid://c1cw42mir3sd2" path="res://scenes/Objects/trashcan.tscn" id="9_5v643"]
-[ext_resource type="PackedScene" uid="uid://bt4n2lrxins2r" path="res://scenes/Objects/table.tscn" id="10_o6ptl"]
-[ext_resource type="PackedScene" uid="uid://6w1hok06rcd8" path="res://scenes/Objects/mug.tscn" id="11_mctl7"]
-[ext_resource type="PackedScene" uid="uid://d3up6xyixv7xf" path="res://scenes/Objects/plate.tscn" id="12_fpd7d"]
-[ext_resource type="PackedScene" uid="uid://d1g1adfrrrx08" path="res://scenes/Objects/shelf.tscn" id="13_nkm7c"]
+[ext_resource type="PackedScene" uid="uid://c1cw42mir3sd2" path="res://scenes/Objects/Trashcan.tscn" id="9_5v643"]
+[ext_resource type="PackedScene" uid="uid://bt4n2lrxins2r" path="res://scenes/Objects/Table.tscn" id="10_o6ptl"]
+[ext_resource type="PackedScene" uid="uid://6w1hok06rcd8" path="res://scenes/Objects/Mug.tscn" id="11_mctl7"]
+[ext_resource type="PackedScene" uid="uid://d3up6xyixv7xf" path="res://scenes/Objects/Plate.tscn" id="12_fpd7d"]
+[ext_resource type="PackedScene" uid="uid://d1g1adfrrrx08" path="res://scenes/Objects/Shelf.tscn" id="13_nkm7c"]
 [ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="15_o6ptl"]
 [ext_resource type="PackedScene" uid="uid://dqlw6xgamps36" path="res://scenes/Objects/Cabinet.tscn" id="16_mctl7"]
 [ext_resource type="PackedScene" uid="uid://8iaxulc475pp" path="res://scenes/Objects/Chair.tscn" id="16_nkm7c"]
@@ -285,16 +285,16 @@ transform = Transform3D(0.80695003, 0, 0.59061986, 0, 1, 0, -0.59061986, 0, 0.80
 [node name="Doors" type="Node3D" parent="." unique_id=984045859]
 
 [node name="Door1" parent="Doors" unique_id=1262857097 instance=ExtResource("6_e5vnl")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 50.37512, 2.2545738, 0.1245656)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 49.38064, 2.2545738, 0.1245656)
 
 [node name="Door2" parent="Doors" unique_id=663709829 instance=ExtResource("6_e5vnl")]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 35.471004, 0.062728405, -10.902475)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 35.471004, 2.2823753, -9.918113)
 
 [node name="Door3" parent="Doors" unique_id=1514901348 instance=ExtResource("6_e5vnl")]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 90.1172, 0.07745123, -14.188985)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 90.1172, 2.235553, -13.176802)
 
 [node name="Door4" parent="Doors" unique_id=759756118 instance=ExtResource("6_e5vnl")]
-transform = Transform3D(1, 0, 3.019916e-07, 0, 1, 0, -3.019916e-07, 0, 1, 25.266035, 0.15915132, 11.081024)
+transform = Transform3D(1, 0, 3.019916e-07, 0, 1, 0, -3.019916e-07, 0, 1, 25.266035, 2.2865963, 10.061064)
 
 [node name="Props" type="Node3D" parent="." unique_id=134084837]
 
@@ -302,10 +302,10 @@ transform = Transform3D(1, 0, 3.019916e-07, 0, 1, 0, -3.019916e-07, 0, 1, 25.266
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.7773514, -0.058618546, 31.789925)
 
 [node name="Lightswitch1" parent="Props" unique_id=1217004636 instance=ExtResource("8_6rin4")]
-transform = Transform3D(-2.1855694e-08, -0.5, -2.1855694e-08, 0, -2.1855694e-08, 0.5, -0.5, 2.1855694e-08, 9.553427e-16, 35.55102, 2.8802538, -12.616323)
+transform = Transform3D(-2.1855694e-08, -0.5, -2.1855694e-08, 0, -2.1855694e-08, 0.5, -0.5, 2.1855694e-08, 9.553427e-16, 35.55992, 2.8802538, -12.616323)
 
 [node name="Lightswitch2" parent="Props" unique_id=1070948722 instance=ExtResource("8_6rin4")]
-transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 52.00383, 2.9832041, 0.06321198)
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 52.00383, 2.9832041, 0.21870577)
 
 [node name="Trashcan1" parent="Props" unique_id=1797922898 instance=ExtResource("9_5v643")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 99.56031, 0.037651062, -1.4158478)

@@ -1,15 +1,26 @@
 [gd_scene format=3 uid="uid://c1mxqes7nafji"]
 
-[ext_resource type="PackedScene" uid="uid://btmyc8eky2ebi" path="res://visuals/Door.glb" id="1_vqt4l"]
+[ext_resource type="Script" uid="uid://bi5rnywmbgynr" path="res://scripts/objects/Door.gd" id="1_yfgsh"]
+[ext_resource type="PackedScene" uid="uid://btmyc8eky2ebi" path="res://visuals/Door.glb" id="2_hbq88"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eg30q"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfgsh"]
+size = Vector3(0.16699219, 3.9700928, 1.9664307)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s6qqm"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_eyv6f"]
+size = Vector3(1.4609985, 4.045929, 2.4375)
 
-[node name="Door" unique_id=193825954 instance=ExtResource("1_vqt4l")]
+[node name="Door" type="StaticBody3D" unique_id=663709829]
+script = ExtResource("1_yfgsh")
 
-[node name="Cube" parent="." index="0" unique_id=2069971124]
-surface_material_override/0 = SubResource("StandardMaterial3D_eg30q")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=488098664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.001953125, -0.2261731, 0.9963989)
+shape = SubResource("BoxShape3D_yfgsh")
 
-[node name="Circle" parent="." index="1" unique_id=2138623674]
-surface_material_override/0 = SubResource("StandardMaterial3D_s6qqm")
+[node name="InteractZone" type="Area3D" parent="." unique_id=744194694]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractZone" unique_id=733605627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027435303, -0.2098453, 1.1308594)
+shape = SubResource("BoxShape3D_eyv6f")
+
+[node name="Door" parent="." unique_id=931913740 instance=ExtResource("2_hbq88")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -2.25, 0.989)

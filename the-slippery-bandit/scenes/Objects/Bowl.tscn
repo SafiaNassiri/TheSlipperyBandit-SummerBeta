@@ -3,8 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://cexlxj13wteu8" path="res://visuals/Bowl.glb" id="1_fnu1l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ib4nb"]
+cull_mode = 2
 
 [node name="Bowl" unique_id=1049776473 instance=ExtResource("1_fnu1l")]
 
-[node name="Circle" parent="." index="0" unique_id=1382658579]
+[node name="Circle" parent="." index="0" unique_id=1791956206]
 surface_material_override/0 = SubResource("StandardMaterial3D_ib4nb")
