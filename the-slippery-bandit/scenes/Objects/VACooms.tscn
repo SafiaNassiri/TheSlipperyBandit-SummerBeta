@@ -27,3 +27,8 @@ shape = SubResource("SphereShape3D_h71f4")
 
 [node name="VACoomRED" parent="." unique_id=1872988539 instance=ExtResource("3_xvspb")]
 visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=128983825]
+light_color = Color(0.69106877, 0.98581415, 0.31206843, 1)
+light_energy = 5.966
+light_size = 0.138

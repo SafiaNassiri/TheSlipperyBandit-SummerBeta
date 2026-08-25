@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dblsj2fk8d87g"]
 
-[ext_resource type="PackedScene" uid="uid://c1mxqes7nafji" path="res://scenes/Objects/Door.tscn" id="1_1pwbc"]
+[ext_resource type="PackedScene" uid="uid://cpq7usfl272mw" path="res://scenes/Objects/Door.tscn" id="1_1pwbc"]
 [ext_resource type="PackedScene" uid="uid://cyuc5t4t5rn3m" path="res://scenes/Player.tscn" id="1_76cw8"]
 [ext_resource type="Script" uid="uid://c40b2tx6t30x4" path="res://scripts/core/Level.gd" id="1_m00rq"]
 [ext_resource type="Environment" uid="uid://biq2lmut8nith" path="res://visuals/atmosphere/HouseDay.tres" id="2_bspq0"]
@@ -14,12 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="11_6owa4"]
 [ext_resource type="PackedScene" uid="uid://8iaxulc475pp" path="res://scenes/Objects/Chair.tscn" id="12_6owa4"]
 [ext_resource type="PackedScene" uid="uid://cv3vvcrhagbji" path="res://scenes/Objects/LightSwitch.tscn" id="13_n5pya"]
-[ext_resource type="PackedScene" uid="uid://c1cw42mir3sd2" path="res://scenes/Objects/Trashcan.tscn" id="14_kypp1"]
-[ext_resource type="PackedScene" uid="uid://bt4n2lrxins2r" path="res://scenes/Objects/Table.tscn" id="15_p5s5a"]
-[ext_resource type="PackedScene" uid="uid://6w1hok06rcd8" path="res://scenes/Objects/Mug.tscn" id="16_njy47"]
-[ext_resource type="PackedScene" uid="uid://d3up6xyixv7xf" path="res://scenes/Objects/Plate.tscn" id="17_njy47"]
+[ext_resource type="PackedScene" uid="uid://d06uqd55is5bv" path="res://scenes/Objects/Trashcan.tscn" id="14_kypp1"]
+[ext_resource type="PackedScene" uid="uid://e10wjj3uthwx" path="res://scenes/Objects/Table.tscn" id="15_p5s5a"]
+[ext_resource type="PackedScene" uid="uid://b6xqs60ydnfcv" path="res://scenes/Objects/Mug.tscn" id="16_njy47"]
+[ext_resource type="PackedScene" uid="uid://d3gtaj05vi0k1" path="res://scenes/Objects/Plate.tscn" id="17_njy47"]
 [ext_resource type="PackedScene" uid="uid://cnhet74pjuaou" path="res://scenes/Objects/plant_pot.tscn" id="17_xbvxr"]
-[ext_resource type="PackedScene" uid="uid://d1g1adfrrrx08" path="res://scenes/Objects/Shelf.tscn" id="18_j7nyf"]
+[ext_resource type="PackedScene" uid="uid://ppjjaph44qeh" path="res://scenes/Objects/Shelf.tscn" id="18_j7nyf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gckpv"]
 size = Vector3(31.758911, 0.2, 30)
@@ -310,34 +310,34 @@ transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 
 
 [node name="WaypointPath1" type="Node3D" parent="." unique_id=186027259]
 
-[node name="Waypoint1" type="Node3D" parent="WaypointPath1" unique_id=940831014]
+[node name="Waypoint1" type="Marker3D" parent="WaypointPath1" unique_id=1725461898]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.64143, 0, -5.9128685)
 
-[node name="Waypoint2" type="Node3D" parent="WaypointPath1" unique_id=1994124262]
+[node name="Waypoint2" type="Marker3D" parent="WaypointPath1" unique_id=674653601]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.961, 0, 8.763254)
 
-[node name="Waypoint3" type="Node3D" parent="WaypointPath1" unique_id=1802090954]
+[node name="Waypoint3" type="Marker3D" parent="WaypointPath1" unique_id=1022007670]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.242828, 0, -6.179839)
 
 [node name="WaypointPath3" type="Node3D" parent="." unique_id=404216635]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.903305, 0, 2.7868652)
 
-[node name="Waypoint1" type="Node3D" parent="WaypointPath3" unique_id=2102207539]
+[node name="Waypoint1" type="Marker3D" parent="WaypointPath3" unique_id=59767360]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.64143, 0, -5.9128685)
 
-[node name="Waypoint2" type="Node3D" parent="WaypointPath3" unique_id=1537543574]
+[node name="Waypoint2" type="Marker3D" parent="WaypointPath3" unique_id=738816240]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.961, 0, 8.763254)
 
-[node name="Waypoint3" type="Node3D" parent="WaypointPath3" unique_id=591991687]
+[node name="Waypoint3" type="Marker3D" parent="WaypointPath3" unique_id=1717557240]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.242828, 0, -6.179839)
 
-[node name="Waypoint4" type="Node3D" parent="WaypointPath3" unique_id=739470910]
+[node name="Waypoint4" type="Marker3D" parent="WaypointPath3" unique_id=365512274]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7986298, 0, 6.06322)
 
-[node name="Waypoint5" type="Node3D" parent="WaypointPath3" unique_id=1658964702]
+[node name="Waypoint5" type="Marker3D" parent="WaypointPath3" unique_id=2104264927]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.457138, 0, -6.179839)
 
-[node name="Waypoint6" type="Node3D" parent="WaypointPath3" unique_id=285099758]
+[node name="Waypoint6" type="Marker3D" parent="WaypointPath3" unique_id=1471851032]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.556427, 0, -13.720821)
 
 [node name="VACooms" type="Node3D" parent="." unique_id=23388049]
