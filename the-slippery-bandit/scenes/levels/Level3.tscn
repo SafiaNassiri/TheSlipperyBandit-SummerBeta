@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dqlw6xgamps36" path="res://scenes/Objects/Cabinet.tscn" id="9_vnuxi"]
 [ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="10_bs2pm"]
 [ext_resource type="PackedScene" uid="uid://deg4j4rf7cpyk" path="res://scenes/Objects/Butter.tscn" id="11_bs2pm"]
+[ext_resource type="PackedScene" uid="uid://bwjs66ewcslfy" path="res://scenes/Objects/premade/vent.tscn" id="13_cw4sw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3825t"]
 size = Vector3(50.489937, 0.2, 98.43412)
@@ -662,6 +663,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.83011, 0.66485596, -39.645
 
 [node name="Cabinet12" parent="Props/Cabinets" unique_id=2102604610 instance=ExtResource("9_vnuxi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.77009, 0.66485596, -39.6453)
+
+[node name="Vents" type="Node3D" parent="Props" unique_id=888497731]
+
+[node name="Vent" parent="Props/Vents" unique_id=170010278 instance=ExtResource("13_cw4sw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6590347, 0.57089233, 6.1404448)
+
+[node name="Vent2" parent="Props/Vents" unique_id=981357527 instance=ExtResource("13_cw4sw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.657784, 0.57089233, -33.428036)
+
+[node name="Vent3" parent="Props/Vents" unique_id=735635498 instance=ExtResource("13_cw4sw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.297035, 0.57089233, -33.428036)
+
+[node name="Vent4" parent="Props/Vents" unique_id=768507201 instance=ExtResource("13_cw4sw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.472664, 0.57089233, -39.673275)
+
+[node name="Vent5" parent="Props/Vents" unique_id=132092617 instance=ExtResource("13_cw4sw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.331184, 0.57089233, -23.464169)
 
 [node name="Butter" type="Node3D" parent="." unique_id=1526898158]
 
