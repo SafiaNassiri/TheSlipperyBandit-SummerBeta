@@ -23,10 +23,8 @@ text = "Paused"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SettingsMenu" parent="." unique_id=1155707233 instance=ExtResource("2_5c87e")]
-visible = false
-
-[node name="ResumeButton" type="TextureButton" parent="." unique_id=898681163]
+[node name="ResumeButton" type="TextureButton" parent="Panel" unique_id=898681163]
+layout_mode = 0
 offset_left = 431.0
 offset_top = 257.0
 offset_right = 851.0
@@ -38,7 +36,8 @@ texture_hover = ExtResource("3_muldy")
 texture_disabled = ExtResource("3_muldy")
 texture_focused = ExtResource("3_muldy")
 
-[node name="RestartButton" type="TextureButton" parent="." unique_id=418526801]
+[node name="RestartButton" type="TextureButton" parent="Panel" unique_id=418526801]
+layout_mode = 0
 offset_left = 431.0
 offset_top = 347.0
 offset_right = 851.0
@@ -50,7 +49,8 @@ texture_hover = ExtResource("4_kkpll")
 texture_disabled = ExtResource("4_kkpll")
 texture_focused = ExtResource("4_kkpll")
 
-[node name="SettingsButton" type="TextureButton" parent="." unique_id=1091327855]
+[node name="SettingsButton" type="TextureButton" parent="Panel" unique_id=1091327855]
+layout_mode = 0
 offset_left = 431.0
 offset_top = 437.0
 offset_right = 851.0
@@ -62,7 +62,8 @@ texture_hover = ExtResource("5_jf1wh")
 texture_disabled = ExtResource("5_jf1wh")
 texture_focused = ExtResource("5_jf1wh")
 
-[node name="MainMenuButton" type="TextureButton" parent="." unique_id=1164440128]
+[node name="MainMenuButton" type="TextureButton" parent="Panel" unique_id=1164440128]
+layout_mode = 0
 offset_left = 431.0
 offset_top = 527.0
 offset_right = 851.0
@@ -73,3 +74,6 @@ texture_pressed = ExtResource("6_scaad")
 texture_hover = ExtResource("6_scaad")
 texture_disabled = ExtResource("6_scaad")
 texture_focused = ExtResource("6_scaad")
+
+[node name="SettingsMenu" parent="." unique_id=1155707233 instance=ExtResource("2_5c87e")]
+visible = false
