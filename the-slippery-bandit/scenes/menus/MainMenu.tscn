@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://tjwo6qibpgrd" path="res://scripts/ui/MainMenu.gd" id="1_wlpbi"]
 [ext_resource type="PackedScene" uid="uid://d1cmfbdgitto3" path="res://scenes/menus/SettingsMenu.tscn" id="2_bqojv"]
+[ext_resource type="AudioStream" uid="uid://c88mmjlgjipg" path="res://sounds/music/MainMenu.wav" id="3_ldf1p"]
 
 [node name="MainMenu" type="Control" unique_id=1474450685]
 layout_mode = 3
@@ -57,3 +58,6 @@ layout_mode = 2
 text = "QUIT"
 
 [node name="SettingsMenu" parent="." unique_id=1155707233 instance=ExtResource("2_bqojv")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=726129072]
+stream = ExtResource("3_ldf1p")

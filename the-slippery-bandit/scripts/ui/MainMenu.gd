@@ -5,6 +5,7 @@ extends Control
 @onready var level_select_button : Button = $ButtonContainer/LevelSelectButton
 @onready var quit_button : Button = $ButtonContainer/QuitButton
 @onready var settings_menu = $SettingsMenu
+@onready var music = $AudioStreamPlayer
 
 func _ready() -> void:
 	get_tree().paused = false
@@ -13,6 +14,7 @@ func _ready() -> void:
 	settings_button.pressed.connect(_on_settings_pressed)
 	level_select_button.pressed.connect(_on_level_select_pressed)
 	quit_button.pressed.connect(_on_quit_pressed)
+	music.play(0)
 
 func _on_play_pressed() -> void:
 	GameManager.start_level(1)

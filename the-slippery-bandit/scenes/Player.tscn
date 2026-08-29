@@ -5,9 +5,10 @@
 [ext_resource type="Script" uid="uid://7o2fpl40wqnj" path="res://scripts/Raccoon.gd" id="3_3li8b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3li8b"]
-size = Vector3(0.7, 1, 2.9335938)
+size = Vector3(1.3668579, 1.3135986, 5.342346)
 
 [node name="Player" type="CharacterBody3D" unique_id=996823743 groups=["player"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_3vyb7")
 
 [node name="CameraTarget" type="Node3D" parent="." unique_id=1661245546]
@@ -17,5 +18,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016559362, 0, -0.008867264
 script = ExtResource("3_3li8b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1142037974]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.026367188)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.023602322, 0.6567993, 0.18093872)
 shape = SubResource("BoxShape3D_3li8b")

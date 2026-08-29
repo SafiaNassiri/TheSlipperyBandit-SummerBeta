@@ -5,5 +5,16 @@
 
 [node name="CartoonRaccoon" unique_id=1709922807 instance=ExtResource("1_5q464")]
 
-[node name="Sphere" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1422898741) index="0" unique_id=79335072]
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1632493) index="0" unique_id=1756694949]
+bones/9/rotation = Quaternion(0.0646396, -0.020508043, -0.66186494, 0.74654937)
+bones/14/rotation = Quaternion(0.035584077, -3.4329187e-08, 0.66532314, 0.74570704)
+bones/15/rotation = Quaternion(0.50539035, -0.08710228, -0.064816475, 0.8560331)
+bones/19/rotation = Quaternion(0.18278943, -0.0037220002, 0.8049436, 0.56448203)
+bones/24/rotation = Quaternion(0.18381327, 0.007078813, -0.8076451, 0.56024283)
+bones/30/rotation = Quaternion(-0.19633986, 2.0542922e-14, 7.645754e-08, 0.9805359)
+bones/31/rotation = Quaternion(0.1629989, -5.6586602e-14, -6.347411e-08, 0.98662627)
+bones/32/rotation = Quaternion(0.1610376, 3.1869066e-14, -6.2710356e-08, 0.9869483)
+bones/34/rotation = Quaternion(0.168275, -3.109752e-14, -6.5528674e-08, 0.98574007)
+
+[node name="Sphere" parent="Armature/Skeleton3D" index="0" unique_id=2050389733]
 material_override = ExtResource("2_5q464")
