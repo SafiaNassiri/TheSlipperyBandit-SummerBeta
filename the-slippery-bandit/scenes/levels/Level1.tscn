@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cnhet74pjuaou" path="res://scenes/Objects/plant_pot.tscn" id="17_xbvxr"]
 [ext_resource type="PackedScene" uid="uid://ppjjaph44qeh" path="res://scenes/Objects/Shelf.tscn" id="18_j7nyf"]
 [ext_resource type="PackedScene" uid="uid://bwjs66ewcslfy" path="res://scenes/Objects/vent.tscn" id="21_usw5k"]
+[ext_resource type="AudioStream" uid="uid://bn472tkio7sja" path="res://sounds/music/Level1.wav" id="23_jsker"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gckpv"]
 size = Vector3(31.758911, 0.2, 30)
@@ -387,3 +388,6 @@ waypoints = Array[NodePath]([NodePath("../../WaypointPath1/Waypoint1"), NodePath
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.066925, 0, -5.5413914)
 move_speed = 4.5
 waypoints = Array[NodePath]([NodePath("../../WaypointPath3/Waypoint1"), NodePath("../../WaypointPath3/Waypoint2"), NodePath("../../WaypointPath3/Waypoint3"), NodePath("../../WaypointPath3/Waypoint4"), NodePath("../../WaypointPath3/Waypoint5"), NodePath("../../WaypointPath3/Waypoint6")])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1765523932]
+stream = ExtResource("23_jsker")

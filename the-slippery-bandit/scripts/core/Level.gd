@@ -3,6 +3,7 @@ extends Node3D
 @onready var hud : CanvasLayer = $HUD
 @export var level_number : int = 1
 @export var max_butter_in_level : int = 6 # change per level in inspector
+@onready var music = $AudioStreamPlayer
 
 var butter_total : int = 0
 var butter_collected : int = 0
@@ -25,6 +26,8 @@ func _ready() -> void:
 	
 	if hud:
 		hud.init(butter_total, level_number)
+		
+	music.play(0)
 
 func _on_butter_collected() -> void:
 	butter_collected += 1
