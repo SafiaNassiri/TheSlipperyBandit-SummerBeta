@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/camera/IsometricCamera.gd" id="3_6qpip"]
 [ext_resource type="PackedScene" uid="uid://dpuhpq3oc0ccx" path="res://scenes/menus/HUD.tscn" id="4_f3pvd"]
 [ext_resource type="PackedScene" uid="uid://ckuvpod5qh0o1" path="res://scenes/menus/PauseMenu.tscn" id="5_x3k3d"]
-[ext_resource type="PackedScene" uid="uid://d1p5prsb0r4pj" path="res://scenes/Objects/premade/bed1.tscn" id="6_6qpip"]
+[ext_resource type="PackedScene" path="res://scenes/Objects/premade/bed1.tscn" id="6_6qpip"]
 [ext_resource type="Texture2D" uid="uid://dhkfd2ljwd50i" path="res://visuals/texture/fabrics_0076_ao_1k.jpg" id="6_i2tsv"]
 [ext_resource type="PackedScene" uid="uid://cpq7usfl272mw" path="res://scenes/Objects/Door.tscn" id="7_f3pvd"]
 [ext_resource type="PackedScene" uid="uid://e10wjj3uthwx" path="res://scenes/Objects/Table.tscn" id="8_stl8g"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dqlw6xgamps36" path="res://scenes/Objects/Cabinet.tscn" id="9_vnuxi"]
 [ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="10_bs2pm"]
 [ext_resource type="PackedScene" uid="uid://deg4j4rf7cpyk" path="res://scenes/Objects/Butter.tscn" id="11_bs2pm"]
-[ext_resource type="PackedScene" uid="uid://bwjs66ewcslfy" path="res://scenes/Objects/premade/vent.tscn" id="13_cw4sw"]
+[ext_resource type="PackedScene" uid="uid://bwjs66ewcslfy" path="res://scenes/Objects/vent.tscn" id="13_cw4sw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3825t"]
 size = Vector3(50.489937, 0.2, 98.43412)

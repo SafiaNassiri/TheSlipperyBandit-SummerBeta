@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://d3gtaj05vi0k1" path="res://scenes/Objects/Plate.tscn" id="17_njy47"]
 [ext_resource type="PackedScene" uid="uid://cnhet74pjuaou" path="res://scenes/Objects/plant_pot.tscn" id="17_xbvxr"]
 [ext_resource type="PackedScene" uid="uid://ppjjaph44qeh" path="res://scenes/Objects/Shelf.tscn" id="18_j7nyf"]
-[ext_resource type="PackedScene" uid="uid://bwjs66ewcslfy" path="res://scenes/Objects/premade/vent.tscn" id="21_usw5k"]
+[ext_resource type="PackedScene" uid="uid://bwjs66ewcslfy" path="res://scenes/Objects/vent.tscn" id="21_usw5k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gckpv"]
 size = Vector3(31.758911, 0.2, 30)

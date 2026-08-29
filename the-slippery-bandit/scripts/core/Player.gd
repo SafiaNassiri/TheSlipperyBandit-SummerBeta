@@ -74,7 +74,14 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _get_input_vector() -> Vector2:
-	return Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	
+	# Debug: Print what keys are mapped
+	if input != Vector2.ZERO:
+		print("Input detected. ui_up pressed: ", Input.is_action_pressed("ui_up"))
+		print("Current ui_up events: ", InputMap.action_get_events("ui_up"))
+	
+	return input
 
 func _is_sprinting() -> bool:
 	return Input.is_action_pressed("sprint")

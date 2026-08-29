@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ca87ot6d3jvah"
-path="res://.godot/imported/Vent.fbx-f3b8ada241c2bde86bf85b6cd669ebeb.scn"
+path="res://.godot/imported/Vent.fbx-9d093e3c4fff89f16c55d563152c26ec.scn"
 
 [deps]
 
-source_file="res://visuals/models/premade/Vent.fbx"
-dest_files=["res://.godot/imported/Vent.fbx-f3b8ada241c2bde86bf85b6cd669ebeb.scn"]
+source_file="res://visuals/models/Vent.fbx"
+dest_files=["res://.godot/imported/Vent.fbx-9d093e3c4fff89f16c55d563152c26ec.scn"]
 
 [params]
 

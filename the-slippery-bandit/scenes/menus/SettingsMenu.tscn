@@ -127,8 +127,8 @@ layout_mode = 2
 metadata/_tab_index = 1
 
 [node name="ResetButton" type="Button" parent="Overlay/Window/Layout/TabBar/Controls" unique_id=2063771075]
-clip_contents = true
 custom_minimum_size = Vector2(90, 35)
+clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Reset to Defaults"

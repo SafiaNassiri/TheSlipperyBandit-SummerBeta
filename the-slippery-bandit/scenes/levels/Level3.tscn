@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://8iaxulc475pp" path="res://scenes/Objects/Chair.tscn" id="16_nkm7c"]
 [ext_resource type="PackedScene" uid="uid://cett2vfu5nbcq" path="res://scenes/Objects/VACooms.tscn" id="17_mctl7"]
 [ext_resource type="PackedScene" uid="uid://e2euqovhtuqn" path="res://scenes/levels/Exit.tscn" id="18_fpd7d"]
-[ext_resource type="PackedScene" uid="uid://bwjs66ewcslfy" path="res://scenes/Objects/premade/vent.tscn" id="20_hmwnr"]
+[ext_resource type="PackedScene" uid="uid://bwjs66ewcslfy" path="res://scenes/Objects/vent.tscn" id="20_hmwnr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2p574"]
 size = Vector3(40.013077, 0.2, 90.14754)
