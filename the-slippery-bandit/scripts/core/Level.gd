@@ -24,7 +24,7 @@ func _ready() -> void:
 		secret.secret_collected.connect(_on_secret_collected)
 	
 	if hud:
-		hud.init(butter_total)
+		hud.init(butter_total, level_number)
 
 func _on_butter_collected() -> void:
 	butter_collected += 1

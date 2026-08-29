@@ -9,10 +9,10 @@ var _elapsed_time : float = 0.0
 var _butter_collected : int = 0
 var _butter_total : int = 0
 var _secret_found : bool = false
+var _level_number : int = 1
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	level_label.text = "HOME %d" % GameManager.current_level
 	_update_butter_dispaly()
 	_update_secret_display()
 
@@ -30,9 +30,11 @@ func on_secret_found() -> void:
 	_secret_found = true
 	_update_secret_display()
 
-func init(butter_total: int) -> void:
+func init(butter_total: int, level_num: int = 1) -> void:
 	_butter_total = butter_total
 	_butter_collected = 0
+	_level_number = level_num
+	level_label.text = "HOME %d" % _level_number
 	_update_butter_dispaly()
 
 func _update_butter_dispaly() -> void:
@@ -45,5 +47,6 @@ func _update_timer_display() -> void:
 	var minutes := int(_elapsed_time) / 60
 	var seconds := int(_elapsed_time) % 60
 	timer_label.text = "%d:%02d" % [minutes, seconds]
+
 func get_elapsed_time() -> float:
 	return _elapsed_time
