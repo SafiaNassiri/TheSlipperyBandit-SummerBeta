@@ -1,5 +1,11 @@
 extends CanvasLayer
 
+const CONFIG_FILE_PATH = "user://keybinds.cfg"
+const VOLUME_CONFIG_PATH = "user://volume.cfg"
+
+var config = ConfigFile.new()
+var volume_config = ConfigFile.new()
+
 const BUS_MASTER := 0
 const BUS_MUSIC := 1
 const BUS_SFX := 2
@@ -48,9 +54,15 @@ var _listening_for : String = ""
 var _bind_buttons : Dictionary = {}
 
 func _ready() -> void:
+	print("Keybinds saved at: ", ProjectSettings.globalize_path(CONFIG_FILE_PATH))
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	overlay.hide()
 	
+	# Load saved keybinds and volumes FIRST
+	_load_keybinds()
+	_load_volumes()
+	
+	# Setup audio
 	_setup_slider(master_slider, master_value, BUS_MASTER)
 	_setup_slider(music_slider, music_value, BUS_MUSIC)
 	_setup_slider(sfx_slider, sfx_value, BUS_SFX)
@@ -59,8 +71,10 @@ func _ready() -> void:
 	music_slider.value_changed.connect(func(v): _on_volume_changed(BUS_MUSIC, v, music_value))
 	sfx_slider.value_changed.connect(func(v): _on_volume_changed(BUS_SFX, v, sfx_value))
 	
-	_ensure_actions_exist()
-	_build_bind_buttons()
+	# Only add defaults if config file doesn't exist
+	var config_exists = config.load(CONFIG_FILE_PATH) == OK
+	if not config_exists:
+		_ensure_actions_exist()
 	
 	reset_button.pressed.connect(_on_reset_pressed)
 	back_button.pressed.connect(_on_back_pressed)
@@ -77,33 +91,61 @@ func _add_key_to_action(action: String, keycode: Key) -> void:
 # HELPER: Clear all keyboard events from an action
 func _clear_action_keys(action: String) -> void:
 	var events := InputMap.action_get_events(action)
-	var events_to_remove = []
-	# Collect ALL non-gamepad events (keyboard only)
+	var keys_to_remove = []
+	
+	# Collect ALL keyboard events (including defaults)
 	for event in events:
 		if event is InputEventKey:
-			events_to_remove.append(event)
-	# Remove them
-	for event in events_to_remove:
+			keys_to_remove.append(event)
+	
+	# Remove all keyboard events
+	for event in keys_to_remove:
 		InputMap.action_erase_event(action, event)
 	
-	print("Cleared %d keyboard events from %s" % [events_to_remove.size(), action])
+	print("Cleared %d keyboard events from %s" % [keys_to_remove.size(), action])
 
 func _ensure_actions_exist() -> void:
 	for action in DEFAULTS.keys():
 		if not InputMap.has_action(action):
 			InputMap.add_action(action)
 		
-		# Check if the DEFAULT key for this action exists
-		var has_default_key = false
+		# Always clear and re-add defaults on first load
+		_clear_action_keys(action)
+		_add_key_to_action(action, DEFAULTS[action])
+
+func _load_keybinds() -> void:
+	if config.load(CONFIG_FILE_PATH) != OK:
+		print("No keybinds config found, using defaults")
+		return
+	
+	print("Loading keybinds from config...")
+	for action in DEFAULTS.keys():
+		if config.has_section_key("keybinds", action):
+			var keycode = config.get_value("keybinds", action)
+			print("Loading %s: %s (%d)" % [action, OS.get_keycode_string(keycode), keycode])
+			
+			# Clear ALL existing keys for this action (including defaults)
+			_clear_action_keys(action)
+			
+			# Add only the saved key
+			_add_key_to_action(action, keycode)
+
+func _save_keybinds() -> void:
+	# Clear the old keybinds section completely
+	if config.has_section("keybinds"):
+		config.erase_section("keybinds")
+	
+	# Save all current keybinds fresh
+	for action in DEFAULTS.keys():
 		var events = InputMap.action_get_events(action)
 		for event in events:
-			if event is InputEventKey and event.keycode == DEFAULTS[action]:
-				has_default_key = true
+			if event is InputEventKey:
+				config.set_value("keybinds", action, event.keycode)
+				print("Saving %s: %s (%d)" % [action, OS.get_keycode_string(event.keycode), event.keycode])
 				break
-		
-		# Only add default if this specific key doesn't exist
-		if not has_default_key:
-			_add_key_to_action(action, DEFAULTS[action])
+	
+	config.save(CONFIG_FILE_PATH)
+	print("Keybinds saved to file")
 
 func _input(event: InputEvent) -> void:
 	if _listening_for.is_empty():
@@ -114,7 +156,9 @@ func _input(event: InputEvent) -> void:
 		get_tree().root.set_input_as_handled()
 
 func show_settings() -> void:
-	_ensure_actions_exist()
+	# Load saved keybinds (without adding defaults on top)
+	_load_keybinds()
+	
 	_build_bind_buttons()
 	overlay.show()
 	overlay.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -139,6 +183,44 @@ func _on_volume_changed(bus: int, value: float, label: Label) -> void:
 	AudioServer.set_bus_mute(bus, value == 0.0)
 	if value > 0.0:
 		AudioServer.set_bus_volume_db(bus, linear_to_db(value / 100.0))
+
+func _load_volumes() -> void:
+	if volume_config.load(VOLUME_CONFIG_PATH) != OK:
+		print("No volume config found, using defaults")
+		return
+	
+	print("Loading saved volumes...")
+	
+	# Load Master
+	if volume_config.has_section_key("volumes", "master"):
+		var val = volume_config.get_value("volumes", "master")
+		master_slider.value = val
+		_on_volume_changed(BUS_MASTER, val, master_value)
+	
+	# Load Music
+	if volume_config.has_section_key("volumes", "music"):
+		var val = volume_config.get_value("volumes", "music")
+		music_slider.value = val
+		_on_volume_changed(BUS_MUSIC, val, music_value)
+	
+	# Load SFX
+	if volume_config.has_section_key("volumes", "sfx"):
+		var val = volume_config.get_value("volumes", "sfx")
+		sfx_slider.value = val
+		_on_volume_changed(BUS_SFX, val, sfx_value)
+
+func _save_volumes() -> void:
+	# Clear old section
+	if volume_config.has_section("volumes"):
+		volume_config.erase_section("volumes")
+	
+	# Save all volumes
+	volume_config.set_value("volumes", "master", master_slider.value)
+	volume_config.set_value("volumes", "music", music_slider.value)
+	volume_config.set_value("volumes", "sfx", sfx_slider.value)
+	
+	volume_config.save(VOLUME_CONFIG_PATH)
+	print("Volumes saved: Master=%d, Music=%d, SFX=%d" % [master_slider.value, music_slider.value, sfx_slider.value])
 
 # CONTROLS
 func _build_bind_buttons() -> void:
@@ -179,15 +261,32 @@ func _rebind(action: String, keycode: Key) -> void:
 		push_error("Action does not exist: %s" % action)
 		return
 	
+	# Check for duplicate actions
+	for other_action in DEFAULTS.keys():
+		if other_action == action:
+			continue
+		
+		var events = InputMap.action_get_events(other_action)
+		for event in events:
+			if event is InputEventKey and event.keycode == keycode:
+				print("ERROR: %s is already bound to %s" % [OS.get_keycode_string(keycode), other_action])
+				_bind_buttons[action].text = "Already bound!"
+				return
+	
 	print("Rebinding %s to %s (%d)" % [action, OS.get_keycode_string(keycode), keycode])
+	
+	# Clear and add
 	_clear_action_keys(action)
 	_add_key_to_action(action, keycode)
+	
+	# Update button immediately
+	var key_string = OS.get_keycode_string(keycode)
+	_bind_buttons[action].text = key_string  # Set directly
+	print("Button updated to: %s" % key_string)
 	
 	# Verify it was added
 	var events := InputMap.action_get_events(action)
 	print("After rebind, events for %s: %s" % [action, events])
-	
-	_refresh_button_label(action)
 
 func _refresh_button_label(action: String) -> void:
 	if not _bind_buttons.has(action):
@@ -198,23 +297,12 @@ func _refresh_button_label(action: String) -> void:
 	_bind_buttons[action].text = key_string if key_string else "Unbound"
 
 func _find_key_string(action: String, events: Array) -> String:
-	# Check for preferred key first (WASD)
-	if action in PREFERRED_KEYS:
-		for event in events:
-			if event is InputEventKey and event.keycode == PREFERRED_KEYS[action]:
-				return OS.get_keycode_string(event.keycode)
-	
-	# Check for any non-arrow key
-	for event in events:
-		if event is InputEventKey and event.keycode not in ARROW_CODES:
-			return OS.get_keycode_string(event.keycode)
-	
-	# Fall back to any key (allows arrow keys)
+	# Simply find the FIRST keyboard event and show it (should only be one)
 	for event in events:
 		if event is InputEventKey:
 			return OS.get_keycode_string(event.keycode)
 	
-	return ""
+	return ""  # No keyboard event found
 
 func _on_reset_pressed() -> void:
 	for action in DEFAULTS.keys():
@@ -228,7 +316,29 @@ func _on_back_pressed() -> void:
 		get_parent().show_pause()
 
 func _on_apply_pressed() -> void:
+	# Check if any action has multiple keyboard keys
+	if not _validate_keybinds():
+		print("ERROR: Cannot apply - some actions have multiple keys bound")
+		return
+	
+	_save_keybinds()
 	hide_settings()
-		
 	if get_parent().has_method("show_pause"):
 		get_parent().show_pause()
+
+func _validate_keybinds() -> bool:
+	for action in DEFAULTS.keys():
+		var keyboard_count = 0
+		var events = InputMap.action_get_events(action)
+		
+		for event in events:
+			if event is InputEventKey:
+				keyboard_count += 1
+		
+		# Only allow 1 keyboard key per action
+		if keyboard_count > 1:
+			print("ERROR: Action '%s' has %d keyboard keys bound (max 1 allowed)" % [action, keyboard_count])
+			_bind_buttons[action].text = "ERROR: Multiple keys!"
+			return false
+	
+	return true
