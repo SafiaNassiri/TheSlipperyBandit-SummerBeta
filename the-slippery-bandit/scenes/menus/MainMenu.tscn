@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://tjwo6qibpgrd" path="res://scripts/ui/MainMenu.gd" id="1_wlpbi"]
 [ext_resource type="PackedScene" uid="uid://d1cmfbdgitto3" path="res://scenes/menus/SettingsMenu.tscn" id="2_bqojv"]
 [ext_resource type="Texture2D" uid="uid://dblyl42c04wn3" path="res://visuals/texture/IMG_0184.png" id="2_tyyoy"]
+[ext_resource type="Texture2D" uid="uid://dup66enstuo0l" path="res://visuals/texture/play.png" id="3_krskw"]
 [ext_resource type="AudioStream" uid="uid://c88mmjlgjipg" path="res://sounds/music/MainMenu.wav" id="3_ldf1p"]
-[ext_resource type="Texture2D" uid="uid://cvl1x6qy03ivp" path="res://visuals/texture/IMG_0185-removebg-preview.png" id="5_41ciy"]
-[ext_resource type="Texture2D" uid="uid://tspn4g0mb6pi" path="res://visuals/texture/IMG_0186-removebg-preview.png" id="6_krskw"]
-[ext_resource type="Texture2D" uid="uid://dq8ytf3oh4lhf" path="res://visuals/texture/IMG_0187-removebg-preview.png" id="7_727om"]
-[ext_resource type="Texture2D" uid="uid://cyuh71gvtjjiq" path="res://visuals/texture/IMG_0188-removebg-preview.png" id="8_il8nq"]
+[ext_resource type="Texture2D" uid="uid://cwa8huwoqy8l2" path="res://visuals/texture/settings.png" id="5_727om"]
+[ext_resource type="Texture2D" uid="uid://g4w2c3or4ec1" path="res://visuals/texture/levels.png" id="6_il8nq"]
+[ext_resource type="Texture2D" uid="uid://cwr4elpwsx26i" path="res://visuals/texture/quit.png" id="7_p4qar"]
 
 [node name="MainMenu" type="Control" unique_id=1474450685]
 layout_mode = 3
@@ -36,12 +36,6 @@ offset_bottom = 65.0
 text = "A gold bar heist. Probably."
 horizontal_alignment = 1
 
-[node name="SettingsMenu" parent="." unique_id=1155707233 instance=ExtResource("2_bqojv")]
-visible = false
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=726129072]
-stream = ExtResource("3_ldf1p")
-
 [node name="PlayButton" type="TextureButton" parent="." unique_id=1429172106]
 layout_mode = 0
 offset_left = 115.0
@@ -49,11 +43,11 @@ offset_top = 274.0
 offset_right = 535.0
 offset_bottom = 386.0
 scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("5_41ciy")
-texture_pressed = ExtResource("5_41ciy")
-texture_hover = ExtResource("5_41ciy")
-texture_disabled = ExtResource("5_41ciy")
-texture_focused = ExtResource("5_41ciy")
+texture_normal = ExtResource("3_krskw")
+texture_pressed = ExtResource("3_krskw")
+texture_hover = ExtResource("3_krskw")
+texture_disabled = ExtResource("3_krskw")
+texture_focused = ExtResource("3_krskw")
 
 [node name="SettingsButton" type="TextureButton" parent="." unique_id=2029910021]
 layout_mode = 0
@@ -62,11 +56,11 @@ offset_top = 364.0
 offset_right = 535.0
 offset_bottom = 476.0
 scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("6_krskw")
-texture_pressed = ExtResource("6_krskw")
-texture_hover = ExtResource("6_krskw")
-texture_disabled = ExtResource("6_krskw")
-texture_focused = ExtResource("6_krskw")
+texture_normal = ExtResource("5_727om")
+texture_pressed = ExtResource("5_727om")
+texture_hover = ExtResource("5_727om")
+texture_disabled = ExtResource("5_727om")
+texture_focused = ExtResource("5_727om")
 
 [node name="LevelSelectButton" type="TextureButton" parent="." unique_id=1798720140]
 layout_mode = 0
@@ -75,11 +69,11 @@ offset_top = 454.0
 offset_right = 535.0
 offset_bottom = 566.0
 scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("7_727om")
-texture_pressed = ExtResource("7_727om")
-texture_hover = ExtResource("7_727om")
-texture_disabled = ExtResource("7_727om")
-texture_focused = ExtResource("7_727om")
+texture_normal = ExtResource("6_il8nq")
+texture_pressed = ExtResource("6_il8nq")
+texture_hover = ExtResource("6_il8nq")
+texture_disabled = ExtResource("6_il8nq")
+texture_focused = ExtResource("6_il8nq")
 
 [node name="QuitButton" type="TextureButton" parent="." unique_id=1783809201]
 layout_mode = 0
@@ -88,8 +82,14 @@ offset_top = 544.0
 offset_right = 535.0
 offset_bottom = 656.0
 scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("8_il8nq")
-texture_pressed = ExtResource("8_il8nq")
-texture_hover = ExtResource("8_il8nq")
-texture_disabled = ExtResource("8_il8nq")
-texture_focused = ExtResource("8_il8nq")
+texture_normal = ExtResource("7_p4qar")
+texture_pressed = ExtResource("7_p4qar")
+texture_hover = ExtResource("7_p4qar")
+texture_disabled = ExtResource("7_p4qar")
+texture_focused = ExtResource("7_p4qar")
+
+[node name="SettingsMenu" parent="." unique_id=1155707233 instance=ExtResource("2_bqojv")]
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=726129072]
+stream = ExtResource("3_ldf1p")

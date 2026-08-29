@@ -1,9 +1,9 @@
 extends Control
 
-@onready var play_button : Button = $ButtonContainer/PlayButton
-@onready var settings_button : Button = $ButtonContainer/SettingsButton
-@onready var level_select_button : Button = $ButtonContainer/LevelSelectButton
-@onready var quit_button : Button = $ButtonContainer/QuitButton
+@onready var play_button : TextureButton = $PlayButton
+@onready var settings_button : TextureButton = $SettingsButton
+@onready var level_select_button : TextureButton = $LevelSelectButton
+@onready var quit_button : TextureButton = $QuitButton
 @onready var settings_menu = $SettingsMenu
 @onready var music = $AudioStreamPlayer
 

@@ -1,10 +1,10 @@
 extends CanvasLayer
 
 @onready var panel : Control = $Panel
-@onready var resume_button : Button = $Panel/ButtonContainer/ResumeButton
-@onready var restart_button : Button = $Panel/ButtonContainer/RestartButton
-@onready var settings_button : Button = $Panel/ButtonContainer/SettingsButton
-@onready var menu_button : Button  = $Panel/ButtonContainer/MainMenuButton
+@onready var resume_button : TextureButton = $Panel/ResumeButton
+@onready var restart_button : TextureButton = $Panel/RestartButton
+@onready var settings_button : TextureButton = $Panel/SettingsButton
+@onready var menu_button : TextureButton  = $Panel/MainMenuButton
 @onready var settings_menu = $SettingsMenu
 
 var is_paused: bool = false

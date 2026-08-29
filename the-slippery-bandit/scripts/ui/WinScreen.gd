@@ -11,9 +11,9 @@ const FLAVOR_LINES: Array[String] = [
 @onready var butter_label     : Label  = $StatsContainer/ButterLabel
 @onready var secret_label     : Label  = $StatsContainer/SecretLabel
 @onready var flavor_label     : Label  = $SubtitleLabel
-@onready var next_btn         : Button = $ButtonContainer/NextLevelButton
-@onready var replay_btn       : Button = $ButtonContainer/ReplayButton
-@onready var menu_btn         : Button = $ButtonContainer/MainMenuButton
+@onready var next_btn         : TextureButton = $NextLevelButton
+@onready var replay_btn       : TextureButton = $ReplayButton
+@onready var menu_btn         : TextureButton = $MainMenuButton
 
 func _ready() -> void:
 	butter_label.text = "Butter collected: %d / %d" % [

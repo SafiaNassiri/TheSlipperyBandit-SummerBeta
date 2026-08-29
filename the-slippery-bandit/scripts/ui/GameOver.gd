@@ -10,8 +10,8 @@ const CAUGHT_LINES: Array[String] = [
 ]
 
 @onready var subtitle_label : Label  = $SubtitleLabel
-@onready var retry_button   : Button = $ButtonContainer/RetryButton
-@onready var menu_button    : Button = $ButtonContainer/MainMenuButton
+@onready var retry_button   : TextureButton = $RetryButton
+@onready var menu_button    : TextureButton = $MainMenuButton
 
 func _ready() -> void:
 	subtitle_label.text = CAUGHT_LINES[randi() % CAUGHT_LINES.size()]
