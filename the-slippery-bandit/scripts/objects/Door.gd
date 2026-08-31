@@ -2,6 +2,7 @@ extends StaticBody3D
 
 @export var open_rotation : float = 90.0
 @export var anim_speed : float = 5.0
+@onready var interact_prompt = $Door2/Cube/InteractPrompt
 
 var _is_open : bool = false
 var _player_nearby : bool = false
@@ -44,10 +45,12 @@ func _toggle() -> void:
 func _on_player_entered_range(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		_player_nearby = true
+		interact_prompt.visible = true
 
 func _on_player_exited_range(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		_player_nearby = false
+		interact_prompt.visible = false
 
 func _set_collision_disabled(disabled: bool) -> void:
 	if _collision_shape:
