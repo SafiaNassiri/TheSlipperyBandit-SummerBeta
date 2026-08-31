@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dpuhpq3oc0ccx"]
 
 [ext_resource type="Script" uid="uid://b1gur5byx0xpk" path="res://scripts/ui/Hud.gd" id="1_jyvo4"]
+[ext_resource type="FontFile" uid="uid://btewwmmfbypiy" path="res://visuals/fonts/fonts-DSEG_v046/DSEG7-Modern/DSEG7Modern-Bold.ttf" id="2_sf33l"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1785215213]
 script = ExtResource("1_jyvo4")
@@ -39,4 +40,5 @@ text = "HOME 1"
 
 [node name="TimerLabel" type="Label" parent="HUDContainer/TopRight" unique_id=311155940]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sf33l")
 text = "0:00"
