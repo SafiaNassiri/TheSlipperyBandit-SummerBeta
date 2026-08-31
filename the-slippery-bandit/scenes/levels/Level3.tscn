@@ -585,3 +585,5 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 100.
 
 [node name="Butter5" parent="." unique_id=1926664323 instance=ExtResource("6_twycr")]
 transform = Transform3D(0.54172283, 0, 0.84055716, 0, 1, 0, -0.84055716, 0, 0.54172283, 94.913956, 0.34704834, 7.783784)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=623685547]

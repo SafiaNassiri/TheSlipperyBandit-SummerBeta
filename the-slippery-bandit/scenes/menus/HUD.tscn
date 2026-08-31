@@ -1,10 +1,50 @@
 [gd_scene format=3 uid="uid://dpuhpq3oc0ccx"]
 
 [ext_resource type="Script" uid="uid://b1gur5byx0xpk" path="res://scripts/ui/Hud.gd" id="1_jyvo4"]
+[ext_resource type="Texture2D" uid="uid://dmyrwjnpn5kxe" path="res://visuals/texture/ButterCounter.png" id="2_4maxk"]
 [ext_resource type="FontFile" uid="uid://btewwmmfbypiy" path="res://visuals/fonts/fonts-DSEG_v046/DSEG7-Modern/DSEG7Modern-Bold.ttf" id="2_sf33l"]
+[ext_resource type="Texture2D" uid="uid://bagketvagywrw" path="res://visuals/texture/Timer.png" id="3_v3b6h"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1785215213]
 script = ExtResource("1_jyvo4")
+
+[node name="ButterCollect" type="TextureRect" parent="." unique_id=359988266]
+offset_right = 1879.0
+offset_bottom = 855.0
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_4maxk")
+
+[node name="ButterLabel" type="Label" parent="." unique_id=1902858087]
+offset_left = 64.0
+offset_top = 17.0
+offset_right = 119.0
+offset_bottom = 45.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="TextureRect" parent="." unique_id=737954237]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -163.0
+offset_right = 1875.0
+offset_bottom = 1115.0
+grow_horizontal = 0
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("3_v3b6h")
+
+[node name="TimerLabel" type="Label" parent="." unique_id=311155940]
+offset_left = 1044.0
+offset_top = 34.0
+offset_right = 1097.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("2_sf33l")
+theme_override_font_sizes/font_size = 20
+text = "0:00"
 
 [node name="HUDContainer" type="MarginContainer" parent="." unique_id=867038387]
 anchors_preset = 15
@@ -20,12 +60,8 @@ theme_override_constants/margin_bottom = 16
 [node name="TopLeft" type="VBoxContainer" parent="HUDContainer" unique_id=732475158]
 layout_mode = 2
 
-[node name="ButterLabel" type="Label" parent="HUDContainer/TopLeft" unique_id=1902858087]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "🧈 0 / 0"
-
 [node name="SecretLabel" type="Label" parent="HUDContainer/TopLeft" unique_id=528464385]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 text = "★ NOT FOUND"
@@ -35,10 +71,6 @@ layout_mode = 2
 size_flags_horizontal = 8
 
 [node name="LevelLabel" type="Label" parent="HUDContainer/TopRight" unique_id=643632266]
+visible = false
 layout_mode = 2
 text = "HOME 1"
-
-[node name="TimerLabel" type="Label" parent="HUDContainer/TopRight" unique_id=311155940]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_sf33l")
-text = "0:00"

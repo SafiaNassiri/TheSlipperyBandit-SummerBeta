@@ -16,9 +16,10 @@ offset_bottom = 648.0
 
 [node name="PausedLabel" type="Label" parent="Panel" unique_id=658879722]
 layout_mode = 0
-offset_top = 27.0
+offset_top = 94.0
 offset_right = 1152.0
-offset_bottom = 102.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 60
 text = "Paused"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -76,4 +77,3 @@ texture_disabled = ExtResource("6_scaad")
 texture_focused = ExtResource("6_scaad")
 
 [node name="SettingsMenu" parent="." unique_id=1155707233 instance=ExtResource("2_5c87e")]
-visible = false

@@ -89,7 +89,6 @@ texture_disabled = ExtResource("7_p4qar")
 texture_focused = ExtResource("7_p4qar")
 
 [node name="SettingsMenu" parent="." unique_id=1155707233 instance=ExtResource("2_bqojv")]
-visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=726129072]
 stream = ExtResource("3_ldf1p")

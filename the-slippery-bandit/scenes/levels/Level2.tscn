@@ -227,6 +227,8 @@ size = 15.0
 script = ExtResource("3_6qpip")
 distance = 30.0
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1944536797]
+
 [node name="HUD" parent="." unique_id=1785215213 instance=ExtResource("4_f3pvd")]
 
 [node name="PauseMenu" parent="." unique_id=501947168 instance=ExtResource("5_x3k3d")]
@@ -501,91 +503,91 @@ transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 
 [node name="Table3" parent="Props/Tables" unique_id=2048801979 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 82.62, 1.1619163, -5.7105837)
 
-[node name="Cube" parent="Props/Tables/Table3" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table3" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table4" parent="Props/Tables" unique_id=1688483240 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 82.61994, 1.1619163, -3.7380037)
 
-[node name="Cube" parent="Props/Tables/Table4" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table4" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table5" parent="Props/Tables" unique_id=509997465 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 80.61985, 1.1619163, -5.71065)
 
-[node name="Cube" parent="Props/Tables/Table5" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table5" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table6" parent="Props/Tables" unique_id=2017682814 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 80.61978, 1.1619163, -3.7373378)
 
-[node name="Cube" parent="Props/Tables/Table6" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table6" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table7" parent="Props/Tables" unique_id=1308221334 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 82.61987, 1.1619163, -1.7371187)
 
-[node name="Cube" parent="Props/Tables/Table7" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table7" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table8" parent="Props/Tables" unique_id=181239005 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 82.619804, 1.1619163, 0.23546863)
 
-[node name="Cube" parent="Props/Tables/Table8" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table8" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table9" parent="Props/Tables" unique_id=2119673051 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 80.61972, 1.1619163, -1.7371852)
 
-[node name="Cube" parent="Props/Tables/Table9" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table9" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table10" parent="Props/Tables" unique_id=1603690570 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 80.61965, 1.1619163, 0.23612714)
 
-[node name="Cube" parent="Props/Tables/Table10" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table10" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table13" parent="Props/Tables" unique_id=357471750 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 84.60661, 1.1619163, -1.7370529)
 
-[node name="Cube" parent="Props/Tables/Table13" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table13" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table14" parent="Props/Tables" unique_id=240237132 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 84.60654, 1.1619163, 0.2362597)
 
-[node name="Cube" parent="Props/Tables/Table14" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table14" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table17" parent="Props/Tables" unique_id=2045789724 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 84.60674, 1.1619163, -5.710518)
 
-[node name="Cube" parent="Props/Tables/Table17" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table17" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table18" parent="Props/Tables" unique_id=736092557 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 84.606674, 1.1619163, -3.7372055)
 
-[node name="Cube" parent="Props/Tables/Table18" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table18" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table11" parent="Props/Tables" unique_id=2118705352 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 82.62007, 1.1619163, -7.697316)
 
-[node name="Cube" parent="Props/Tables/Table11" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table11" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_ljeji")
 
 [node name="Table12" parent="Props/Tables" unique_id=3781200 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 80.61992, 1.1619163, -7.697383)
 
-[node name="Cube" parent="Props/Tables/Table12" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table12" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_bqc3i")
 
 [node name="Table19" parent="Props/Tables" unique_id=1199054326 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 84.606804, 1.1619163, -7.6972427)
 
-[node name="Cube" parent="Props/Tables/Table19" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table19" index="0" unique_id=490955296]
 surface_material_override/0 = SubResource("StandardMaterial3D_vjdto")
 
 [node name="Chairs" type="Node3D" parent="Props" unique_id=1086113504]
@@ -703,13 +705,13 @@ transform = Transform3D(0.92274576, 0, -0.38540927, 0, 1, 0, 0.38540927, 0, 0.92
 [node name="Door1" parent="Doors" unique_id=663709829 instance=ExtResource("7_f3pvd")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.97982, 2.2545738, 6.0360785)
 
-[node name="Cube" parent="Doors/Door1/Door" parent_id_path=PackedInt32Array(663709829, 931913740) index="0" unique_id=563541107]
+[node name="Cube" parent="Doors/Door1/Door" parent_id_path=PackedInt32Array(663709829, 931913740) index="0" unique_id=1827329067]
 surface_material_override/0 = SubResource("StandardMaterial3D_4n27n")
 
 [node name="Door2" parent="Doors" unique_id=1879898367 instance=ExtResource("7_f3pvd")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 100.65722, 2.2823753, -15.597086)
 
-[node name="Cube" parent="Doors/Door2/Door" parent_id_path=PackedInt32Array(1879898367, 931913740) index="0" unique_id=563541107]
+[node name="Cube" parent="Doors/Door2/Door" parent_id_path=PackedInt32Array(1879898367, 931913740) index="0" unique_id=1827329067]
 surface_material_override/0 = SubResource("StandardMaterial3D_cw4sw")
 
 [editable path="Props/Tables/Table3"]

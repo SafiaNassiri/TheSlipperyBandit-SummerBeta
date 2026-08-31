@@ -322,6 +322,8 @@ func _on_apply_pressed() -> void:
 		return
 	
 	_save_keybinds()
+	_save_volumes()
+	
 	hide_settings()
 	if get_parent().has_method("show_pause"):
 		get_parent().show_pause()

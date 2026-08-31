@@ -391,3 +391,11 @@ waypoints = Array[NodePath]([NodePath("../../WaypointPath3/Waypoint1"), NodePath
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1765523932]
 stream = ExtResource("23_jsker")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1265550734]
+offset_top = 27.0
+offset_right = 1152.0
+offset_bottom = 102.0
+text = "LEVEL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
