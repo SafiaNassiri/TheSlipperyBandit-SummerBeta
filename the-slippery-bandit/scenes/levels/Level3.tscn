@@ -94,6 +94,7 @@ environment = ExtResource("2_uh3oe")
 offset_top = 27.0
 offset_right = 1152.0
 offset_bottom = 102.0
+theme_override_font_sizes/font_size = 20
 text = "LEVEL 3
 "
 horizontal_alignment = 1

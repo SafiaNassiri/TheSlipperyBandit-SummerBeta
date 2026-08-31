@@ -36,6 +36,7 @@ layout_mode = 2
 [node name="TitleLabel" type="Label" parent="Overlay/Window/Layout/Header" unique_id=1314835040]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
 text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -44,12 +45,14 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(50, 30)
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 20
 text = "X"
 
 [node name="TabBar" type="TabContainer" parent="Overlay/Window/Layout" unique_id=585260921]
 custom_minimum_size = Vector2(0, 440)
 layout_mode = 2
 theme_override_constants/side_margin = 10
+theme_override_font_sizes/font_size = 20
 current_tab = 1
 
 [node name="Audio" type="VBoxContainer" parent="Overlay/Window/Layout/TabBar" unique_id=99814556]
@@ -64,6 +67,7 @@ theme_override_constants/separation = 5
 [node name="Label" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MasterRow" unique_id=256905974]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
+theme_override_font_sizes/font_size = 18
 text = "Master"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -75,6 +79,7 @@ size_flags_horizontal = 3
 [node name="MasterValue" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MasterRow" unique_id=156767128]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
+theme_override_font_sizes/font_size = 18
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -86,6 +91,7 @@ theme_override_constants/separation = 5
 [node name="Label" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MusicRow" unique_id=2005124180]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
+theme_override_font_sizes/font_size = 18
 text = "Music"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -97,6 +103,7 @@ size_flags_horizontal = 3
 [node name="MusicValue" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/MusicRow" unique_id=1461221504]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
+theme_override_font_sizes/font_size = 18
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -108,6 +115,7 @@ theme_override_constants/separation = 5
 [node name="Label" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/SFXRow" unique_id=1164968603]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
+theme_override_font_sizes/font_size = 18
 text = "SFX"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -119,6 +127,7 @@ size_flags_horizontal = 3
 [node name="SFXValue" type="Label" parent="Overlay/Window/Layout/TabBar/Audio/SFXRow" unique_id=1500157632]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
+theme_override_font_sizes/font_size = 18
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -132,6 +141,7 @@ custom_minimum_size = Vector2(90, 35)
 clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 18
 text = "Reset to Defaults"
 
 [node name="Footer" type="HBoxContainer" parent="Overlay/Window/Layout" unique_id=261086571]
@@ -142,4 +152,5 @@ custom_minimum_size = Vector2(90, 35)
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 8
+theme_override_font_sizes/font_size = 18
 text = "Apply"
