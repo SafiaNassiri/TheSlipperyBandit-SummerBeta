@@ -21,15 +21,17 @@ layout_mode = 0
 offset_top = 27.0
 offset_right = 1152.0
 offset_bottom = 102.0
+theme_override_font_sizes/font_size = 60
 text = "HEIS COMPLETE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SubtitleLabel" type="Label" parent="." unique_id=1088596130]
 layout_mode = 0
-offset_top = 92.0
+offset_top = 125.0
 offset_right = 1152.0
-offset_bottom = 155.0
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 20
 text = "TBD"
 horizontal_alignment = 1
 
@@ -44,11 +46,13 @@ alignment = 1
 
 [node name="ButterLabel" type="Label" parent="StatsContainer" unique_id=1845071482]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "Butter collected: X / Y"
 horizontal_alignment = 1
 
 [node name="SecretLabel" type="Label" parent="StatsContainer" unique_id=333702575]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "Secret found: ✓ / ✗"
 horizontal_alignment = 1
 

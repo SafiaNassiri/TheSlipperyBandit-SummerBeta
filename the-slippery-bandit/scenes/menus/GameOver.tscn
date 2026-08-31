@@ -20,15 +20,17 @@ layout_mode = 0
 offset_top = 27.0
 offset_right = 1152.0
 offset_bottom = 102.0
+theme_override_font_sizes/font_size = 60
 text = "YOU'VE BEEN CAUGHT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SubtitleLabel" type="Label" parent="." unique_id=61049929]
 layout_mode = 0
-offset_top = 92.0
+offset_top = 151.0
 offset_right = 1152.0
-offset_bottom = 155.0
+offset_bottom = 214.0
+theme_override_font_sizes/font_size = 20
 text = "tbd"
 horizontal_alignment = 1
 

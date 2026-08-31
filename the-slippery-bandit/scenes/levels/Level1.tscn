@@ -81,6 +81,15 @@ script = ExtResource("1_m00rq")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2097507599]
 environment = ExtResource("2_bspq0")
 
+[node name="TitleLabel" type="Label" parent="." unique_id=1265550734]
+offset_top = 27.0
+offset_right = 1152.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 20
+text = "LEVEL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Player" parent="." unique_id=996823743 instance=ExtResource("1_76cw8")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -13.655557, 0.17291707, -0.87548393)
 
@@ -391,11 +400,3 @@ waypoints = Array[NodePath]([NodePath("../../WaypointPath3/Waypoint1"), NodePath
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1765523932]
 stream = ExtResource("23_jsker")
-
-[node name="TitleLabel" type="Label" parent="." unique_id=1265550734]
-offset_top = 27.0
-offset_right = 1152.0
-offset_bottom = 102.0
-text = "LEVEL 1"
-horizontal_alignment = 1
-vertical_alignment = 1

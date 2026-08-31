@@ -33,16 +33,17 @@ layout_mode = 0
 offset_top = 27.0
 offset_right = 1152.0
 offset_bottom = 102.0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 60
 text = "Choose Your Heist"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SubtitleLabel" type="Label" parent="." unique_id=2069073505]
 layout_mode = 0
-offset_top = 84.0
+offset_top = 139.0
 offset_right = 1152.0
-offset_bottom = 119.0
+offset_bottom = 174.0
+theme_override_font_sizes/font_size = 20
 text = "Rutabaga is ready."
 horizontal_alignment = 1
 
