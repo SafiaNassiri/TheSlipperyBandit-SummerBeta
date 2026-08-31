@@ -688,7 +688,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.331184, 0.57089233, -23.4
 [node name="Butter" type="Node3D" parent="." unique_id=1526898158]
 
 [node name="Butter" parent="Butter" unique_id=1107591258 instance=ExtResource("11_bs2pm")]
-transform = Transform3D(0.3615434, 0, -0.9323553, 0, 1, 0, 0.9323553, 0, 0.3615434, 3.1889467, 0.41082764, 9.042609)
+transform = Transform3D(0.3615434, 0, -0.9323553, 0, 1, 0, 0.9323553, 0, 0.3615434, 6.8434544, 0.41082764, 13.633047)
 
 [node name="Butter2" parent="Butter" unique_id=1683243002 instance=ExtResource("11_bs2pm")]
 transform = Transform3D(0.69159174, 0, -0.7222886, 0, 1, 0, 0.7222886, 0, 0.69159174, 6.5844927, 0.37664795, -28.59153)
