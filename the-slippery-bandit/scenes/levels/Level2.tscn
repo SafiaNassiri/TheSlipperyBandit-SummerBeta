@@ -4,6 +4,7 @@
 [ext_resource type="Environment" uid="uid://biq2lmut8nith" path="res://visuals/atmosphere/HouseDay.tres" id="2_4n27n"]
 [ext_resource type="PackedScene" uid="uid://cyuc5t4t5rn3m" path="res://scenes/Player.tscn" id="2_3825t"]
 [ext_resource type="Script" uid="uid://ck4vugks1ijix" path="res://scripts/camera/IsometricCamera.gd" id="3_6qpip"]
+[ext_resource type="AudioStream" uid="uid://bn472tkio7sja" path="res://sounds/music/Level1.wav" id="3_mctl7"]
 [ext_resource type="PackedScene" uid="uid://dpuhpq3oc0ccx" path="res://scenes/menus/HUD.tscn" id="4_f3pvd"]
 [ext_resource type="PackedScene" uid="uid://ckuvpod5qh0o1" path="res://scenes/menus/PauseMenu.tscn" id="5_x3k3d"]
 [ext_resource type="Texture2D" uid="uid://dhkfd2ljwd50i" path="res://visuals/texture/fabrics_0076_ao_1k.jpg" id="6_i2tsv"]
@@ -206,6 +207,9 @@ level_number = 2
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=700082101]
 environment = ExtResource("2_4n27n")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1351070158]
+stream = ExtResource("3_mctl7")
+
 [node name="TitleLabel" type="Label" parent="." unique_id=1578361313]
 offset_top = 27.0
 offset_right = 1152.0
@@ -228,8 +232,6 @@ current = true
 size = 15.0
 script = ExtResource("3_6qpip")
 distance = 30.0
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1944536797]
 
 [node name="HUD" parent="." unique_id=1785215213 instance=ExtResource("4_f3pvd")]
 

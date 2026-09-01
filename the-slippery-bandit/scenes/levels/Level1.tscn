@@ -81,6 +81,9 @@ script = ExtResource("1_m00rq")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2097507599]
 environment = ExtResource("2_bspq0")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1765523932]
+stream = ExtResource("23_jsker")
+
 [node name="TitleLabel" type="Label" parent="." unique_id=1265550734]
 offset_top = 27.0
 offset_right = 1152.0
@@ -397,6 +400,3 @@ waypoints = Array[NodePath]([NodePath("../../WaypointPath1/Waypoint1"), NodePath
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.066925, 0, -5.5413914)
 move_speed = 4.5
 waypoints = Array[NodePath]([NodePath("../../WaypointPath3/Waypoint1"), NodePath("../../WaypointPath3/Waypoint2"), NodePath("../../WaypointPath3/Waypoint3"), NodePath("../../WaypointPath3/Waypoint4"), NodePath("../../WaypointPath3/Waypoint5"), NodePath("../../WaypointPath3/Waypoint6")])
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1765523932]
-stream = ExtResource("23_jsker")
