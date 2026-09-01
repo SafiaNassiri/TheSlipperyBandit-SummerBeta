@@ -2,6 +2,7 @@ extends StaticBody3D
 
 @export var knock_rotation : float = -60.0
 @export var anim_speed : float = 6.0
+@onready var interact_prompt = $InteractPrompt
 
 var _is_knocked : bool = false
 var _player_nearby : bool = false
@@ -38,7 +39,9 @@ func _knock_over() -> void:
 func _on_player_entered_range(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		_player_nearby = true
+		interact_prompt.visible = true
 
 func _on_player_exited_range(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		_player_nearby = false
+		interact_prompt.visible = false
