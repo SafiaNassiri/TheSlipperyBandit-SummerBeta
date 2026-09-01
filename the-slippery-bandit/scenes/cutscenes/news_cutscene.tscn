@@ -40,3 +40,12 @@ vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=1671874050]
 one_shot = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2135903734]
+offset_left = 857.0
+offset_top = 588.0
+offset_right = 1074.0
+offset_bottom = 615.0
+text = "Press SPACE to continue..."
+horizontal_alignment = 2
+vertical_alignment = 2
