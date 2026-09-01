@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://c3igjcvq3yiuq"]
+
+[ext_resource type="Script" uid="uid://b8n0menuchase" path="res://scripts/ui/MenuChase.gd" id="1_chase"]
+[ext_resource type="PackedScene" uid="uid://deg4j4rf7cpyk" path="res://scenes/Objects/Butter.tscn" id="2_eprw8"]
+[ext_resource type="PackedScene" uid="uid://b1d638i27j54e" path="res://scenes/Raccoon.tscn" id="2_rac"]
+[ext_resource type="PackedScene" uid="uid://dyu8esql870ha" path="res://scenes/Objects/VACoomModel.tscn" id="3_vac"]
+[ext_resource type="Environment" uid="uid://biq2lmut8nith" path="res://visuals/atmosphere/HouseDay.tres" id="4_env"]
+[ext_resource type="Texture2D" uid="uid://dhkfd2ljwd50i" path="res://visuals/texture/fabrics_0076_ao_1k.jpg" id="5_floor"]
+[ext_resource type="PackedScene" uid="uid://dqlw6xgamps36" path="res://scenes/Objects/Cabinet.tscn" id="6_t4e8m"]
+[ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="7_eprw8"]
+
+[sub_resource type="StandardMaterial3D" id="FloorMat"]
+albedo_color = Color(0.21568628, 0.16470589, 0.22352941, 1)
+albedo_texture = ExtResource("5_floor")
+
+[sub_resource type="PlaneMesh" id="FloorMesh"]
+material = SubResource("FloorMat")
+size = Vector2(40, 10)
+
+[sub_resource type="StandardMaterial3D" id="WallMat"]
+albedo_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="BoxMesh" id="WallMesh"]
+material = SubResource("WallMat")
+size = Vector3(40, 8, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t5xkk"]
+albedo_color = Color(0.60215014, 0.13394222, 0.1676346, 1)
+
+[node name="MenuChase" type="Node3D" unique_id=1997055041]
+script = ExtResource("1_chase")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1518631367]
+environment = ExtResource("4_env")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1349337161]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 8, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=696869449]
+transform = Transform3D(0.7826084, 0.14796333, -0.6046742, 0, 0.9713419, 0.23768663, 0.6225143, -0.18601556, 0.76018035, -6.647857, 1.9241782, 4.8879604)
+current = true
+fov = 42.0
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=762613922]
+mesh = SubResource("FloorMesh")
+
+[node name="Wall" type="MeshInstance3D" parent="." unique_id=861672764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -3.4)
+mesh = SubResource("WallMesh")
+surface_material_override/0 = SubResource("StandardMaterial3D_t5xkk")
+
+[node name="Raccoon" parent="." unique_id=1721794742 instance=ExtResource("2_rac")]
+
+[node name="Chasers" type="Node3D" parent="." unique_id=580916581]
+
+[node name="VACoom1" parent="Chasers" unique_id=839723268 instance=ExtResource("3_vac")]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -1.7, 0, 0)
+
+[node name="Props" type="Node" parent="." unique_id=545108790]
+
+[node name="Butter2" parent="Props" unique_id=1107591258 instance=ExtResource("2_eprw8")]
+transform = Transform3D(0.9567606, 0, -0.29087663, 0, 1, 0, 0.29087663, 0, 0.9567606, -0.009696007, 1.6915138, -2.7354622)
+
+[node name="Butter3" parent="Props" unique_id=723967057 instance=ExtResource("2_eprw8")]
+transform = Transform3D(0.9567606, 0, -0.29087663, 0, 1, 0, 0.29087663, 0, 0.9567606, 7.6939898, 1.6915138, -2.7354622)
+
+[node name="Cabinet" parent="Props" unique_id=1120051597 instance=ExtResource("6_t4e8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2929463, 0.6085427, -3.308916)
+
+[node name="Cabinet10" parent="Props" unique_id=1623753948 instance=ExtResource("6_t4e8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2115397, 0.6085427, -3.308916)
+
+[node name="Cabinet2" parent="Props" unique_id=901884221 instance=ExtResource("6_t4e8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3529668, 0.6085427, -3.308916)
+
+[node name="Cabinet3" parent="Props" unique_id=838391834 instance=ExtResource("6_t4e8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41682482, 0.6085427, -3.308916)
+
+[node name="Cabinet4" parent="Props" unique_id=1480558542 instance=ExtResource("6_t4e8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5231547, 0.6085427, -3.308916)
+
+[node name="Fridge" parent="Props" unique_id=262071157 instance=ExtResource("7_eprw8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.4190974, -0.056313276, -2.147585)
+
+[node name="Fridge2" parent="Props" unique_id=1201816368 instance=ExtResource("7_eprw8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.835213, -0.056313276, -2.147585)
+
+[node name="Cabinet5" parent="Props" unique_id=1744318354 instance=ExtResource("6_t4e8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.405441, 0.6085427, -3.308916)
+
+[node name="Cabinet6" parent="Props" unique_id=1562268745 instance=ExtResource("6_t4e8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3454204, 0.6085427, -3.308916)
+
+[node name="Cabinet7" parent="Props" unique_id=1479813045 instance=ExtResource("6_t4e8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.281563, 0.6085427, -3.308916)
+
+[node name="Cabinet8" parent="Props" unique_id=1223289756 instance=ExtResource("6_t4e8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.221542, 0.6085427, -3.308916)
+
+[node name="Cabinet9" parent="Props" unique_id=345943611 instance=ExtResource("6_t4e8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.119431, 0.6085427, -3.308916)

@@ -8,30 +8,35 @@
 [ext_resource type="Texture2D" uid="uid://cwa8huwoqy8l2" path="res://visuals/texture/settings.png" id="5_727om"]
 [ext_resource type="Texture2D" uid="uid://g4w2c3or4ec1" path="res://visuals/texture/levels.png" id="6_il8nq"]
 [ext_resource type="Texture2D" uid="uid://cwr4elpwsx26i" path="res://visuals/texture/quit.png" id="7_p4qar"]
+[ext_resource type="PackedScene" uid="uid://c3igjcvq3yiuq" path="res://scenes/menus/MenuChase.tscn" id="8_chase"]
 
 [node name="MainMenu" type="Control" unique_id=1474450685]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_wlpbi")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1059559305]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.31808648, 0.050251007, 0.071545966, 1)
+[node name="MenuChase" parent="." unique_id=1620811296 instance=ExtResource("8_chase")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1702169387]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_tyyoy")
 expand_mode = 1
 
 [node name="SubtitleLabel" type="Label" parent="." unique_id=688337606]
 layout_mode = 0
-offset_left = 759.0
+offset_left = 826.0
 offset_top = 36.0
-offset_right = 1075.0
+offset_right = 1142.0
 offset_bottom = 65.0
 text = "A gold bar heist. Probably."
 horizontal_alignment = 1
