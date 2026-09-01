@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cv4flar1vd6fb"]
 
 [ext_resource type="Script" uid="uid://c0ogxfri8fitx" path="res://scripts/cutscenes/ending_cutscene.gd" id="1_wkpu8"]
+[ext_resource type="FontFile" uid="uid://ceskq7vgh2ovy" path="res://visuals/fonts/PatrickHand-Regular.ttf" id="2_jkofx"]
 
 [node name="EndingCutscene" type="Node2D" unique_id=1552525180]
 script = ExtResource("1_wkpu8")
@@ -32,3 +33,16 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1793336017]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 898.0
+offset_top = 17.0
+offset_right = 1121.0
+offset_bottom = 45.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_jkofx")
+theme_override_font_sizes/font_size = 20
+text = "[PRESS SPACE TO CONTINUE]"

@@ -75,6 +75,9 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_t2wor"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvye3"]
+albedo_color = Color(0.9743915, 0.17438936, 0.5001484, 1)
+
 [node name="Level1" type="Node3D" unique_id=1435790613]
 script = ExtResource("1_m00rq")
 
@@ -305,6 +308,9 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 73.4
 [node name="Chair" parent="Props/Chairs" unique_id=2093500120 instance=ExtResource("12_6owa4")]
 transform = Transform3D(0.99999994, 0, -1.7484554e-07, 0, 1, 0, 1.7484554e-07, 0, 0.99999994, 66.4791, 0.8287797, 14.287696)
 
+[node name="Cube" parent="Props/Chairs/Chair/Chair" parent_id_path=PackedInt32Array(2093500120, 1068570129) index="0" unique_id=613273933]
+surface_material_override/0 = SubResource("StandardMaterial3D_mvye3")
+
 [node name="Chair2" parent="Props/Chairs" unique_id=1936553171 instance=ExtResource("12_6owa4")]
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 80.99313, 0.8287797, 12.846203)
 
@@ -400,3 +406,6 @@ waypoints = Array[NodePath]([NodePath("../../WaypointPath1/Waypoint1"), NodePath
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.066925, 0, -5.5413914)
 move_speed = 4.5
 waypoints = Array[NodePath]([NodePath("../../WaypointPath3/Waypoint1"), NodePath("../../WaypointPath3/Waypoint2"), NodePath("../../WaypointPath3/Waypoint3"), NodePath("../../WaypointPath3/Waypoint4"), NodePath("../../WaypointPath3/Waypoint5"), NodePath("../../WaypointPath3/Waypoint6")])
+
+[editable path="Props/Chairs/Chair"]
+[editable path="Props/Chairs/Chair/Chair"]

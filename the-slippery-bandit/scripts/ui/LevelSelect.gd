@@ -33,7 +33,7 @@ func _make_card(level_num: int) -> PanelContainer:
 
 	# Lock icon or level number
 	var icon_label := Label.new()
-	icon_label.text = "🧈 %d" % level_num if unlocked else "🔒"
+	icon_label.text = "Heist %d" % level_num if unlocked else "[Locked]"
 	icon_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	icon_label.add_theme_font_size_override("font_size", 32)
 	vbox.add_child(icon_label)
