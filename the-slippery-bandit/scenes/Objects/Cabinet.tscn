@@ -1,5 +1,7 @@
 [gd_scene format=4 uid="uid://dqlw6xgamps36"]
 
+[ext_resource type="Material" uid="uid://d0dx0jpwkp3yi" path="res://visuals/WoodColor.tres" id="1_d5pii"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_x3h3v"]
 size = Vector3(3.2261963, 2.29187, 2.2640991)
 
@@ -35,6 +37,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fysy5")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ak77a"]
+albedo_color = Color(0.4351923, 0.43519226, 0.43519226, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0v6o"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fb34t"]
@@ -66,6 +71,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fb34t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eyoan"]
+albedo_color = Color(0.40705582, 0.40705633, 0.40705603, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7ftw"]
 
@@ -111,11 +119,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.56836593, 0, 0.5432768)
 [node name="Handle" type="MeshInstance3D" parent="Cabinet" unique_id=2014097801]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 mesh = SubResource("ArrayMesh_08o8n")
+surface_material_override/0 = SubResource("StandardMaterial3D_ak77a")
 
 [node name="Countertop" type="MeshInstance3D" parent="Cabinet" unique_id=1410533397]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 mesh = SubResource("ArrayMesh_kxvnc")
+surface_material_override/0 = SubResource("StandardMaterial3D_eyoan")
 
 [node name="Cabinet" type="MeshInstance3D" parent="Cabinet" unique_id=1101476367]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 mesh = SubResource("ArrayMesh_pswkt")
+surface_material_override/0 = ExtResource("1_d5pii")

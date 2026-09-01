@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://e10wjj3uthwx"]
 
 [ext_resource type="PackedScene" uid="uid://de0vgdwftlw7" path="res://visuals/models/Table.glb" id="1_bmpgw"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdh0r"]
+[ext_resource type="Material" uid="uid://d0dx0jpwkp3yi" path="res://visuals/WoodColor.tres" id="2_i63ik"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j2tbh"]
 size = Vector3(1.9882202, 0.1616211, 1.9978027)
@@ -12,8 +11,8 @@ size = Vector3(0.32226563, 1.7315674, 0.30969238)
 
 [node name="Table" unique_id=2048801979 instance=ExtResource("1_bmpgw")]
 
-[node name="Cube" parent="." index="0" unique_id=68793899]
-surface_material_override/0 = SubResource("StandardMaterial3D_rdh0r")
+[node name="Cube" parent="." index="0" unique_id=1404715730]
+surface_material_override/0 = ExtResource("2_i63ik")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1017153433]
 

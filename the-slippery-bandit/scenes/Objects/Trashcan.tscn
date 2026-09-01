@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b5r7obdqxg32y" path="res://visuals/models/Trashcan.glb" id="1_n6wpt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdh0r"]
+albedo_color = Color(0.46877694, 0.46877706, 0.46877682, 1)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_j2tbh"]
 height = 1.9902344
@@ -10,7 +11,7 @@ radius = 0.9038086
 
 [node name="Trashcan" unique_id=867734644 instance=ExtResource("1_n6wpt")]
 
-[node name="Circle" parent="." index="0" unique_id=680211444]
+[node name="Circle" parent="." index="0" unique_id=1279180829]
 surface_material_override/0 = SubResource("StandardMaterial3D_rdh0r")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1095572470]

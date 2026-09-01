@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bef8lr4u327fb" path="res://visuals/models/PlantPot.glb" id="1_ak77a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dnjgo"]
+albedo_color = Color(0.8023101, 0.49176937, 0.30792597, 1)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_j2tbh"]
 height = 1.480957
@@ -10,7 +11,7 @@ radius = 0.85253906
 
 [node name="PlantPot" unique_id=1996763502 instance=ExtResource("1_ak77a")]
 
-[node name="Circle" parent="." index="0" unique_id=1914040184]
+[node name="Circle" parent="." index="0" unique_id=571886553]
 surface_material_override/0 = SubResource("StandardMaterial3D_dnjgo")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1044250169]

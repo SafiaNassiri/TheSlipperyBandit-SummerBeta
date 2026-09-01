@@ -4,6 +4,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xgb0r"]
 cull_mode = 1
+albedo_color = Color(0.34509805, 0.2, 0.12156863, 1)
 
 [node name="Shelf" unique_id=1446275178 instance=ExtResource("1_wsbq3")]
 

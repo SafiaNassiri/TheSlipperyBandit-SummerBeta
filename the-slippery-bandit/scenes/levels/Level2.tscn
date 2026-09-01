@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ctmm5hudty6ch"]
+[gd_scene format=4 uid="uid://ctmm5hudty6ch"]
 
 [ext_resource type="Script" uid="uid://c40b2tx6t30x4" path="res://scripts/core/Level.gd" id="1_twaqj"]
 [ext_resource type="Environment" uid="uid://biq2lmut8nith" path="res://visuals/atmosphere/HouseDay.tres" id="2_4n27n"]
@@ -10,11 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://dhkfd2ljwd50i" path="res://visuals/texture/fabrics_0076_ao_1k.jpg" id="6_i2tsv"]
 [ext_resource type="PackedScene" uid="uid://cpq7usfl272mw" path="res://scenes/Objects/Door.tscn" id="7_f3pvd"]
 [ext_resource type="PackedScene" uid="uid://e10wjj3uthwx" path="res://scenes/Objects/Table.tscn" id="8_stl8g"]
-[ext_resource type="PackedScene" uid="uid://8iaxulc475pp" path="res://scenes/Objects/Chair.tscn" id="9_h66bl"]
 [ext_resource type="PackedScene" uid="uid://dw6r3uwtrhfaf" path="res://visuals/bed.tscn" id="9_vjdto"]
 [ext_resource type="PackedScene" uid="uid://dqlw6xgamps36" path="res://scenes/Objects/Cabinet.tscn" id="9_vnuxi"]
 [ext_resource type="PackedScene" uid="uid://pwqelcb4omxc" path="res://scenes/Objects/Fridge.tscn" id="10_bs2pm"]
 [ext_resource type="PackedScene" uid="uid://deg4j4rf7cpyk" path="res://scenes/Objects/Butter.tscn" id="11_bs2pm"]
+[ext_resource type="Script" uid="uid://xi5hh2kwen07" path="res://scripts/objects/Chair.gd" id="11_fpd7d"]
+[ext_resource type="Material" uid="uid://d0dx0jpwkp3yi" path="res://visuals/WoodColor.tres" id="12_nkm7c"]
 [ext_resource type="PackedScene" uid="uid://bwjs66ewcslfy" path="res://scenes/Objects/vent.tscn" id="13_cw4sw"]
 [ext_resource type="PackedScene" uid="uid://e2euqovhtuqn" path="res://scenes/levels/Exit.tscn" id="16_o6ptl"]
 
@@ -194,6 +195,133 @@ albedo_color = Color(0.34509805, 0.2, 0.12156863, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjdto"]
 albedo_color = Color(0.34509805, 0.2, 0.12156863, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_m14uu"]
+size = Vector3(0.8330078, 0.7700224, 0.94785)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ut6l"]
+size = Vector3(1, 3.5186157, 0.13295269)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m14uu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bni3c"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7ho06"]
+_surfaces = [{
+"aabb": AABB(-1, -1.6481526, -1, 2, 3.6770852, 2),
+"format": 34359742465,
+"index_count": 258,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQABQABAAMABQAEAAEABgAFAAMABgADAAAABwAEAAUAAgAEAAcABwAFAAYABwAIAAIACQAAAAIACQACAAgACgAGAAAACAALAAkACAAMAAsADQAMAAgABwANAAgACwAMAA4ADQAOAAwACwAOAA8ACQALAA8AEAAPAA4AEAAOAA0ACQAPABAAEQAQAA0ABwARAA0AEgAJABAAEwAQABEAEgAQABMAEQAHABQAEwARABQAFAAHABUAFgAVAAcAFgAHAAYAFAAVABcAFgAXABUAFwAYABQAFAAZABMAFAAYABkAEwAZABoAGQAYABsAFwAbABgAGQAbABoAHAAbABcAHAAaABsAEwAaABwAFgAcABcAEgATABwAFgASABwAEgAWAB0ABgAeABYAHQAWAB4AHwASAB0ABgAgAB4AHQAhAB8AHQAiACEAHgAiAB0AHgAjACIAIAAjAB4AJAAhACIAJAAiACMAIAAkACMAHwAhACQAHwAkACAABgAlACAAJQAfACAAJQAGAAoAJgAfACUAJgASAB8AJgAlAAoAEgAmAAkACQAmACcACQAnAAAAJgAoACcACgAAACkAAAAnACkACgAqACYAJgAqACgAKQArAAoACgArACoAJwAsACkAJwAoACwAKQAsACsALAAoACoALAAqACsA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 45,
+"vertex_data": PackedByteArray("AACAvygxtz0AAIC/AACAvwjaAUAAAIA/AACAvygxtz0AAIA/AACAvwjaAUAAAIC/bts2vwjaAUAAAIA/bts2vwjaAUAAAIC/bts2vygxtz0AAIC/bts2vygxtz0AAIA/AACAvygxt70AAIA/AACAvygxt72rqio/q6oqvygxt70AAIC/AACAv6r20r+rqio/AACAv6r20r8AAIA/qqoqvygxt70AAIA/qqoqv6r20r8AAIA/qqoqv6r20r+rqio/qqoqvygxt72rqio/AAAAMygxt70AAIA/AACAPygxt70AAACzqqoqPygxt72rqio/q6oqPygxt70AAIA/AACAPygxtz0AAIA/AACAPygxtz0AAIC/AACAPygxt70AAIA/q6oqP6r20r8AAIA/qqoqP6r20r+rqio/AACAP6r20r+qqio/AACAP6r20r8AAIA/AACAPygxt72qqio/AACAPygxt72rqiq/AACAPygxt70AAIC/qqoqPygxt72qqiq/qqoqPygxt70AAIC/qqoqP6r20r+qqiq/AACAP6r20r+rqiq/AACAP6r20r8AAIC/qqoqP6r20r8AAIC/AAAAsygxt70AAIC/q6oqvygxt72qqiq/AACAvygxt72qqiq/AACAv6r20r+qqiq/AACAvygxt70AAIC/q6oqv6r20r+qqiq/q6oqv6r20r8AAIC/AACAv6r20r8AAIC/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qo4vk"]
+resource_name = "Chair_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1.6481526, -1, 2, 3.6770852, 2),
+"attribute_data": PackedByteArray("AAAgPwAAQD8AACA/AACAPwAAID8AAIA/AAAgPwAAQD8AAMA+WFVVPgAAID8AAIA+AADAPgAAgD4AAMA+WFVVPgAAwD4AAIA+AAAgPzBJEj0AAMA+AAAAPgAAwD6wqqo9AADAPrCqqj0AAMA+AAAAAAAAwD4AAAAAAAAgPwAAAAAAACA/MEkSPQAAID8AAAAAAADAPlZVFT8AAMA+AAAAPwAAwD4AAAA/AADAPlZVFT8AACA/bts2PwAAID8AAAA/AADAPgAAID8AAMA+VlU1PwAAID9u2zY/AAAgPwAAQD8AACA/AABAPwAAwD4AAEA/AADAPlZVNT8AAMA+AABAPwAAwD6squo+AAAgPwAAAD8AAMA+AAAAPwAAwD6squo+AADAPgAAAD8AAMA+AADAPgAAwD5WVZU+AADAPgAAgD4AACA/AACAPgAAwD4AAIA+AADAPlZVlT6qqio+VlWVPlVVVT4AAIA+VVVVPgAAgD6qqio+VlWVPgAAgD4AAAA/q6qqPqyq6j5WVZU+AAAAP6qqKj6squo+VVVVPgAAAD8AAMA+AADAPgAAwD6squo+AADAPlVVdT8AAAA+rKrqPgAAID8AAEA/AADAPgAAQD8AACA/AACAPwAAwD4AAIA/qqoqPlZVlT6qqqo+VlWVPgAAwD5WVZU+AACAPgAAgD5VVVU+AACAPqqqqj4AAIA+AADAPqyq6j6rqqo+rKrqPquqqj6squo+AADAPqyq6j4AAAA+rKrqPgAAwD4AAEA/AADAPgAAQD8AAAA+rKrqPgAAAD5WVZU+qqoqPgAAgD6qqio+VlWVPgAAAD4AAIA+bttWPwAAgD5u21Y/AAAAP27bVj8AAAA/bttWPwAAgD4AACA/AAAAP27bVj8AAIA+bttWPwAAAD8AACA/AACAPm7bVj8AAAA/AABgPwAAgD4AAGA/AAAAP27bVj8AAIA+qqqqPlZVlT4AAMA+AACAPgAAwD5WVZU+qqqqPgAAgD4AAAA+AAAAP6qqKj6squo+qqoqPgAAAD8AAAA+rKrqPquqqj4AAAA/AADAPqyq6j4AAMA+AAAAP6uqqj6squo+qqqqPlZVlT4AAMA+VlWVPgAAwD5WVZU+qqqqPlZVlT6qqqo+AACAPqqqqj5WVZU+qqqqPlZVlT6qqqo+AACAPquqqj6squo+VlWVPgAAAD9WVZU+AAAAP6uqqj6squo+AADAPgAAgD8AAMA+VVV1PwAAwD5VVXU/AADAPgAAgD+qqio+rKrqPgAAAD6squo+AAAAPqyq6j6qqio+rKrqPgAAwD5VVXU/qqoqPlZVlT6qqio+VlWVPgAAwD5VVXU/VVVVPgAAAD+qqio+rKrqPqqqKj6squo+VVVVPgAAAD8="),
+"format": 34359742487,
+"index_count": 258,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABgAHAAQABgAIAAcABAAJAAUACgAJAAQACQAKAAsACwAMAA0ACwANAA4ACQALAA4ACQAOAA8ADwAQAAkADwARABAAEgATABQAEgAVABMAFgASABQAFgAUABcAFgAYABIAGAAWABkAFgAaABsAFgAbABwAGQAWABwAGQAcAB0AHQAeABkAHQAfAB4AIAAhACIAIgAjACAAIgAkACMAJQAhACAAIQAlACYAIQAmACcAIQAnACgAJgApACcAJgAqACkAKwAsAC0AKwAuACwALwAwADEAMgAwAC8AMgAvADMAMgA0ADAAMAA0ADUANAAyADYANgAyADcANgA3ADgAOAA3ADkANgA4ADoANgA6ADsANAA2ADwANAA8AD0ANAA9AD4APQA8AD8APwA8AEAAPQA/AEEAQgBDAEQAQgBFAEMARgBHAEgARgBJAEcASgBLAEwASgBNAEsATgBPAFAATgBRAE8AUgBTAFQAUgBVAFMAVgBXAFgAVgBZAFcAWgBbAFwAWgBdAFsAXgBfAGAAXgBhAF8AYgBjAGQAYgBlAGMAZgBnAGgAZgBpAGcAagBrAGwAagBtAGsAbgBvAHAAbgBxAG8AcgBzAHQAcgB1AHMAdgB3AHgAdgB5AHcAegB7AHwAegB9AHsAfgB/AIAAfgCBAH8A"),
+"material": SubResource("StandardMaterial3D_bni3c"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 130,
+"vertex_data": PackedByteArray("AACAvygxtz0AAIC/AACAvwjaAUAAAIA/AACAvygxtz0AAIA/AACAvwjaAUAAAIC/q6oqPygxt70AAIA/AACAPygxtz0AAIA/AACAPygxt70AAIA/q6oqP6r20r8AAIA/AACAP6r20r8AAIA/bts2vygxtz0AAIA/AAAAMygxt70AAIA/qqoqvygxt70AAIA/qqoqv6r20r8AAIA/AACAv6r20r8AAIA/AACAvygxt70AAIA/AACAvygxtz0AAIA/bts2vwjaAUAAAIA/AACAvwjaAUAAAIA/qqoqPygxt70AAIC/AACAP6r20r8AAIC/AACAPygxt70AAIC/qqoqP6r20r8AAIC/bts2vygxtz0AAIC/AACAPygxtz0AAIC/AAAAsygxt70AAIC/q6oqvygxt70AAIC/bts2vwjaAUAAAIC/AACAvwjaAUAAAIC/AACAvygxtz0AAIC/AACAvygxt70AAIC/q6oqv6r20r8AAIC/AACAv6r20r8AAIC/AACAPygxt72rqiq/AACAPygxtz0AAIC/AACAPygxt70AAIC/AACAP6r20r+rqiq/AACAP6r20r8AAIC/AACAPygxt70AAACzAACAPygxt72qqio/AACAPygxt70AAIA/AACAPygxtz0AAIA/AACAP6r20r8AAIA/AACAP6r20r+qqio/qqoqvygxt72rqio/qqoqv6r20r8AAIA/qqoqvygxt70AAIA/qqoqv6r20r+rqio/AAAAsygxt70AAIC/qqoqPygxt72qqiq/qqoqPygxt70AAIC/q6oqvygxt72qqiq/q6oqvygxt70AAIC/AACAPygxt70AAACzAACAPygxt72rqiq/AACAvygxt72rqio/AACAvygxt72qqiq/AACAvygxtz0AAIC/AACAvygxt70AAIC/AACAvygxtz0AAIA/AACAvygxt70AAIA/qqoqvygxt72rqio/qqoqPygxt72rqio/AACAPygxt72qqio/AAAAMygxt70AAIA/qqoqvygxt70AAIA/q6oqPygxt70AAIA/AACAPygxt72rqiq/qqoqP6r20r+qqiq/qqoqPygxt72qqiq/AACAP6r20r+rqiq/AACAvygxt72qqiq/AACAv6r20r8AAIC/AACAvygxt70AAIC/AACAv6r20r+qqiq/AACAv6r20r+rqio/qqoqv6r20r8AAIA/qqoqv6r20r+rqio/AACAv6r20r8AAIA/bts2vygxtz0AAIA/bts2vwjaAUAAAIC/bts2vygxtz0AAIC/bts2vwjaAUAAAIA/AACAPygxtz0AAIC/bts2vygxtz0AAIA/bts2vygxtz0AAIC/AACAPygxtz0AAIA/bts2vwjaAUAAAIC/AACAvwjaAUAAAIA/AACAvwjaAUAAAIC/bts2vwjaAUAAAIA/qqoqP6r20r+rqio/AACAP6r20r8AAIA/AACAP6r20r+qqio/q6oqP6r20r8AAIA/AACAv6r20r8AAIC/q6oqv6r20r+qqiq/q6oqv6r20r8AAIC/AACAv6r20r+qqiq/qqoqP6r20r8AAIC/AACAP6r20r+rqiq/AACAP6r20r8AAIC/qqoqP6r20r+qqiq/qqoqPygxt72rqio/AACAP6r20r+qqio/AACAPygxt72qqio/qqoqP6r20r+rqio/q6oqPygxt70AAIA/qqoqP6r20r+rqio/qqoqPygxt72rqio/q6oqP6r20r8AAIA/qqoqPygxt72qqiq/qqoqP6r20r8AAIC/qqoqPygxt70AAIC/qqoqP6r20r+qqiq/AACAvygxt70AAIA/AACAv6r20r+rqio/AACAvygxt72rqio/AACAv6r20r8AAIA/q6oqvygxt72qqiq/AACAv6r20r+qqiq/AACAvygxt72qqiq/q6oqv6r20r+qqiq/AACAvygxt72rqio/qqoqv6r20r+rqio/qqoqvygxt72rqio/AACAv6r20r+rqio/q6oqvygxt70AAIC/q6oqv6r20r+qqiq/q6oqvygxt72qqiq/q6oqv6r20r8AAIC/AAD/f////78AAP9/////vwAA/3////+/AAD/f////7//f/9//3/+//9//3//f/7//3//f/9/////f/9/////P/9//3////8//3//fzK85eH/f/9/iYk5+/9//3+30SPX/3//f////z//f/9/////P/9//3/amJHz/3//f/9/////f/9/////P/9//3////8//////9oX7Mv/////////v//////Nd+b7/////////7//////ooMt/v//////f////////6zfKND//////3/+//////////+//////////7///////3/+////////f////////////7//////////v////3//f///////f/9///////9//3///////3////+/////f////7////9//3/+/////3//f///////f/9///////9//3///////3////+/////f////7////9/////v////3////+/////f////7////9/////v0x0swtL9CW6THSzC0v0JbpMdLMLS/Qlukx0swtX3bFETHSzC0v0JbpMdLMLM83hQ0x0swtL9CW6THSzC0nTMERMdLMLS/TZRUx0swukAtvyTHSzC7MLJjpMdLMLswvYxUx0swuzC9jFTHSzC0b2ULBMdLMLS/Qlukx0swtL9CW6THSzC0v0JbpMdLMLS/Qlukx0swtL9CW6/3//f////z//f/9/////P/9//3////8//3//f////z8AAP9/////vwAA/3////+/AAD/f////78AAP9/////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+/////f////7////9/////v////3////+/////f////7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//////////7//////////v/////////+//////////78AAP9/////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+/AAD/f////7//f/9/////P/9//3////8//3//f////z//f/9/////P/////////+//////////7//////////v/////////+/////f////7////9/////v////3////+/////f////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7ho06")
+
+[sub_resource type="BoxMesh" id="BoxMesh_jrvxa"]
+size = Vector3(0.06736755, 1.7238617, 1.0450478)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0yr05"]
+transparency = 1
+cull_mode = 1
+no_depth_test = true
+shading_mode = 0
+albedo_color = Color(1, 0.5568628, 1, 0.3764706)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qg48n"]
+albedo_color = Color(0.34509805, 0.2, 0.12156863, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2euep"]
+albedo_color = Color(0.34509805, 0.2, 0.12156863, 1)
+
+[sub_resource type="Shader" id="Shader_uh3oe"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.7.2.stable's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+void vertex() {
+	UV = UV * uv1_scale.xy + uv1_offset.xy;
+}
+
+void fragment() {
+	vec2 base_uv = UV;
+
+	vec4 albedo_tex = texture(texture_albedo, base_uv);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+
+	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4p5gg"]
+render_priority = 0
+shader = SubResource("Shader_uh3oe")
+shader_parameter/albedo = Color(0.34509805, 0.2, 0.12156863, 1)
+shader_parameter/albedo_texture_size = Vector2i(0, 0)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bts75"]
+albedo_color = Color(0.34509805, 0.2, 0.12156863, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j08mf"]
+albedo_color = Color(0.34509805, 0.2, 0.12156863, 1)
+
 [node name="Level2" type="Node3D" unique_id=385752927]
 script = ExtResource("1_twaqj")
 level_number = 2
@@ -249,7 +377,7 @@ mesh = SubResource("BoxMesh_3825t")
 surface_material_override/0 = SubResource("StandardMaterial3D_6qpip")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Floor" unique_id=1230666054]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.396296, 0.07, -15.878)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.399691, 0.08484966, -15.889056)
 mesh = SubResource("BoxMesh_i8h8o")
 surface_material_override/0 = SubResource("StandardMaterial3D_i7uq1")
 
@@ -501,127 +629,710 @@ transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 
 [node name="Table3" parent="Props/Tables" unique_id=2048801979 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 82.62, 1.1619163, -5.7105837)
 
-[node name="Cube" parent="Props/Tables/Table3" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table3" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table4" parent="Props/Tables" unique_id=1688483240 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 82.61994, 1.1619163, -3.7380037)
 
-[node name="Cube" parent="Props/Tables/Table4" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table4" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table5" parent="Props/Tables" unique_id=509997465 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 80.61985, 1.1619163, -5.71065)
 
-[node name="Cube" parent="Props/Tables/Table5" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table5" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table6" parent="Props/Tables" unique_id=2017682814 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 80.61978, 1.1619163, -3.7373378)
 
-[node name="Cube" parent="Props/Tables/Table6" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table6" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table7" parent="Props/Tables" unique_id=1308221334 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 82.61987, 1.1619163, -1.7371187)
 
-[node name="Cube" parent="Props/Tables/Table7" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table7" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table8" parent="Props/Tables" unique_id=181239005 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 82.619804, 1.1619163, 0.23546863)
 
-[node name="Cube" parent="Props/Tables/Table8" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table8" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table9" parent="Props/Tables" unique_id=2119673051 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 80.61972, 1.1619163, -1.7371852)
 
-[node name="Cube" parent="Props/Tables/Table9" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table9" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table10" parent="Props/Tables" unique_id=1603690570 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 80.61965, 1.1619163, 0.23612714)
 
-[node name="Cube" parent="Props/Tables/Table10" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table10" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table13" parent="Props/Tables" unique_id=357471750 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 84.60661, 1.1619163, -1.7370529)
 
-[node name="Cube" parent="Props/Tables/Table13" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table13" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table14" parent="Props/Tables" unique_id=240237132 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 84.60654, 1.1619163, 0.2362597)
 
-[node name="Cube" parent="Props/Tables/Table14" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table14" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table17" parent="Props/Tables" unique_id=2045789724 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 84.60674, 1.1619163, -5.710518)
 
-[node name="Cube" parent="Props/Tables/Table17" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table17" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table18" parent="Props/Tables" unique_id=736092557 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 84.606674, 1.1619163, -3.7372055)
 
-[node name="Cube" parent="Props/Tables/Table18" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table18" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_8qlrg")
 
 [node name="Table11" parent="Props/Tables" unique_id=2118705352 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 82.62007, 1.1619163, -7.697316)
 
-[node name="Cube" parent="Props/Tables/Table11" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table11" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_ljeji")
 
 [node name="Table12" parent="Props/Tables" unique_id=3781200 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 80.61992, 1.1619163, -7.697383)
 
-[node name="Cube" parent="Props/Tables/Table12" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table12" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_bqc3i")
 
 [node name="Table19" parent="Props/Tables" unique_id=1199054326 instance=ExtResource("8_stl8g")]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 84.606804, 1.1619163, -7.6972427)
 
-[node name="Cube" parent="Props/Tables/Table19" index="0" unique_id=383875864]
+[node name="Cube" parent="Props/Tables/Table19" index="0" unique_id=1404715730]
 surface_material_override/0 = SubResource("StandardMaterial3D_vjdto")
 
 [node name="Chairs" type="Node3D" parent="Props" unique_id=1086113504]
 
-[node name="Chair" parent="Props/Chairs" unique_id=2093500120 instance=ExtResource("9_h66bl")]
+[node name="Chair" type="StaticBody3D" parent="Props/Chairs" unique_id=2093500120]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 80.63649, 0.79795647, -9.836229)
+script = ExtResource("11_fpd7d")
 
-[node name="Chair2" parent="Props/Chairs" unique_id=1441597320 instance=ExtResource("9_h66bl")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair" unique_id=817748250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34110668, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="RampCollision" type="StaticBody3D" parent="Props/Chairs/Chair" unique_id=199919946]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair/RampCollision" unique_id=1305713454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6590265e-08, -1.7574794, -0.3795414)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair/RampCollision" unique_id=822738636]
+transform = Transform3D(0.48201057, 0, -0.8761654, 0, 1, 0, 0.8761654, 0, 0.48201057, -0.673007, -1.7574794, -0.7831459)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Props/Chairs/Chair/RampCollision" unique_id=1561714479]
+transform = Transform3D(-0.55191034, 0, -0.8339034, 0, 1, 0, 0.8339034, 0, -0.55191034, 0.7102505, -1.7574794, -0.76976043)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="InteractZone" type="Area3D" parent="Props/Chairs/Chair" unique_id=620543393]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair/InteractZone" unique_id=1605367443]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")
+
+[node name="Chair" type="Node3D" parent="Props/Chairs/Chair" unique_id=1068570129]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Props/Chairs/Chair/Chair" unique_id=1202068381]
+mesh = SubResource("ArrayMesh_qo4vk")
+surface_material_override/0 = ExtResource("12_nkm7c")
+
+[node name="InteractPrompt" type="Node3D" parent="Props/Chairs/Chair" unique_id=418985220]
+transform = Transform3D(16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Props/Chairs/Chair/InteractPrompt" unique_id=502720552]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0054445565, 3.6565933, 0)
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[E] Interact"
+font_size = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Chairs/Chair/InteractPrompt" unique_id=561263112]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
+mesh = SubResource("BoxMesh_jrvxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yr05")
+
+[node name="Chair2" type="StaticBody3D" parent="Props/Chairs" unique_id=1441597320]
 transform = Transform3D(-3.3183893e-05, 0, -1, 0, 1, 0, 1, 0, -3.3183893e-05, 84.22798, 0.79795647, -9.83611)
+script = ExtResource("11_fpd7d")
 
-[node name="Chair3" parent="Props/Chairs" unique_id=1755995223 instance=ExtResource("9_h66bl")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair2" unique_id=89217845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34110668, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="RampCollision" type="StaticBody3D" parent="Props/Chairs/Chair2" unique_id=2081474414]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair2/RampCollision" unique_id=391230632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6590265e-08, -1.7574794, -0.3795414)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair2/RampCollision" unique_id=1461042213]
+transform = Transform3D(0.48201057, 0, -0.8761654, 0, 1, 0, 0.8761654, 0, 0.48201057, -0.673007, -1.7574794, -0.7831459)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Props/Chairs/Chair2/RampCollision" unique_id=2141430279]
+transform = Transform3D(-0.55191034, 0, -0.8339034, 0, 1, 0, 0.8339034, 0, -0.55191034, 0.7102505, -1.7574794, -0.76976043)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="InteractZone" type="Area3D" parent="Props/Chairs/Chair2" unique_id=864806789]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair2/InteractZone" unique_id=578122]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")
+
+[node name="Chair" type="Node3D" parent="Props/Chairs/Chair2" unique_id=1172576360]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Props/Chairs/Chair2/Chair" unique_id=535192568]
+mesh = SubResource("ArrayMesh_qo4vk")
+surface_material_override/0 = ExtResource("12_nkm7c")
+
+[node name="InteractPrompt" type="Node3D" parent="Props/Chairs/Chair2" unique_id=1506577732]
+transform = Transform3D(16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Props/Chairs/Chair2/InteractPrompt" unique_id=1244158732]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0054445565, 3.6565933, 0)
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[E] Interact"
+font_size = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Chairs/Chair2/InteractPrompt" unique_id=256906213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
+mesh = SubResource("BoxMesh_jrvxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yr05")
+
+[node name="Chair3" type="StaticBody3D" parent="Props/Chairs" unique_id=1755995223]
 transform = Transform3D(3.30329e-05, 0, 1, 0, 1, 0, -1, 0, 3.30329e-05, 80.63609, 0.79795647, 2.1666925)
+script = ExtResource("11_fpd7d")
 
-[node name="Chair4" parent="Props/Chairs" unique_id=997940929 instance=ExtResource("9_h66bl")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair3" unique_id=1760180922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34110668, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="RampCollision" type="StaticBody3D" parent="Props/Chairs/Chair3" unique_id=1537982887]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair3/RampCollision" unique_id=430940625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6590265e-08, -1.7574794, -0.3795414)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair3/RampCollision" unique_id=1835390359]
+transform = Transform3D(0.48201057, 0, -0.8761654, 0, 1, 0, 0.8761654, 0, 0.48201057, -0.673007, -1.7574794, -0.7831459)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Props/Chairs/Chair3/RampCollision" unique_id=156311127]
+transform = Transform3D(-0.55191034, 0, -0.8339034, 0, 1, 0, 0.8339034, 0, -0.55191034, 0.7102505, -1.7574794, -0.76976043)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="InteractZone" type="Area3D" parent="Props/Chairs/Chair3" unique_id=1220756349]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair3/InteractZone" unique_id=1044713019]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")
+
+[node name="Chair" type="Node3D" parent="Props/Chairs/Chair3" unique_id=816019204]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Props/Chairs/Chair3/Chair" unique_id=113738120]
+mesh = SubResource("ArrayMesh_qo4vk")
+surface_material_override/0 = ExtResource("12_nkm7c")
+
+[node name="InteractPrompt" type="Node3D" parent="Props/Chairs/Chair3" unique_id=2132708441]
+transform = Transform3D(16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Props/Chairs/Chair3/InteractPrompt" unique_id=371450313]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0054445565, 3.6565933, 0)
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[E] Interact"
+font_size = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Chairs/Chair3/InteractPrompt" unique_id=1731402140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
+mesh = SubResource("BoxMesh_jrvxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yr05")
+
+[node name="Chair4" type="StaticBody3D" parent="Props/Chairs" unique_id=997940929]
 transform = Transform3D(3.30329e-05, 0, 1, 0, 1, 0, -1, 0, 3.30329e-05, 84.227585, 0.79795647, 2.1668117)
+script = ExtResource("11_fpd7d")
 
-[node name="Chair5" parent="Props/Chairs" unique_id=1316193262 instance=ExtResource("9_h66bl")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair4" unique_id=129766887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34110668, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="RampCollision" type="StaticBody3D" parent="Props/Chairs/Chair4" unique_id=1494718404]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair4/RampCollision" unique_id=1012531613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6590265e-08, -1.7574794, -0.3795414)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair4/RampCollision" unique_id=1843892226]
+transform = Transform3D(0.48201057, 0, -0.8761654, 0, 1, 0, 0.8761654, 0, 0.48201057, -0.673007, -1.7574794, -0.7831459)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Props/Chairs/Chair4/RampCollision" unique_id=324188937]
+transform = Transform3D(-0.55191034, 0, -0.8339034, 0, 1, 0, 0.8339034, 0, -0.55191034, 0.7102505, -1.7574794, -0.76976043)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="InteractZone" type="Area3D" parent="Props/Chairs/Chair4" unique_id=1187536419]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair4/InteractZone" unique_id=970352901]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")
+
+[node name="Chair" type="Node3D" parent="Props/Chairs/Chair4" unique_id=681656395]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Props/Chairs/Chair4/Chair" unique_id=128077587]
+mesh = SubResource("ArrayMesh_qo4vk")
+surface_material_override/0 = ExtResource("12_nkm7c")
+
+[node name="InteractPrompt" type="Node3D" parent="Props/Chairs/Chair4" unique_id=620505163]
+transform = Transform3D(16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Props/Chairs/Chair4/InteractPrompt" unique_id=225096358]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0054445565, 3.6565933, 0)
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[E] Interact"
+font_size = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Chairs/Chair4/InteractPrompt" unique_id=556781053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
+mesh = SubResource("BoxMesh_jrvxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yr05")
+
+[node name="Chair5" type="StaticBody3D" parent="Props/Chairs" unique_id=1316193262]
 transform = Transform3D(-1, 0, 3.3227603e-05, 0, 1, 0, -3.3227603e-05, 0, -1, 87.40848, 0.798, -1.2772279)
+script = ExtResource("11_fpd7d")
 
-[node name="Chair6" parent="Props/Chairs" unique_id=576122231 instance=ExtResource("9_h66bl")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair5" unique_id=1706647865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34110668, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="RampCollision" type="StaticBody3D" parent="Props/Chairs/Chair5" unique_id=1197503253]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair5/RampCollision" unique_id=1663220472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6590265e-08, -1.7574794, -0.3795414)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair5/RampCollision" unique_id=34136726]
+transform = Transform3D(0.48201057, 0, -0.8761654, 0, 1, 0, 0.8761654, 0, 0.48201057, -0.673007, -1.7574794, -0.7831459)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Props/Chairs/Chair5/RampCollision" unique_id=1343626715]
+transform = Transform3D(-0.55191034, 0, -0.8339034, 0, 1, 0, 0.8339034, 0, -0.55191034, 0.7102505, -1.7574794, -0.76976043)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="InteractZone" type="Area3D" parent="Props/Chairs/Chair5" unique_id=845664484]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair5/InteractZone" unique_id=1380659226]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")
+
+[node name="Chair" type="Node3D" parent="Props/Chairs/Chair5" unique_id=1656338389]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Props/Chairs/Chair5/Chair" unique_id=1017835208]
+mesh = SubResource("ArrayMesh_qo4vk")
+surface_material_override/0 = ExtResource("12_nkm7c")
+
+[node name="InteractPrompt" type="Node3D" parent="Props/Chairs/Chair5" unique_id=1482654574]
+transform = Transform3D(16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Props/Chairs/Chair5/InteractPrompt" unique_id=922503258]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0054445565, 3.6565933, 0)
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[E] Interact"
+font_size = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Chairs/Chair5/InteractPrompt" unique_id=1877958302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
+mesh = SubResource("BoxMesh_jrvxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yr05")
+
+[node name="Chair6" type="StaticBody3D" parent="Props/Chairs" unique_id=576122231]
 transform = Transform3D(-1, 0, 3.3227603e-05, 0, 1, 0, -3.3227603e-05, 0, -1, 87.408485, 0.79795647, -6.846411)
+script = ExtResource("11_fpd7d")
 
-[node name="Chair7" parent="Props/Chairs" unique_id=136688204 instance=ExtResource("9_h66bl")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair6" unique_id=1465194375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34110668, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="RampCollision" type="StaticBody3D" parent="Props/Chairs/Chair6" unique_id=1463346741]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair6/RampCollision" unique_id=803187083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6590265e-08, -1.7574794, -0.3795414)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair6/RampCollision" unique_id=1045903797]
+transform = Transform3D(0.48201057, 0, -0.8761654, 0, 1, 0, 0.8761654, 0, 0.48201057, -0.673007, -1.7574794, -0.7831459)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Props/Chairs/Chair6/RampCollision" unique_id=807048071]
+transform = Transform3D(-0.55191034, 0, -0.8339034, 0, 1, 0, 0.8339034, 0, -0.55191034, 0.7102505, -1.7574794, -0.76976043)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="InteractZone" type="Area3D" parent="Props/Chairs/Chair6" unique_id=52353961]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair6/InteractZone" unique_id=768480172]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")
+
+[node name="Chair" type="Node3D" parent="Props/Chairs/Chair6" unique_id=1480952587]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Props/Chairs/Chair6/Chair" unique_id=835705366]
+mesh = SubResource("ArrayMesh_qo4vk")
+surface_material_override/0 = ExtResource("12_nkm7c")
+
+[node name="InteractPrompt" type="Node3D" parent="Props/Chairs/Chair6" unique_id=223793794]
+transform = Transform3D(16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Props/Chairs/Chair6/InteractPrompt" unique_id=774036805]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0054445565, 3.6565933, 0)
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[E] Interact"
+font_size = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Chairs/Chair6/InteractPrompt" unique_id=677495339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
+mesh = SubResource("BoxMesh_jrvxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yr05")
+
+[node name="Chair7" type="StaticBody3D" parent="Props/Chairs" unique_id=136688204]
 transform = Transform3D(-1, 0, 3.3227603e-05, 0, 1, 0, -3.3227603e-05, 0, -1, 87.408394, 0.79795647, -4.2175965)
+script = ExtResource("11_fpd7d")
 
-[node name="Chair8" parent="Props/Chairs" unique_id=1278949367 instance=ExtResource("9_h66bl")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair7" unique_id=2116006874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34110668, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="RampCollision" type="StaticBody3D" parent="Props/Chairs/Chair7" unique_id=737583105]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair7/RampCollision" unique_id=890737141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6590265e-08, -1.7574794, -0.3795414)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair7/RampCollision" unique_id=1575417598]
+transform = Transform3D(0.48201057, 0, -0.8761654, 0, 1, 0, 0.8761654, 0, 0.48201057, -0.673007, -1.7574794, -0.7831459)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Props/Chairs/Chair7/RampCollision" unique_id=1741258411]
+transform = Transform3D(-0.55191034, 0, -0.8339034, 0, 1, 0, 0.8339034, 0, -0.55191034, 0.7102505, -1.7574794, -0.76976043)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="InteractZone" type="Area3D" parent="Props/Chairs/Chair7" unique_id=126298075]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair7/InteractZone" unique_id=2141007816]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")
+
+[node name="Chair" type="Node3D" parent="Props/Chairs/Chair7" unique_id=624642977]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Props/Chairs/Chair7/Chair" unique_id=1098813395]
+mesh = SubResource("ArrayMesh_qo4vk")
+surface_material_override/0 = SubResource("StandardMaterial3D_qg48n")
+
+[node name="InteractPrompt" type="Node3D" parent="Props/Chairs/Chair7" unique_id=1549618124]
+transform = Transform3D(16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Props/Chairs/Chair7/InteractPrompt" unique_id=613188366]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0054445565, 3.6565933, 0)
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[E] Interact"
+font_size = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Chairs/Chair7/InteractPrompt" unique_id=1439434075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
+mesh = SubResource("BoxMesh_jrvxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yr05")
+
+[node name="Chair8" type="StaticBody3D" parent="Props/Chairs" unique_id=1278949367]
 transform = Transform3D(1, 0, -3.3140182e-05, 0, 1, 0, 3.3140182e-05, 0, 1, 78.173355, 0.798, -1.2775342)
+script = ExtResource("11_fpd7d")
 
-[node name="Chair9" parent="Props/Chairs" unique_id=693448588 instance=ExtResource("9_h66bl")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair8" unique_id=1759768043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34110668, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="RampCollision" type="StaticBody3D" parent="Props/Chairs/Chair8" unique_id=885406997]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair8/RampCollision" unique_id=1881893292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6590265e-08, -1.7574794, -0.3795414)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair8/RampCollision" unique_id=1714698083]
+transform = Transform3D(0.48201057, 0, -0.8761654, 0, 1, 0, 0.8761654, 0, 0.48201057, -0.673007, -1.7574794, -0.7831459)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Props/Chairs/Chair8/RampCollision" unique_id=612948275]
+transform = Transform3D(-0.55191034, 0, -0.8339034, 0, 1, 0, 0.8339034, 0, -0.55191034, 0.7102505, -1.7574794, -0.76976043)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="InteractZone" type="Area3D" parent="Props/Chairs/Chair8" unique_id=1474117118]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair8/InteractZone" unique_id=790998096]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")
+
+[node name="Chair" type="Node3D" parent="Props/Chairs/Chair8" unique_id=1160007291]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Props/Chairs/Chair8/Chair" unique_id=848545985]
+mesh = SubResource("ArrayMesh_qo4vk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2euep")
+
+[node name="InteractPrompt" type="Node3D" parent="Props/Chairs/Chair8" unique_id=1546597305]
+transform = Transform3D(16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Props/Chairs/Chair8/InteractPrompt" unique_id=440759574]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0054445565, 3.6565933, 0)
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[E] Interact"
+font_size = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Chairs/Chair8/InteractPrompt" unique_id=1709768502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
+mesh = SubResource("BoxMesh_jrvxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yr05")
+
+[node name="Chair9" type="StaticBody3D" parent="Props/Chairs" unique_id=693448588]
 transform = Transform3D(1, 0, -3.3140182e-05, 0, 1, 0, 3.3140182e-05, 0, 1, 78.17337, 0.79795647, -6.846718)
+script = ExtResource("11_fpd7d")
 
-[node name="Chair10" parent="Props/Chairs" unique_id=418107888 instance=ExtResource("9_h66bl")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair9" unique_id=2028797556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34110668, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="RampCollision" type="StaticBody3D" parent="Props/Chairs/Chair9" unique_id=1421818894]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair9/RampCollision" unique_id=228664523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6590265e-08, -1.7574794, -0.3795414)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair9/RampCollision" unique_id=801298776]
+transform = Transform3D(0.48201057, 0, -0.8761654, 0, 1, 0, 0.8761654, 0, 0.48201057, -0.673007, -1.7574794, -0.7831459)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Props/Chairs/Chair9/RampCollision" unique_id=1689337899]
+transform = Transform3D(-0.55191034, 0, -0.8339034, 0, 1, 0, 0.8339034, 0, -0.55191034, 0.7102505, -1.7574794, -0.76976043)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="InteractZone" type="Area3D" parent="Props/Chairs/Chair9" unique_id=737957130]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair9/InteractZone" unique_id=1683510436]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")
+
+[node name="Chair" type="Node3D" parent="Props/Chairs/Chair9" unique_id=1438152785]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Props/Chairs/Chair9/Chair" unique_id=466749759]
+mesh = SubResource("ArrayMesh_qo4vk")
+surface_material_override/0 = SubResource("ShaderMaterial_4p5gg")
+
+[node name="InteractPrompt" type="Node3D" parent="Props/Chairs/Chair9" unique_id=65828830]
+transform = Transform3D(16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Props/Chairs/Chair9/InteractPrompt" unique_id=194490797]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0054445565, 3.6565933, 0)
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[E] Interact"
+font_size = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Chairs/Chair9/InteractPrompt" unique_id=926861803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
+mesh = SubResource("BoxMesh_jrvxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yr05")
+
+[node name="Chair10" type="StaticBody3D" parent="Props/Chairs" unique_id=418107888]
 transform = Transform3D(1, 0, -3.3140182e-05, 0, 1, 0, 3.3140182e-05, 0, 1, 78.17328, 0.79795647, -4.217903)
+script = ExtResource("11_fpd7d")
 
-[node name="Chair11" parent="Props/Chairs" unique_id=845091538 instance=ExtResource("9_h66bl")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair10" unique_id=1884261254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34110668, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="RampCollision" type="StaticBody3D" parent="Props/Chairs/Chair10" unique_id=2091409489]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair10/RampCollision" unique_id=668240585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6590265e-08, -1.7574794, -0.3795414)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair10/RampCollision" unique_id=1571005481]
+transform = Transform3D(0.48201057, 0, -0.8761654, 0, 1, 0, 0.8761654, 0, 0.48201057, -0.673007, -1.7574794, -0.7831459)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Props/Chairs/Chair10/RampCollision" unique_id=1593252447]
+transform = Transform3D(-0.55191034, 0, -0.8339034, 0, 1, 0, 0.8339034, 0, -0.55191034, 0.7102505, -1.7574794, -0.76976043)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="InteractZone" type="Area3D" parent="Props/Chairs/Chair10" unique_id=989070333]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair10/InteractZone" unique_id=65510260]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")
+
+[node name="Chair" type="Node3D" parent="Props/Chairs/Chair10" unique_id=110772810]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Props/Chairs/Chair10/Chair" unique_id=154303424]
+mesh = SubResource("ArrayMesh_qo4vk")
+surface_material_override/0 = SubResource("StandardMaterial3D_bts75")
+
+[node name="InteractPrompt" type="Node3D" parent="Props/Chairs/Chair10" unique_id=628439558]
+transform = Transform3D(16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Props/Chairs/Chair10/InteractPrompt" unique_id=176741551]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0054445565, 3.6565933, 0)
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[E] Interact"
+font_size = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Chairs/Chair10/InteractPrompt" unique_id=1261903592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
+mesh = SubResource("BoxMesh_jrvxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yr05")
+
+[node name="Chair11" type="StaticBody3D" parent="Props/Chairs" unique_id=845091538]
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 125.85629, 0.8287797, 24.38192)
+script = ExtResource("11_fpd7d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair11" unique_id=723078329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34110668, 0)
+shape = SubResource("BoxShape3D_m14uu")
+
+[node name="RampCollision" type="StaticBody3D" parent="Props/Chairs/Chair11" unique_id=467379898]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75926244, 0.9966216, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Chairs/Chair11/RampCollision" unique_id=30254373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6590265e-08, -1.7574794, -0.3795414)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair11/RampCollision" unique_id=1377037882]
+transform = Transform3D(0.48201057, 0, -0.8761654, 0, 1, 0, 0.8761654, 0, 0.48201057, -0.673007, -1.7574794, -0.7831459)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Props/Chairs/Chair11/RampCollision" unique_id=2101582386]
+transform = Transform3D(-0.55191034, 0, -0.8339034, 0, 1, 0, 0.8339034, 0, -0.55191034, 0.7102505, -1.7574794, -0.76976043)
+shape = SubResource("BoxShape3D_5ut6l")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="InteractZone" type="Area3D" parent="Props/Chairs/Chair11" unique_id=1231404641]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Chairs/Chair11/InteractZone" unique_id=508054325]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_m14uu")
+
+[node name="Chair" type="Node3D" parent="Props/Chairs/Chair11" unique_id=498490721]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Props/Chairs/Chair11/Chair" unique_id=2044082596]
+mesh = SubResource("ArrayMesh_qo4vk")
+surface_material_override/0 = SubResource("StandardMaterial3D_j08mf")
+
+[node name="InteractPrompt" type="Node3D" parent="Props/Chairs/Chair11" unique_id=456678910]
+transform = Transform3D(16, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Props/Chairs/Chair11/InteractPrompt" unique_id=2047891895]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0054445565, 3.6565933, 0)
+billboard = 1
+no_depth_test = true
+fixed_size = true
+text = "[E] Interact"
+font_size = 20
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Chairs/Chair11/InteractPrompt" unique_id=423928908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
+mesh = SubResource("BoxMesh_jrvxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0yr05")
 
 [node name="Cabinets" type="Node3D" parent="Props" unique_id=1150617425]
 
@@ -638,7 +1349,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.41773, 0.66485596, -39.645
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.35771, 0.66485596, -39.6453)
 
 [node name="Fridge" parent="Props/Cabinets" unique_id=262071157 instance=ExtResource("10_bs2pm")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 72.253654, 0, -38.48397)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 72.253654, 0.88707876, -38.48397)
 
 [node name="Cabinet5" parent="Props/Cabinets" unique_id=937540990 instance=ExtResource("9_vnuxi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.24, 0.66485596, -39.6453)
