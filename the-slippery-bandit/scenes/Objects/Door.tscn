@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cpq7usfl272mw"]
 
 [ext_resource type="Script" uid="uid://bi5rnywmbgynr" path="res://scripts/objects/Door.gd" id="1_yfgsh"]
-[ext_resource type="PackedScene" uid="uid://btmyc8eky2ebi" path="res://visuals/models/Door.glb" id="2_hbq88"]
 [ext_resource type="PackedScene" uid="uid://w2vljvfjyncj" path="res://visuals/door.tscn" id="3_d1656"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yfgsh"]
@@ -22,10 +21,6 @@ shape = SubResource("BoxShape3D_yfgsh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractZone" unique_id=733605627]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027435303, -0.2098453, 1.1308594)
 shape = SubResource("BoxShape3D_eyv6f")
-
-[node name="Door" parent="." unique_id=931913740 instance=ExtResource("2_hbq88")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -2.25, 0.989)
-visible = false
 
 [node name="Door2" parent="." unique_id=1990792259 instance=ExtResource("3_d1656")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -2.25, 0.989)
