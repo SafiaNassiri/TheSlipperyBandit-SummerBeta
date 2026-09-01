@@ -22,7 +22,7 @@
 size = Vector3(50.489937, 0.2, 98.43412)
 
 [sub_resource type="BoxMesh" id="BoxMesh_6qpip"]
-size = Vector3(12.744385, 0.2, 30)
+size = Vector3(12.744385, 0.2, 29.969238)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3pvd"]
 albedo_color = Color(0.35686275, 0.4627451, 0.5529412, 1)
@@ -36,14 +36,14 @@ albedo_color = Color(0.35686275, 0.4627451, 0.5529412, 1)
 albedo_texture = ExtResource("6_i2tsv")
 
 [sub_resource type="BoxMesh" id="BoxMesh_i8h8o"]
-size = Vector3(14.7, 0.2, 74.537)
+size = Vector3(14.548596, 0.2, 74.537)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i7uq1"]
 albedo_color = Color(0.35686275, 0.4627451, 0.5529412, 1)
 albedo_texture = ExtResource("6_i2tsv")
 
 [sub_resource type="BoxMesh" id="BoxMesh_j2tbh"]
-size = Vector3(10.652, 0.2, 77.116)
+size = Vector3(10.652, 0.2, 76.9745)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i8h8o"]
 albedo_color = Color(0.35686275, 0.4627451, 0.5529412, 1)
@@ -93,7 +93,7 @@ size = Vector3(0.3, 4.0737305, 16.26226)
 size = Vector3(0.33276367, 4.4380493, 16.259644)
 
 [sub_resource type="BoxMesh" id="BoxMesh_stl8g"]
-size = Vector3(27.341478, 4.017456, 0.3)
+size = Vector3(27.341478, 4.2269897, 0.3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f42yj"]
 size = Vector3(27.364197, 4.167511, 0.30297852)
@@ -165,7 +165,7 @@ albedo_color = Color(0.9647059, 0.7764706, 0.65882355, 1)
 size = Vector3(0.29785156, 2.2006836, 10.078003)
 
 [sub_resource type="BoxMesh" id="BoxMesh_juh0i"]
-size = Vector3(0.3, 3.9979248, 6.152893)
+size = Vector3(0.3, 4.1869507, 6.152893)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bs2pm"]
 albedo_color = Color(0.9647059, 0.7764706, 0.65882355, 1)
@@ -193,12 +193,6 @@ albedo_color = Color(0.34509805, 0.2, 0.12156863, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjdto"]
 albedo_color = Color(0.34509805, 0.2, 0.12156863, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4n27n"]
-albedo_color = Color(0.81960785, 0.4862745, 0.4862745, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cw4sw"]
-albedo_color = Color(0.81960785, 0.4862745, 0.4862745, 1)
 
 [node name="Level2" type="Node3D" unique_id=385752927]
 script = ExtResource("1_twaqj")
@@ -245,7 +239,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0836163, 0, -4.0767097)
 shape = SubResource("BoxShape3D_3825t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=204572993]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, -17.718658, 0.07049847, 0.12844445)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, -17.718658, 0.07049847, 0.17458703)
 mesh = SubResource("BoxMesh_6qpip")
 surface_material_override/0 = SubResource("StandardMaterial3D_f3pvd")
 
@@ -255,12 +249,12 @@ mesh = SubResource("BoxMesh_3825t")
 surface_material_override/0 = SubResource("StandardMaterial3D_6qpip")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Floor" unique_id=1230666054]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.472, 0.07, -15.878)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.396296, 0.07, -15.878)
 mesh = SubResource("BoxMesh_i8h8o")
 surface_material_override/0 = SubResource("StandardMaterial3D_i7uq1")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Floor" unique_id=1566280748]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.002352, -0.024619125, 6.942409)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.002352, -0.024619125, 7.013156)
 mesh = SubResource("BoxMesh_j2tbh")
 surface_material_override/0 = SubResource("StandardMaterial3D_i8h8o")
 
@@ -331,7 +325,7 @@ shape = SubResource("BoxShape3D_ofcji")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.87399, 1.4501343, -34.008804)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/Outerwalls/StaticBody3D4" unique_id=1362665920]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.714798, 0.53686523, 2.1902275)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2031097, 0.53686523, 2.1902275)
 mesh = SubResource("BoxMesh_ofcji")
 surface_material_override/0 = SubResource("StandardMaterial3D_lcp8y")
 
@@ -343,7 +337,7 @@ shape = SubResource("BoxShape3D_3cfb3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.71826, 1.4501343, -22.74755)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/Outerwalls/StaticBody3D5" unique_id=844373546]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5285492, 0.508728, -0.85668564)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5285492, 0.40396118, -0.85668564)
 sorting_offset = 50.0
 mesh = SubResource("BoxMesh_stl8g")
 surface_material_override/0 = SubResource("StandardMaterial3D_lcp8y")
@@ -477,7 +471,7 @@ shape = SubResource("BoxShape3D_5fa63")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46954727, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/Innerwalls/StaticBody3D4" unique_id=1547108918]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.12962, 2.117859, -20.66568)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.12962, 2.023346, -20.66568)
 mesh = SubResource("BoxMesh_juh0i")
 surface_material_override/0 = SubResource("StandardMaterial3D_bs2pm")
 
@@ -709,14 +703,8 @@ transform = Transform3D(0.92274576, 0, -0.38540927, 0, 1, 0, 0.38540927, 0, 0.92
 [node name="Door1" parent="Doors" unique_id=663709829 instance=ExtResource("7_f3pvd")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.97982, 2.2545738, 6.0360785)
 
-[node name="Cube" parent="Doors/Door1/Door" parent_id_path=PackedInt32Array(663709829, 931913740) index="0" unique_id=563541107]
-surface_material_override/0 = SubResource("StandardMaterial3D_4n27n")
-
 [node name="Door2" parent="Doors" unique_id=1879898367 instance=ExtResource("7_f3pvd")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 100.65722, 2.2823753, -15.597086)
-
-[node name="Cube" parent="Doors/Door2/Door" parent_id_path=PackedInt32Array(1879898367, 931913740) index="0" unique_id=563541107]
-surface_material_override/0 = SubResource("StandardMaterial3D_cw4sw")
 
 [node name="Exit" parent="." unique_id=1313272235 instance=ExtResource("16_o6ptl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 116.27635, 0.51310265, 28.673883)
@@ -737,6 +725,4 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 116.
 [editable path="Props/Tables/Table12"]
 [editable path="Props/Tables/Table19"]
 [editable path="Doors/Door1"]
-[editable path="Doors/Door1/Door"]
 [editable path="Doors/Door2"]
-[editable path="Doors/Door2/Door"]
