@@ -278,7 +278,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.2
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.0864563, 0.34704834, 5.5239787)
 
 [node name="Butter3" parent="Butters" unique_id=1715077581 instance=ExtResource("6_twycr")]
-transform = Transform3D(-0.68281496, 0, 0.73059136, 0, 1, 0, -0.73059136, 0, -0.68281496, 29.138693, 0.34704834, 28.371452)
+transform = Transform3D(-0.68281496, 0, 0.73059136, 0, 1, 0, -0.73059136, 0, -0.68281496, 31.595228, 0.34704834, 28.371452)
 
 [node name="Butter4" parent="Butters" unique_id=512807833 instance=ExtResource("6_twycr")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 96.13655, 0.34704834, -27.668228)
