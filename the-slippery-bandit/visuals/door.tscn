@@ -64,3 +64,4 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.1
 billboard = 1
 fixed_size = true
 text = "[E] Interact"
+font_size = 25

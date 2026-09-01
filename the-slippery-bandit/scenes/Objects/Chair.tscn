@@ -65,6 +65,7 @@ billboard = 1
 no_depth_test = true
 fixed_size = true
 text = "[E] Interact"
+font_size = 20
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="InteractPrompt" unique_id=561263112]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.392334e-05, 2.100045, -0.019479752)
